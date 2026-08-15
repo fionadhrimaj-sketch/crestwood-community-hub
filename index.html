@@ -47,42 +47,226 @@ nav a:hover{color:var(--teal);border-bottom-color:var(--teal)}
   color:var(--navy);font-weight:800;padding:10px 14px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.08)
 }
 
-.status-section{padding:24px 0 8px;background:#fff}
-.status-card{border:1px solid var(--line);border-radius:20px;background:#fff;box-shadow:0 6px 20px rgba(28,50,83,.07);padding:20px}
-.status-title{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:16px}
-.status-title h2{margin:0;color:var(--navy);font-size:26px;letter-spacing:-.4px}
-.status-title span{font-size:12px;color:var(--muted)}
-.status-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px}
-.metric{border-radius:15px;padding:14px 12px;text-align:center;background:#f7fbff;border:1px solid #e3edf7}
-.metric:nth-child(2){background:#f3fbfa;border-color:#d9f1ee}
-.metric:nth-child(3){background:#faf7ff;border-color:#e8defb}
-.metric-number{display:block;font-size:28px;font-weight:850;color:var(--navy);line-height:1}
-.metric-label{display:block;margin-top:6px;font-size:12px;font-weight:750;color:#5c6d88}
-.status-items{display:grid;gap:13px}
-.status-item{padding-top:13px;border-top:1px solid var(--line)}
-.status-row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px}
-.status-name{font-size:14px;font-weight:800;color:#21365f}
-.status-badge{font-size:11px;font-weight:800;padding:5px 8px;border-radius:999px;white-space:nowrap}
-.status-badge.progress{background:#eaf3ff;color:#2f73cc}
-.status-badge.scheduled{background:#f2edff;color:#7357d5}
-.status-badge.pending{background:#fff5e4;color:#c97700}
-.progress-track{height:8px;border-radius:999px;background:#edf1f6;overflow:hidden}
-.progress-fill{height:100%;border-radius:999px;background:linear-gradient(90deg,#2f80ed,#54a2ff)}
-.progress-fill.purple{background:linear-gradient(90deg,#7357d5,#9a7dec)}
-.progress-fill.orange{background:linear-gradient(90deg,#ef9c22,#f5bc62)}
-.status-note{margin-top:12px;font-size:11px;line-height:1.45;color:var(--muted)}
-@media(max-width:520px){
-  .status-section{padding:18px 0 4px}
-  .status-card{padding:16px;border-radius:18px}
-  .status-title{display:block;margin-bottom:14px}
-  .status-title h2{font-size:22px}
-  .status-title span{display:block;margin-top:4px}
-  .status-metrics{gap:8px}
-  .metric{padding:12px 6px}
-  .metric-number{font-size:24px}
-  .metric-label{font-size:11px}
-}
 
+
+
+.status-section{
+  padding:22px 0 10px;
+  background:#fff;
+}
+.assessment-card{
+  background:linear-gradient(180deg,#ffffff 0%,#fbfdff 100%);
+  border:1px solid #dbe6f1;
+  border-radius:20px;
+  box-shadow:0 7px 22px rgba(22,47,84,.07);
+  padding:20px 22px;
+}
+.assessment-card-head{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:16px;
+  margin-bottom:15px;
+}
+.assessment-card-head h2{
+  margin:0;
+  color:var(--navy);
+  font-size:25px;
+  line-height:1.15;
+  letter-spacing:-.4px;
+}
+.assessment-card-head p{
+  margin:4px 0 0;
+  color:#687991;
+  font-size:13px;
+  font-weight:600;
+}
+.assessment-active{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:999px;
+  background:#e9f4ff;
+  color:#2c6cab;
+  padding:6px 11px;
+  font-size:11px;
+  font-weight:800;
+}
+.assessment-date-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-bottom:12px;
+}
+.date-box{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-height:62px;
+  border:1px solid #d7e5f2;
+  border-radius:13px;
+  padding:10px 12px;
+  background:#f9fcff;
+}
+.date-icon{
+  width:34px;
+  height:34px;
+  min-width:34px;
+  border-radius:9px;
+  background:#e5faf6;
+  color:#11aa9d;
+  display:grid;
+  place-items:center;
+  font-size:18px;
+}
+.date-box small{
+  display:block;
+  margin:0 0 2px;
+  color:#657890;
+  font-size:10px;
+}
+.date-box strong{
+  display:block;
+  color:var(--navy);
+  font-size:13px;
+}
+.assessment-main-grid{
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:12px;
+  align-items:stretch;
+  margin-bottom:13px;
+}
+.countdown-main{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:16px;
+  min-height:112px;
+  border:1px solid #d7e5f2;
+  border-radius:14px;
+  background:#f9fcff;
+  padding:14px;
+}
+.clock-ring{
+  position:relative;
+  width:54px;
+  height:54px;
+  min-width:54px;
+  border:4px solid #20b5a9;
+  border-radius:50%;
+}
+.clock-ring:before{
+  content:"";
+  position:absolute;
+  width:3px;
+  height:16px;
+  background:#20b5a9;
+  left:50%;
+  top:9px;
+  transform:translateX(-50%);
+  border-radius:3px;
+}
+.clock-ring:after{
+  content:"";
+  position:absolute;
+  width:13px;
+  height:3px;
+  background:#20b5a9;
+  left:50%;
+  top:50%;
+  transform-origin:left center;
+  transform:rotate(38deg);
+  border-radius:3px;
+}
+.countdown-number{
+  color:var(--navy);
+  font-size:39px;
+  line-height:.95;
+  font-weight:900;
+  letter-spacing:-1px;
+}
+.countdown-label{
+  color:#526785;
+  font-size:18px;
+  line-height:1.1;
+}
+.assessment-facts{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:9px;
+}
+.fact{
+  min-height:112px;
+  border:1px solid #dce6f1;
+  border-radius:13px;
+  background:#fff;
+  padding:13px 11px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.fact-label{
+  color:#657890;
+  font-size:10px;
+  font-weight:800;
+  margin-bottom:4px;
+}
+.fact strong{
+  color:var(--navy);
+  font-size:20px;
+  line-height:1.05;
+}
+.fact small{
+  color:#738197;
+  font-size:10px;
+  margin-top:4px;
+}
+.assessment-progress-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:7px;
+  color:#243a63;
+  font-size:12px;
+  font-weight:800;
+}
+.assessment-progress-track{
+  width:100%;
+  height:14px;
+  overflow:hidden;
+  border-radius:999px;
+  background:#e7edf3;
+}
+.assessment-progress-fill{
+  width:20%;
+  height:100%;
+  border-radius:999px;
+  background:linear-gradient(90deg,#17a99d,#2bc5b6);
+}
+.assessment-purpose{
+  margin-top:12px;
+  padding:12px 14px;
+  border-radius:12px;
+  background:#f7fafc;
+  color:#5b6c83;
+  font-size:12px;
+  line-height:1.45;
+}
+.assessment-purpose strong{
+  color:#263f69;
+}
+.countdown-foot{
+  margin-top:9px;
+  color:#62758d;
+  font-size:10px;
+  line-height:1.35;
+}
+.countdown-complete{
+  color:#2d7a52;
+  font-weight:800;
+}
 .section{padding:28px 0}
 .section h2{margin:0 0 18px;text-align:center;color:var(--navy);font-size:27px}
 .quick-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
@@ -121,8 +305,26 @@ nav a:hover{color:var(--teal);border-bottom-color:var(--teal)}
 footer{margin-top:24px;border-top:1px solid var(--line);background:#fafcff;padding:24px 0;color:#61708a;font-size:13px}
 .footer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center}.footer-brand{font-weight:800;color:var(--navy)}
 
-@media(max-width:860px){
-  nav{display:none}.topbar-inner{height:58px}.brand{font-size:17px}
+
+}
+.status-card,.countdown-card{border-radius:16px;padding:15px}
+  .status-title,.countdown-title{margin-bottom:12px}
+  .status-title h2,.countdown-title h2{font-size:21px}
+  .status-title span{font-size:10px}
+  .status-metrics{gap:7px}
+  .metric{min-height:66px;padding:8px 5px}
+  .metric-number{font-size:17px}
+  .metric-label{font-size:9px}
+  .date-pair{gap:7px}
+  .date-box{min-height:58px;padding:8px}
+  .date-icon{width:30px;height:30px;min-width:30px;font-size:16px}
+  .date-box strong{font-size:12px}
+  .countdown-main{min-height:84px;padding:12px}
+  .clock-ring{width:46px;height:46px;min-width:46px}
+  .countdown-number{font-size:31px}
+  .countdown-label{font-size:16px}
+}
+.topbar-inner{height:58px}.brand{font-size:17px}
   .hero-grid{grid-template-columns:1fr;padding:28px 0 18px;text-align:center}
   .hero h1{font-size:50px}.accent{margin:18px auto}.hero p{font-size:17px;margin:auto}
   .photo-card{min-height:235px}.quick-grid{grid-template-columns:1fr 1fr}
@@ -134,6 +336,150 @@ footer{margin-top:24px;border-top:1px solid var(--line);background:#fafcff;paddi
   .quick-grid{grid-template-columns:1fr}.quick{min-height:66px}.section{padding:22px 0}.section h2{font-size:23px}
   .footer-inner{display:block;text-align:center}.footer-inner div+div{margin-top:8px}
 }
+
+@media (max-width: 600px) {
+  html, body { overflow-x: hidden; }
+  .wrap { width: 100%; max-width: 100%; padding-left: 14px; padding-right: 14px; }
+
+  /* Header: keep only the brand on phone */
+  .topbar-inner { min-height: 58px; }
+  .brand { font-size: 17px; line-height: 1.15; }
+  .brand-mark, .brand-dot { flex: 0 0 auto; }
+  nav { display: none !important; }
+
+  /* Hero: stack text and image neatly */
+  .hero-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+    padding-top: 24px !important;
+    padding-bottom: 18px !important;
+    min-height: auto !important;
+    text-align: center;
+  }
+  .hero-copy, .hero-grid > div:first-child { text-align: center; }
+  .hero h1, .hero-copy h1 {
+    font-size: 42px !important;
+    line-height: 1.02 !important;
+    letter-spacing: -1.3px !important;
+  }
+  .hero p, .hero-copy p {
+    font-size: 16px !important;
+    line-height: 1.45 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .accent { margin-left: auto !important; margin-right: auto !important; }
+  .photo-card {
+    width: 100% !important;
+    min-height: 220px !important;
+    border-radius: 18px !important;
+  }
+
+  /* One clean assessment card */
+  .status-section { padding: 16px 0 6px !important; }
+  .assessment-card {
+    width: 100% !important;
+    padding: 16px !important;
+    border-radius: 18px !important;
+    overflow: hidden !important;
+  }
+  .assessment-card-head {
+    align-items: flex-start !important;
+    margin-bottom: 14px !important;
+  }
+  .assessment-card-head h2 {
+    font-size: 24px !important;
+    line-height: 1.1 !important;
+  }
+  .assessment-card-head p {
+    font-size: 12px !important;
+    line-height: 1.35 !important;
+  }
+
+  .assessment-date-row {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+  }
+  .date-box {
+    min-width: 0 !important;
+    padding: 9px !important;
+  }
+  .date-icon {
+    width: 28px !important;
+    height: 28px !important;
+    min-width: 28px !important;
+    font-size: 14px !important;
+  }
+  .date-box strong { font-size: 12px !important; }
+  .date-box small { font-size: 9px !important; }
+
+  /* Countdown first, facts underneath */
+  .assessment-main-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+  .countdown-main {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 94px !important;
+    padding: 12px !important;
+  }
+  .clock-ring {
+    width: 46px !important;
+    height: 46px !important;
+    min-width: 46px !important;
+  }
+  .countdown-number {
+    font-size: 34px !important;
+    white-space: nowrap !important;
+  }
+  .countdown-label { font-size: 16px !important; }
+
+  .assessment-facts {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+  .fact {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 74px !important;
+    padding: 11px 12px !important;
+  }
+  .fact strong { font-size: 20px !important; }
+  .fact-label, .fact small { font-size: 10px !important; }
+
+  .assessment-progress-head { font-size: 12px !important; }
+  .assessment-purpose {
+    font-size: 11px !important;
+    line-height: 1.45 !important;
+    padding: 11px 12px !important;
+  }
+  .countdown-foot { font-size: 10px !important; }
+
+  /* Quick actions: one column is easier to read/tap */
+  .quick-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+  .quick {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 68px !important;
+    padding: 11px 13px !important;
+  }
+  .quick-title { font-size: 17px !important; }
+
+  /* Other sections */
+  .cards3, .update-grid, .lower-grid, .two-col, .notice-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .section h2, .section-title { font-size: 24px !important; }
+}
+
 </style>
 </head>
 <body>
@@ -163,38 +509,91 @@ footer{margin-top:24px;border-top:1px solid var(--line);background:#fafcff;paddi
 </section>
 
 
-<section class="status-section" aria-label="Building status overview">
+
+
+
+
+<section class="status-section" aria-label="Special assessment status">
   <div class="wrap">
-    <div class="status-card">
-      <div class="status-title">
-        <h2>Building Status</h2>
-        <span>At-a-glance resident update</span>
+    <div class="assessment-card">
+
+      <div class="assessment-card-head">
+        <div>
+          <h2>Special Assessment</h2>
+          <p>Line of Credit Repayment Assessment</p>
+        </div>
+        <span class="assessment-active">Active</span>
       </div>
 
-      <div class="status-metrics">
-        <div class="metric"><span class="metric-number">4</span><span class="metric-label">Open Items</span></div>
-        <div class="metric"><span class="metric-number">2</span><span class="metric-label">In Progress</span></div>
-        <div class="metric"><span class="metric-number">1</span><span class="metric-label">Scheduled</span></div>
+      <div class="assessment-date-row">
+        <div class="date-box">
+          <span class="date-icon" aria-hidden="true">▣</span>
+          <div>
+            <small>Started</small>
+            <strong>August 2026</strong>
+          </div>
+        </div>
+        <div class="date-box">
+          <span class="date-icon" aria-hidden="true">▣</span>
+          <div>
+            <small>Ends</small>
+            <strong>December 2026</strong>
+          </div>
+        </div>
       </div>
 
-      <div class="status-items">
-        <div class="status-item">
-          <div class="status-row"><span class="status-name">Roof Replacement</span><span class="status-badge progress">In Progress</span></div>
-          <div class="progress-track"><div class="progress-fill" style="width:80%"></div></div>
+      <div class="assessment-main-grid">
+        <div class="countdown-main">
+          <span class="clock-ring" aria-hidden="true"></span>
+          <div>
+            <div class="countdown-number" id="assessmentMonths">4 months</div>
+            <div class="countdown-label" id="assessmentCountdownLabel">remaining</div>
+          </div>
         </div>
-        <div class="status-item">
-          <div class="status-row"><span class="status-name">Elevator Inspection</span><span class="status-badge scheduled">Scheduled</span></div>
-          <div class="progress-track"><div class="progress-fill purple" style="width:60%"></div></div>
-        </div>
-        <div class="status-item">
-          <div class="status-row"><span class="status-name">Shareholder Meeting Date</span><span class="status-badge pending">Awaiting Verification</span></div>
-          <div class="progress-track"><div class="progress-fill orange" style="width:35%"></div></div>
+
+        <div class="assessment-facts">
+          <div class="fact">
+            <span class="fact-label">Assessment Rate</span>
+            <strong>$0.668583</strong>
+            <small>per share / month</small>
+          </div>
+          <div class="fact">
+            <span class="fact-label">Amount Borrowed</span>
+            <strong>$112,800</strong>
+            <small>line of credit</small>
+          </div>
+          <div class="fact">
+            <span class="fact-label">Audited LOC Balance</span>
+            <strong>$36,900</strong>
+            <small>as of 12/31/2025</small>
+          </div>
         </div>
       </div>
-      <div class="status-note">Sample layout only. Replace these items, counts, and percentages with verified Crestwood information before publishing.</div>
+
+      <div class="assessment-progress-head">
+        <span>Assessment Progress</span>
+        <span id="assessmentPercent">20%</span>
+      </div>
+      <div class="assessment-progress-track" aria-label="Assessment progress">
+        <div class="assessment-progress-fill" id="assessmentProgress"></div>
+      </div>
+
+      <div class="assessment-purpose">
+        <strong>Purpose:</strong>
+        Replenish funds and repay the line of credit used for the hallway/lobby renovation, front walkway, and other project costs.
+      </div>
+
+      <div class="countdown-foot" id="assessmentFoot">
+        Special assessment runs from August 2026 through December 2026.
+      </div>
+
     </div>
   </div>
 </section>
+
+
+
+
 
 <section class="section" id="updates">
   <div class="wrap">
@@ -263,5 +662,71 @@ footer{margin-top:24px;border-top:1px solid var(--line);background:#fafcff;paddi
 <footer>
   <div class="wrap footer-inner"><div class="footer-brand">Crestwood Resident Hub</div><div>Resident information • Documents • Updates • Resources</div></div>
 </footer>
+
+
+<script>
+(function () {
+  const now = new Date();
+  const monthsEl = document.getElementById("assessmentMonths");
+  const labelEl = document.getElementById("assessmentCountdownLabel");
+  const percentEl = document.getElementById("assessmentPercent");
+  const progressEl = document.getElementById("assessmentProgress");
+  const footEl = document.getElementById("assessmentFoot");
+  if (!monthsEl || !labelEl || !percentEl || !progressEl || !footEl) return;
+
+  const year = now.getFullYear();
+  const month = now.getMonth(); // Jan=0
+  let percent = 0;
+  let monthsRemaining = 5;
+
+  if (year < 2026 || (year === 2026 && month < 7)) {
+    percent = 0;
+    monthsRemaining = 5;
+    monthsEl.textContent = "5 months";
+    labelEl.textContent = "scheduled";
+    footEl.textContent = "Special assessment is scheduled for August through December 2026.";
+  } else if (year === 2026 && month >= 7 && month <= 11) {
+    const monthNumber = month - 7 + 1; // Aug=1 ... Dec=5
+    percent = monthNumber * 20;
+    monthsRemaining = 5 - monthNumber;
+    monthsEl.textContent = monthsRemaining === 0 ? "Final month" : monthsRemaining + (monthsRemaining === 1 ? " month" : " months");
+    labelEl.textContent = monthsRemaining === 0 ? "December 2026" : "remaining";
+    footEl.textContent = "Special assessment runs from August 2026 through December 2026.";
+  } else {
+    percent = 100;
+    monthsRemaining = 0;
+    monthsEl.textContent = "Complete";
+    labelEl.textContent = "December 2026";
+    footEl.innerHTML = '<span class="countdown-complete">Assessment period completed at the end of December 2026.</span>';
+  }
+
+  percentEl.textContent = percent + "%";
+  progressEl.style.width = percent + "%";
+})();
+</script>
+
 </body>
 </html>
+@media(max-width:860px){
+  .assessment-main-grid{grid-template-columns:1fr}
+}
+@media(max-width:520px){
+  .status-section{padding-top:14px}
+  .assessment-card{padding:16px;border-radius:17px}
+  .assessment-card-head h2{font-size:23px}
+  .assessment-card-head p{font-size:12px}
+  .assessment-date-row{gap:7px}
+  .date-box{min-height:58px;padding:8px}
+  .date-icon{width:30px;height:30px;min-width:30px;font-size:16px}
+  .date-box strong{font-size:12px}
+  .countdown-main{min-height:96px;padding:12px}
+  .clock-ring{width:46px;height:46px;min-width:46px}
+  .countdown-number{font-size:31px}
+  .countdown-label{font-size:16px}
+  .assessment-facts{grid-template-columns:1fr 1fr}
+  .fact{min-height:88px;padding:10px}
+  .fact:nth-child(3){grid-column:1 / -1}
+  .fact strong{font-size:18px}
+  .assessment-purpose{font-size:11px;padding:11px 12px}
+}
+
