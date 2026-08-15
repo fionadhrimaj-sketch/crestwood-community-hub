@@ -480,6 +480,30 @@ footer{margin-top:24px;border-top:1px solid var(--line);background:#fafcff;paddi
   .section h2, .section-title { font-size: 24px !important; }
 }
 
+
+@media(max-width:860px){
+  .assessment-main-grid{grid-template-columns:1fr}
+}
+@media(max-width:520px){
+  .status-section{padding-top:14px}
+  .assessment-card{padding:16px;border-radius:17px}
+  .assessment-card-head h2{font-size:23px}
+  .assessment-card-head p{font-size:12px}
+  .assessment-date-row{gap:7px}
+  .date-box{min-height:58px;padding:8px}
+  .date-icon{width:30px;height:30px;min-width:30px;font-size:16px}
+  .date-box strong{font-size:12px}
+  .countdown-main{min-height:96px;padding:12px}
+  .clock-ring{width:46px;height:46px;min-width:46px}
+  .countdown-number{font-size:31px}
+  .countdown-label{font-size:16px}
+  .assessment-facts{grid-template-columns:1fr 1fr}
+  .fact{min-height:88px;padding:10px}
+  .fact:nth-child(3){grid-column:1 / -1}
+  .fact strong{font-size:18px}
+  .assessment-purpose{font-size:11px;padding:11px 12px}
+}
+
 </style>
 </head>
 <body>
@@ -707,26 +731,3 @@ footer{margin-top:24px;border-top:1px solid var(--line);background:#fafcff;paddi
 
 </body>
 </html>
-@media(max-width:860px){
-  .assessment-main-grid{grid-template-columns:1fr}
-}
-@media(max-width:520px){
-  .status-section{padding-top:14px}
-  .assessment-card{padding:16px;border-radius:17px}
-  .assessment-card-head h2{font-size:23px}
-  .assessment-card-head p{font-size:12px}
-  .assessment-date-row{gap:7px}
-  .date-box{min-height:58px;padding:8px}
-  .date-icon{width:30px;height:30px;min-width:30px;font-size:16px}
-  .date-box strong{font-size:12px}
-  .countdown-main{min-height:96px;padding:12px}
-  .clock-ring{width:46px;height:46px;min-width:46px}
-  .countdown-number{font-size:31px}
-  .countdown-label{font-size:16px}
-  .assessment-facts{grid-template-columns:1fr 1fr}
-  .fact{min-height:88px;padding:10px}
-  .fact:nth-child(3){grid-column:1 / -1}
-  .fact strong{font-size:18px}
-  .assessment-purpose{font-size:11px;padding:11px 12px}
-}
-
