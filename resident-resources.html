@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crestwood Community Hub - Resident Resources</title>
+<style>
+:root{
+  --navy:#102a63; --teal:#18a99d; --blue:#3787f3; --purple:#7357d5;
+  --ink:#22324a; --muted:#67758c; --line:#e3eaf2; --soft:#f7faff;
+  --shadow:0 7px 22px rgba(23,50,92,.08);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:auto;padding:0 22px}
+.topbar{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line)}
+.topbar-inner{height:64px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--navy);font-weight:800;font-size:19px}
+.brand-dot{width:31px;height:31px;border-radius:50%;background:var(--teal);position:relative}
+.brand-dot:after{content:"";position:absolute;width:12px;height:12px;border-radius:50%;background:#fff;left:9.5px;top:9.5px}
+.nav{display:flex;gap:22px;font-size:14px;font-weight:700;color:#344364}
+.hero{background:linear-gradient(180deg,#fbfdff,#eef6ff);border-bottom:1px solid var(--line)}
+.hero-inner{padding:42px 0 34px}
+.hero h1{margin:0;color:var(--navy);font-size:48px;letter-spacing:-1.2px}
+.hero p{margin:10px 0 0;color:#566982;font-size:18px;max-width:760px}
+.section{padding:30px 0}
+.section h2{margin:0 0 14px;color:var(--navy);font-size:26px}
+.section-intro{margin:-4px 0 18px;color:var(--muted);font-size:15px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.card{display:block;padding:18px;border:1px solid var(--line);border-radius:16px;background:#fff;box-shadow:0 3px 12px rgba(32,55,90,.05)}
+.card h3{margin:0;color:#1c3562;font-size:18px}
+.card p{margin:7px 0 0;color:#617188;font-size:14px;line-height:1.5}
+.card .meta{margin-top:10px;color:var(--teal);font-size:12px;font-weight:800}
+.callout{padding:18px;border:1px solid #dce8f2;background:#f9fcff;border-radius:16px}
+.callout strong{color:var(--navy)}
+.steps{margin:10px 0 0;padding-left:20px;color:#5b6d84;font-size:14px;line-height:1.55}
+.placeholder{border-style:dashed;background:#fcfdff}
+.placeholder .meta{color:#8794a7}
+footer{margin-top:24px;border-top:1px solid var(--line);background:#fafcff;padding:22px 0;color:#61708a;font-size:13px}
+.footer-inner{display:flex;justify-content:space-between;gap:20px}
+.footer-brand{font-weight:800;color:var(--navy)}
+@media(max-width:760px){
+  .nav{display:none}.wrap{padding:0 14px}.hero-inner{padding:30px 0 26px;text-align:center}
+  .hero h1{font-size:38px}.hero p{font-size:16px;margin-left:auto;margin-right:auto}
+  .grid{grid-template-columns:1fr}.section{padding:24px 0}.section h2{font-size:23px}
+  .footer-inner{display:block;text-align:center}.footer-inner div+div{margin-top:7px}
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="index.html"><span class="brand-dot"></span>Crestwood Community Hub</a>
+    <div class="nav">
+      <a href="index.html">Home</a>
+      <a href="https://sites.google.com/view/crestwoodcommunityhub/building-updates" target="_top">Updates</a>
+      <a href="https://sites.google.com/view/crestwoodcommunityhub/calendar" target="_top">Calendar</a>
+      <a href="documents.html">Documents</a>
+      <a href="resident-resources.html">Resources</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <h1>Resident Resources</h1>
+    <p>Helpful Crestwood information for everyday resident needs, contractors, governing documents, and building procedures.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>Contractors &amp; Renovations</h2>
+    <p class="section-intro">Use these documents when hiring a contractor or vendor to perform work in the building.</p>
+    <div class="grid">
+      <a class="card" href="docs/contractor-coi-instructions.docx" target="_blank">
+        <h3>Contractor COI Instructions</h3>
+        <p>Building owner, managing agent, and property information that contractors should use when preparing a Certificate of Insurance.</p>
+        <div class="meta">Open instructions →</div>
+      </a>
+      <a class="card" href="docs/sample-coi.pdf" target="_blank">
+        <h3>Sample Certificate of Insurance</h3>
+        <p>Sample COI showing expected liability limits, certificate holder information, and additional-insured language.</p>
+        <div class="meta">Open sample COI →</div>
+      </a>
+    </div>
+    <div class="callout" style="margin-top:14px">
+      <strong>Contractor reminder:</strong>
+      <ol class="steps">
+        <li>Give the contractor the COI instructions and sample COI.</li>
+        <li>Make sure the certificate identifies Crestwood and management correctly.</li>
+        <li>Have management review/approve the insurance before work begins.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--soft)">
+  <div class="wrap">
+    <h2>Governing Documents</h2>
+    <p class="section-intro">Quick access to the documents that govern shareholder rights, responsibilities, and occupancy.</p>
+    <div class="grid">
+      <a class="card" href="docs/crestwood-bylaws.pdf" target="_blank">
+        <h3>Crestwood By-Laws</h3>
+        <p>Rules governing shareholder meetings, directors, elections, officers, vacancies, and corporate procedures.</p>
+        <div class="meta">Open By-Laws →</div>
+      </a>
+      <a class="card" href="docs/proprietary-lease.pdf" target="_blank">
+        <h3>Proprietary Lease</h3>
+        <p>The lease governing the relationship between Crestwood and shareholder-tenants, including occupancy and lease obligations.</p>
+        <div class="meta">Open Proprietary Lease →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>Everyday Resident Information</h2>
+    <p class="section-intro">These sections are ready for the next information you receive from management or the Board.</p>
+    <div class="grid">
+      <div class="card placeholder">
+        <h3>House Rules</h3>
+        <p>Add current building rules, quiet hours, common-area rules, trash/recycling guidance, and other resident expectations here.</p>
+        <div class="meta">Content to be added</div>
+      </div>
+      <div class="card placeholder">
+        <h3>Move-In / Move-Out</h3>
+        <p>Add scheduling rules, elevator requirements, deposits, contractor/mover insurance, and contact procedures here.</p>
+        <div class="meta">Content to be added</div>
+      </div>
+      <div class="card placeholder">
+        <h3>Maintenance &amp; Repairs</h3>
+        <p>Add instructions for routine maintenance requests, emergencies, building responsibility vs. shareholder responsibility, and access procedures.</p>
+        <div class="meta">Content to be added</div>
+      </div>
+      <div class="card placeholder">
+        <h3>Shareholder Meetings</h3>
+        <p>Add confirmed meeting dates, notices, election information, proxies, and annual-meeting materials when available.</p>
+        <div class="meta">Content to be added</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--soft)">
+  <div class="wrap">
+    <h2>Financial Information</h2>
+    <p class="section-intro">Resident-friendly access to Crestwood's financial documents and explanations.</p>
+    <div class="grid">
+      <a class="card" href="docs/2025-audited-financial-statements.pdf" target="_blank">
+        <h3>2025 Audited Financial Statements</h3>
+        <p>The official audited statements for 2025 and 2024.</p>
+        <div class="meta">Open audited statements →</div>
+      </a>
+      <a class="card" href="docs/2025-financials-explained-for-shareholders.pdf" target="_blank">
+        <h3>2025 Financials Explained</h3>
+        <p>A plain-language shareholder guide explaining expenses, cash, assessments, reserves, and the mortgage.</p>
+        <div class="meta">Open plain-language guide →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="footer-brand">Crestwood Community Hub</div>
+    <div>Resident information • Documents • Updates • Resources</div>
+  </div>
+</footer>
+</body>
+</html>
