@@ -79,11 +79,26 @@ footer{background:#f5f8fb!important;border-top:1px solid var(--cw-line)!importan
 
 
 body.page-calendar{--page-dark:#17426a;--page-accent:#3e8bc9}
-.page-calendar .timeline{display:grid!important;gap:16px!important}.page-calendar .event{display:grid!important;grid-template-columns:90px 1fr!important;align-items:stretch!important;overflow:hidden!important;padding:0!important}
-.page-calendar .event-date{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;background:linear-gradient(180deg,#e9f4ff,#f4f9ff)!important;border-right:1px solid #d9e6f2!important;padding:18px 10px!important}
-.page-calendar .month{text-transform:uppercase!important;color:#3e8bc9!important;font-weight:900!important;font-size:11px!important;letter-spacing:.8px!important}.page-calendar .day{font-size:26px!important;font-weight:900!important;color:var(--cw-navy)!important}
-.page-calendar .event>div:not(.event-date){padding:20px 22px!important}.page-calendar .tag{display:inline-block!important;border:0!important;border-radius:999px!important;background:#edf5fb!important;color:#386e9a!important;padding:6px 10px!important;font-size:11px!important;font-weight:800!important}
-@media(max-width:560px){.page-calendar .event{grid-template-columns:72px 1fr!important}.page-calendar .event>div:not(.event-date){padding:16px!important}}
+.page-calendar .calendar-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:18px!important}
+.page-calendar .date-card{position:relative!important;overflow:hidden!important;border:1px solid var(--cw-line)!important;border-radius:20px!important;background:#fff!important;box-shadow:var(--cw-shadow)!important;padding:0!important;min-height:235px!important;display:flex!important;flex-direction:column!important;transition:transform .18s ease,box-shadow .18s ease!important}
+.page-calendar .date-card:hover{transform:translateY(-3px)!important;box-shadow:0 16px 36px rgba(28,52,83,.14)!important}
+.page-calendar .date-top{display:flex!important;align-items:center!important;gap:14px!important;padding:18px 20px!important;background:linear-gradient(135deg,#eaf5ff,#f6fbff)!important;border-bottom:1px solid #dce8f3!important}
+.page-calendar .date-badge{width:68px!important;min-width:68px!important;height:68px!important;border-radius:16px!important;background:#fff!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;box-shadow:0 5px 15px rgba(36,78,118,.10)!important}
+.page-calendar .date-badge .month{color:#3e8bc9!important;font-size:10px!important;font-weight:900!important;letter-spacing:.8px!important;text-transform:uppercase!important;line-height:1!important}
+.page-calendar .date-badge .day{color:var(--cw-navy)!important;font-size:22px!important;font-weight:900!important;line-height:1.05!important;margin-top:5px!important;text-align:center!important}
+.page-calendar .date-year{color:#5d7188!important;font-size:13px!important;font-weight:800!important;line-height:1.3!important}
+.page-calendar .date-body{padding:20px!important;display:flex!important;flex-direction:column!important;flex:1!important}
+.page-calendar .date-body h3{margin:0!important;color:var(--cw-navy)!important;font-size:19px!important;line-height:1.25!important}
+.page-calendar .date-body p{margin:10px 0 0!important;color:#5e6f85!important;font-size:14px!important;line-height:1.55!important}
+.page-calendar .tag{display:inline-block!important;align-self:flex-start!important;margin-top:auto!important;padding:6px 10px!important;border-radius:999px!important;background:#edf5fb!important;color:#386e9a!important;font-size:11px!important;font-weight:800!important;border:0!important}
+.page-calendar .upcoming-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:18px!important}
+.page-calendar .upcoming-card{border:1px solid var(--cw-line)!important;border-radius:20px!important;background:#fff!important;box-shadow:var(--cw-shadow)!important;padding:22px!important;display:flex!important;gap:16px!important;align-items:flex-start!important}
+.page-calendar .upcoming-icon{width:48px!important;height:48px!important;min-width:48px!important;border-radius:14px!important;background:linear-gradient(135deg,#e8f4ff,#f5faff)!important;display:flex!important;align-items:center!important;justify-content:center!important;color:#3e8bc9!important;font-size:22px!important;font-weight:900!important}
+.page-calendar .upcoming-card h3{margin:0!important;color:var(--cw-navy)!important;font-size:19px!important}
+.page-calendar .upcoming-card p{margin:7px 0 12px!important;color:#5e6f85!important;font-size:14px!important;line-height:1.55!important}
+.page-calendar .calendar-note{margin-top:20px!important;padding:16px 18px!important;border-radius:16px!important;background:#fff8e7!important;border:1px solid #efddad!important;box-shadow:none!important;color:#6f551e!important;font-size:14px!important;line-height:1.5!important}
+@media(max-width:900px){.page-calendar .calendar-grid{grid-template-columns:1fr!important}.page-calendar .date-card{min-height:0!important}.page-calendar .upcoming-grid{grid-template-columns:1fr!important}}
+@media(max-width:560px){.page-calendar .date-top{padding:15px!important}.page-calendar .date-body{padding:17px!important}.page-calendar .date-badge{width:62px!important;min-width:62px!important;height:62px!important}.page-calendar .upcoming-card{padding:18px!important}}
 </style></head>
 <body class="page-calendar">
 <section class="hero"><div class="wrap hero-inner">
@@ -92,36 +107,30 @@ body.page-calendar{--page-dark:#17426a;--page-accent:#3e8bc9}
 </div></section>
 <section class="section"><div class="wrap">
 <h2>Known Dates</h2>
-<p class="section-intro">Only dates already confirmed by notices or information provided to the Community Hub are listed below.</p>
-<div class="timeline">
-<div class="event">
-<div class="event-date"><span class="month">August</span><span class="day">1, 2026</span></div>
-<div><h3>Parking &amp; Bicycle Storage Fee Changes</h3><p>Monthly parking charges increase by $25, and bicycle storage fees become $12 per month per space.</p><span class="tag">Fee Change</span></div>
-</div>
-<div class="event">
-<div class="event-date"><span class="month">August</span><span class="day">2026</span></div>
-<div><h3>Line of Credit Repayment Assessment Begins</h3><p>The current line-of-credit repayment assessment begins in August 2026 and runs through December 2026.</p><span class="tag">Assessment</span></div>
-</div>
-<div class="event">
-<div class="event-date"><span class="month">December</span><span class="day">31, 2026</span></div>
-<div><h3>June 25 Operating Assessment Period Ends</h3><p>The June 25 notice states that its operating assessment continues through December 31, 2026.</p><span class="tag">Assessment</span></div>
-</div>
+<p class="section-intro">Confirmed dates and changes currently affecting Crestwood residents.</p>
+<div class="calendar-grid">
+  <article class="date-card">
+    <div class="date-top"><div class="date-badge"><span class="month">Aug</span><span class="day">1</span></div><div class="date-year">2026<br/>Effective Date</div></div>
+    <div class="date-body"><h3>Parking &amp; Bicycle Storage Fee Changes</h3><p>Monthly parking charges increase by $25, and bicycle storage fees become $12 per month per space.</p><span class="tag">Fee Change</span></div>
+  </article>
+  <article class="date-card">
+    <div class="date-top"><div class="date-badge"><span class="month">Aug</span><span class="day">2026</span></div><div class="date-year">Assessment<br/>Begins</div></div>
+    <div class="date-body"><h3>Line of Credit Repayment Assessment</h3><p>The line-of-credit repayment assessment begins in August 2026 and runs through December 2026.</p><span class="tag">Assessment</span></div>
+  </article>
+  <article class="date-card">
+    <div class="date-top"><div class="date-badge"><span class="month">Dec</span><span class="day">31</span></div><div class="date-year">2026<br/>Period Ends</div></div>
+    <div class="date-body"><h3>June 25 Operating Assessment Period Ends</h3><p>The June 25 notice states that its operating assessment continues through December 31, 2026.</p><span class="tag">Assessment</span></div>
+  </article>
 </div>
 </div></section>
 <section class="section" style="background:var(--soft)"><div class="wrap">
 <h2>Upcoming Meetings &amp; Events</h2>
-<p class="section-intro">Confirmed Board, shareholder, election, project, and building dates can be added here as notices are received.</p>
-<div class="timeline">
-<div class="event placeholder">
-<div class="event-date"><span class="month">Date</span><span class="day">TBD</span></div>
-<div><h3>Annual Shareholder Meeting</h3><p>No verified annual shareholder meeting date has been added yet.</p><span class="tag">Awaiting Confirmed Notice</span></div>
+<p class="section-intro">New dates will be added as official notices and meeting information are received.</p>
+<div class="upcoming-grid">
+  <article class="upcoming-card"><div class="upcoming-icon">31</div><div><h3>Annual Shareholder Meeting</h3><p>No verified annual shareholder meeting date has been announced yet.</p><span class="tag">Date TBD</span></div></article>
+  <article class="upcoming-card"><div class="upcoming-icon">+</div><div><h3>Future Building &amp; Community Dates</h3><p>Board meetings, election dates, project milestones, and community events will appear here once confirmed.</p><span class="tag">Updates Coming</span></div></article>
 </div>
-<div class="event placeholder">
-<div class="event-date"><span class="month">Future</span><span class="day">Event</span></div>
-<div><h3>Next Community Event</h3><p>Confirmed building events, election dates, project milestones, or other important dates will appear here.</p><span class="tag">Information Coming Soon</span></div>
-</div>
-</div>
-<div class="callout" style="margin-top:14px"><strong>Calendar note:</strong> Dates will only be added when they are supported by a verified Board, management, or shareholder notice.</div>
+<div class="calendar-note"><strong>Calendar note:</strong> Dates are added only when supported by a verified Board, management, or shareholder notice.</div>
 </div></section>
 <footer><div class="wrap footer-inner"><div class="footer-brand">Crestwood Community Hub</div><div>Resident information • Documents • Updates • Resources</div></div></footer>
 </body></html>
