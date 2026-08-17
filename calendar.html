@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Crestwood Community Hub - Calendar</title>
 <style>
 :root{--navy:#102a63;--teal:#18a99d;--ink:#22324a;--muted:#67758c;--line:#e3eaf2;--soft:#f7faff;--warn:#fff8e7}
@@ -23,36 +24,90 @@ a{color:inherit;text-decoration:none}.wrap{max-width:1120px;margin:auto;padding:
 footer{margin-top:24px;border-top:1px solid var(--line);background:#fafcff;padding:22px 0;color:#61708a;font-size:13px}.footer-inner{display:flex;justify-content:space-between;gap:20px}.footer-brand{font-weight:800;color:var(--navy)}
 @media(max-width:760px){.nav{display:none}.wrap{padding:0 14px}.hero-inner{padding:30px 0 26px;text-align:center}.hero h1{font-size:38px}.hero p{font-size:16px;margin-left:auto;margin-right:auto}.section{padding:24px 0}.section h2{font-size:23px}.event{grid-template-columns:1fr}.event-date{border-right:0;border-bottom:1px solid var(--line);padding-right:0;padding-bottom:10px}.footer-inner{display:block;text-align:center}.footer-inner div+div{margin-top:7px}}
 </style>
-</head>
-<body>
+<style>
+/* ===== Crestwood Option 2 visual refresh ===== */
+:root{
+  --cw-navy:#17385f;--cw-deep:#102a4c;--cw-teal:#18a99d;--cw-blue:#4d86c6;
+  --cw-purple:#7357d5;--cw-gold:#e7a72f;--cw-ink:#22324a;--cw-muted:#66758a;
+  --cw-line:#dfe7ef;--cw-soft:#f4f8fc;--cw-warm:#fbf8f2;
+  --cw-shadow:0 12px 30px rgba(28,52,83,.10);--cw-radius:20px;
+}
+html{scroll-behavior:smooth}
+body{
+  color:var(--cw-ink)!important;
+  background:linear-gradient(180deg,#f7fafe 0,#fff 420px)!important;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important;
+}
+.wrap{max-width:1160px!important;padding-left:24px!important;padding-right:24px!important}
+.hero{
+  position:relative!important;overflow:hidden!important;
+  background:linear-gradient(125deg,var(--page-dark,var(--cw-deep)),var(--page-accent,var(--cw-blue)))!important;
+  border:0!important;min-height:220px!important;display:flex!important;align-items:center!important;
+}
+.hero:before{content:"";position:absolute;width:330px;height:330px;border-radius:50%;right:-105px;top:-165px;background:rgba(255,255,255,.10)}
+.hero:after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;right:150px;bottom:-125px;border:28px solid rgba(255,255,255,.08)}
+.hero-inner{position:relative;z-index:2;padding-top:48px!important;padding-bottom:48px!important}
+.hero h1{margin:0 0 12px!important;color:#fff!important;font-size:clamp(38px,5vw,58px)!important;line-height:1.05!important;letter-spacing:-1.6px!important}
+.hero p{margin:0!important;color:rgba(255,255,255,.88)!important;font-size:18px!important;line-height:1.55!important;max-width:760px!important}
+.hero .callout{background:rgba(255,255,255,.12)!important;color:#fff!important;border-color:rgba(255,255,255,.25)!important;box-shadow:none!important}
+.section{padding-top:46px!important;padding-bottom:46px!important;border:0!important;background:#fff!important}
+.section[style*="background"]{background:linear-gradient(180deg,#f3f8fc,#f8fbfd)!important}
+.section h2{color:var(--cw-navy)!important;font-size:30px!important;letter-spacing:-.5px!important;margin-bottom:8px!important}
+.section h2:after{content:"";display:block;width:44px;height:4px;border-radius:999px;background:var(--page-accent,var(--cw-teal));margin-top:12px}
+.section-intro{color:var(--cw-muted)!important;font-size:16px!important;line-height:1.6!important;max-width:820px!important;margin-bottom:24px!important}
+.grid{gap:18px!important}
+.card,.doc,.project,.update,.event,.callout{
+  border:1px solid var(--cw-line)!important;border-radius:var(--cw-radius)!important;
+  box-shadow:var(--cw-shadow)!important;background:#fff!important;
+}
+.card,.project,.update,.event,.doc{transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+a.card:hover,a.doc:hover,.project:hover,.update:hover,.event:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(28,52,83,.14)!important;border-color:#cbd8e5!important}
+.card h3,.doc h3,.project h3,.update h3,.event h3{color:var(--cw-navy)!important;letter-spacing:-.2px!important}
+.card p,.doc p,.project p,.update p,.event p,.callout p{color:#5e6f85!important;line-height:1.55!important}
+.more,.meta{color:var(--page-accent,var(--cw-teal))!important;font-weight:800!important}
+.placeholder{border-style:dashed!important;background:linear-gradient(180deg,#fbfcfe,#f7f9fc)!important;box-shadow:none!important}
+.footer-inner{border-top:0!important;background:transparent!important}
+footer{background:#f5f8fb!important;border-top:1px solid var(--cw-line)!important}
+.footer-brand{color:var(--cw-navy)!important}
+@media(max-width:760px){
+  .wrap{padding-left:16px!important;padding-right:16px!important}
+  .hero{min-height:185px!important}.hero-inner{padding-top:36px!important;padding-bottom:36px!important}
+  .hero h1{font-size:38px!important}.hero p{font-size:16px!important}
+  .section{padding-top:34px!important;padding-bottom:34px!important}.section h2{font-size:26px!important}
+  .grid,.board-grid{grid-template-columns:1fr!important}
+}
+
+
+body.page-calendar{--page-dark:#17426a;--page-accent:#3e8bc9}
+.page-calendar .timeline{display:grid!important;gap:16px!important}.page-calendar .event{display:grid!important;grid-template-columns:90px 1fr!important;align-items:stretch!important;overflow:hidden!important;padding:0!important}
+.page-calendar .event-date{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;background:linear-gradient(180deg,#e9f4ff,#f4f9ff)!important;border-right:1px solid #d9e6f2!important;padding:18px 10px!important}
+.page-calendar .month{text-transform:uppercase!important;color:#3e8bc9!important;font-weight:900!important;font-size:11px!important;letter-spacing:.8px!important}.page-calendar .day{font-size:26px!important;font-weight:900!important;color:var(--cw-navy)!important}
+.page-calendar .event>div:not(.event-date){padding:20px 22px!important}.page-calendar .tag{display:inline-block!important;border:0!important;border-radius:999px!important;background:#edf5fb!important;color:#386e9a!important;padding:6px 10px!important;font-size:11px!important;font-weight:800!important}
+@media(max-width:560px){.page-calendar .event{grid-template-columns:72px 1fr!important}.page-calendar .event>div:not(.event-date){padding:16px!important}}
+</style></head>
+<body class="page-calendar">
 <section class="hero"><div class="wrap hero-inner">
 <h1>Calendar</h1>
 <p>Important Crestwood dates, assessment periods, fee changes, and future community meetings.</p>
 </div></section>
-
 <section class="section"><div class="wrap">
 <h2>Known Dates</h2>
 <p class="section-intro">Only dates already confirmed by notices or information provided to the Community Hub are listed below.</p>
 <div class="timeline">
-
 <div class="event">
 <div class="event-date"><span class="month">August</span><span class="day">1, 2026</span></div>
 <div><h3>Parking &amp; Bicycle Storage Fee Changes</h3><p>Monthly parking charges increase by $25, and bicycle storage fees become $12 per month per space.</p><span class="tag">Fee Change</span></div>
 </div>
-
 <div class="event">
 <div class="event-date"><span class="month">August</span><span class="day">2026</span></div>
 <div><h3>Line of Credit Repayment Assessment Begins</h3><p>The current line-of-credit repayment assessment begins in August 2026 and runs through December 2026.</p><span class="tag">Assessment</span></div>
 </div>
-
 <div class="event">
 <div class="event-date"><span class="month">December</span><span class="day">31, 2026</span></div>
 <div><h3>June 25 Operating Assessment Period Ends</h3><p>The June 25 notice states that its operating assessment continues through December 31, 2026.</p><span class="tag">Assessment</span></div>
 </div>
-
 </div>
 </div></section>
-
 <section class="section" style="background:var(--soft)"><div class="wrap">
 <h2>Upcoming Meetings &amp; Events</h2>
 <p class="section-intro">Confirmed Board, shareholder, election, project, and building dates can be added here as notices are received.</p>
@@ -68,6 +123,5 @@ footer{margin-top:24px;border-top:1px solid var(--line);background:#fafcff;paddi
 </div>
 <div class="callout" style="margin-top:14px"><strong>Calendar note:</strong> Dates will only be added when they are supported by a verified Board, management, or shareholder notice.</div>
 </div></section>
-
 <footer><div class="wrap footer-inner"><div class="footer-brand">Crestwood Community Hub</div><div>Resident information • Documents • Updates • Resources</div></div></footer>
 </body></html>

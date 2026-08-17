@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Crestwood Community Hub - Documents</title>
 <style>
 :root{--navy:#102a63;--teal:#18a99d;--blue:#3787f3;--purple:#7357d5;--ink:#22324a;--muted:#67758c;--line:#e3eaf2;--soft:#f7faff;--shadow:0 7px 22px rgba(23,50,92,.08)}
@@ -12,10 +13,69 @@
 .section{padding:30px 0}.section h2{margin:0 0 14px;color:var(--navy);font-size:26px}.section-intro{margin:-4px 0 18px;color:var(--muted);font-size:15px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.doc{display:flex;gap:14px;align-items:flex-start;padding:17px;border:1px solid var(--line);border-radius:16px;background:#fff;box-shadow:0 3px 12px rgba(32,55,90,.05);transition:.16s ease}.doc:hover{transform:translateY(-1px);box-shadow:var(--shadow)}.icon{width:44px;height:44px;min-width:44px;border-radius:12px;display:grid;place-items:center;background:#edf5ff;font-size:22px}.icon.teal{background:#e9fbf8}.icon.purple{background:#f2edff}.doc h3{margin:0;color:#1c3562;font-size:17px}.doc p{margin:5px 0 0;color:#617188;font-size:13px;line-height:1.45}.meta{margin-top:8px;color:var(--teal);font-size:12px;font-weight:800}.private-note{margin-top:26px;padding:15px 17px;border:1px solid #f0dba8;background:#fffaf0;border-radius:14px;color:#71541d;font-size:13px;line-height:1.5}footer{margin-top:24px;border-top:1px solid var(--line);background:#fafcff;padding:22px 0;color:#61708a;font-size:13px}.footer-inner{display:flex;justify-content:space-between;gap:20px}.footer-brand{font-weight:800;color:var(--navy)}
 @media(max-width:760px){.nav{display:none}.wrap{padding:0 14px}.hero-inner{padding:30px 0 26px;text-align:center}.hero h1{font-size:38px}.hero p{font-size:16px;margin-left:auto;margin-right:auto}.grid{grid-template-columns:1fr}.section{padding:24px 0}.section h2{font-size:23px}.doc{padding:15px}.footer-inner{display:block;text-align:center}.footer-inner div+div{margin-top:7px}}
 </style>
-</head>
-<body>
-<section class="hero"><div class="wrap hero-inner"><h1>Documents</h1><p>Important Crestwood financial, governing, assessment, and contractor documents in one place.</p></div></section>
+<style>
+/* ===== Crestwood Option 2 visual refresh ===== */
+:root{
+  --cw-navy:#17385f;--cw-deep:#102a4c;--cw-teal:#18a99d;--cw-blue:#4d86c6;
+  --cw-purple:#7357d5;--cw-gold:#e7a72f;--cw-ink:#22324a;--cw-muted:#66758a;
+  --cw-line:#dfe7ef;--cw-soft:#f4f8fc;--cw-warm:#fbf8f2;
+  --cw-shadow:0 12px 30px rgba(28,52,83,.10);--cw-radius:20px;
+}
+html{scroll-behavior:smooth}
+body{
+  color:var(--cw-ink)!important;
+  background:linear-gradient(180deg,#f7fafe 0,#fff 420px)!important;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important;
+}
+.wrap{max-width:1160px!important;padding-left:24px!important;padding-right:24px!important}
+.hero{
+  position:relative!important;overflow:hidden!important;
+  background:linear-gradient(125deg,var(--page-dark,var(--cw-deep)),var(--page-accent,var(--cw-blue)))!important;
+  border:0!important;min-height:220px!important;display:flex!important;align-items:center!important;
+}
+.hero:before{content:"";position:absolute;width:330px;height:330px;border-radius:50%;right:-105px;top:-165px;background:rgba(255,255,255,.10)}
+.hero:after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;right:150px;bottom:-125px;border:28px solid rgba(255,255,255,.08)}
+.hero-inner{position:relative;z-index:2;padding-top:48px!important;padding-bottom:48px!important}
+.hero h1{margin:0 0 12px!important;color:#fff!important;font-size:clamp(38px,5vw,58px)!important;line-height:1.05!important;letter-spacing:-1.6px!important}
+.hero p{margin:0!important;color:rgba(255,255,255,.88)!important;font-size:18px!important;line-height:1.55!important;max-width:760px!important}
+.hero .callout{background:rgba(255,255,255,.12)!important;color:#fff!important;border-color:rgba(255,255,255,.25)!important;box-shadow:none!important}
+.section{padding-top:46px!important;padding-bottom:46px!important;border:0!important;background:#fff!important}
+.section[style*="background"]{background:linear-gradient(180deg,#f3f8fc,#f8fbfd)!important}
+.section h2{color:var(--cw-navy)!important;font-size:30px!important;letter-spacing:-.5px!important;margin-bottom:8px!important}
+.section h2:after{content:"";display:block;width:44px;height:4px;border-radius:999px;background:var(--page-accent,var(--cw-teal));margin-top:12px}
+.section-intro{color:var(--cw-muted)!important;font-size:16px!important;line-height:1.6!important;max-width:820px!important;margin-bottom:24px!important}
+.grid{gap:18px!important}
+.card,.doc,.project,.update,.event,.callout{
+  border:1px solid var(--cw-line)!important;border-radius:var(--cw-radius)!important;
+  box-shadow:var(--cw-shadow)!important;background:#fff!important;
+}
+.card,.project,.update,.event,.doc{transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+a.card:hover,a.doc:hover,.project:hover,.update:hover,.event:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(28,52,83,.14)!important;border-color:#cbd8e5!important}
+.card h3,.doc h3,.project h3,.update h3,.event h3{color:var(--cw-navy)!important;letter-spacing:-.2px!important}
+.card p,.doc p,.project p,.update p,.event p,.callout p{color:#5e6f85!important;line-height:1.55!important}
+.more,.meta{color:var(--page-accent,var(--cw-teal))!important;font-weight:800!important}
+.placeholder{border-style:dashed!important;background:linear-gradient(180deg,#fbfcfe,#f7f9fc)!important;box-shadow:none!important}
+.footer-inner{border-top:0!important;background:transparent!important}
+footer{background:#f5f8fb!important;border-top:1px solid var(--cw-line)!important}
+.footer-brand{color:var(--cw-navy)!important}
+@media(max-width:760px){
+  .wrap{padding-left:16px!important;padding-right:16px!important}
+  .hero{min-height:185px!important}.hero-inner{padding-top:36px!important;padding-bottom:36px!important}
+  .hero h1{font-size:38px!important}.hero p{font-size:16px!important}
+  .section{padding-top:34px!important;padding-bottom:34px!important}.section h2{font-size:26px!important}
+  .grid,.board-grid{grid-template-columns:1fr!important}
+}
 
+
+body.page-documents{--page-dark:#16385d;--page-accent:#d59a2c}
+.page-documents .grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:18px!important}.page-documents .doc{padding:22px!important;display:flex!important;gap:16px!important;align-items:flex-start!important;position:relative!important;overflow:hidden!important}
+.page-documents .doc:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:linear-gradient(90deg,var(--cw-gold),var(--cw-teal))}
+.page-documents .icon{width:48px!important;height:48px!important;min-width:48px!important;border-radius:14px!important;background:#fff4dc!important;display:grid!important;place-items:center!important;font-size:24px!important}.page-documents .icon.teal{background:#e6f7f4!important}.page-documents .icon.purple{background:#efebff!important}
+.page-documents .private-note{background:linear-gradient(135deg,#edf8f7,#f7fbfb)!important;border:1px solid #cfe9e5!important;border-radius:18px!important;padding:18px 20px!important}
+@media(max-width:720px){.page-documents .grid{grid-template-columns:1fr!important}}
+</style></head>
+<body class="page-documents">
+<section class="hero"><div class="wrap hero-inner"><h1>Documents</h1><p>Important Crestwood financial, governing, assessment, and contractor documents in one place.</p></div></section>
 <section class="section"><div class="wrap"><h2>Financial &amp; Assessment Documents</h2><p class="section-intro">Audited financial information and shareholder notices related to assessments and charges.</p><div class="grid">
 <a class="doc" href="docs/2025-audited-financial-statements.pdf" target="_blank"><span class="icon">📊</span><span><h3>2025 Audited Financial Statements</h3><p>Audited financial statements for Crestwood Apartment Owners Corp. covering 2025 and 2024.</p><div class="meta">Open PDF →</div></span></a>
 <a class="doc" href="docs/2025-financials-explained-for-shareholders.pdf" target="_blank"><span class="icon teal">💡</span><span><h3>2025 Financials Explained for Shareholders</h3><p>A plain-language guide to the audited statements, including where money was spent, year-over-year expense changes, cash levels, assessments, reserves, and the 2029 mortgage issue.</p><div class="meta">Open PDF →</div></span></a>
@@ -23,13 +83,10 @@
 <a class="doc" href="docs/assessment-increase-june-25-2026.pdf" target="_blank"><span class="icon teal">📢</span><span><h3>Assessment &amp; Fee Update - June 25, 2026</h3><p>Notice continuing the current assessment through December 31, 2026 and announcing parking and bicycle storage fee changes.</p><div class="meta">Open PDF →</div></span></a>
 <a class="doc" href="docs/2025-2026-coop-tax-benefits.pdf" target="_blank"><span class="icon purple">🏦</span><span><h3>2025/2026 Co-op Tax Benefits</h3><p>Notice regarding NYC tax credits, exemptions, and the related assessment reflected on the May 2026 maintenance statement.</p><div class="meta">Open PDF →</div></span></a>
 </div></div></section>
-
 <section class="section" style="background:var(--soft)"><div class="wrap"><h2>Governing Documents</h2><p class="section-intro">Core documents governing the cooperative and shareholder tenancy.</p><div class="grid">
 <a class="doc" href="docs/crestwood-bylaws.pdf" target="_blank"><span class="icon purple">🏛️</span><span><h3>Crestwood By-Laws</h3><p>Corporate by-laws covering shareholder meetings, directors, officers, elections, governance, and related procedures.</p><div class="meta">Open PDF →</div></span></a>
 <a class="doc" href="docs/proprietary-lease.pdf" target="_blank"><span class="icon">📘</span><span><h3>Proprietary Lease</h3><p>The Crestwood proprietary lease governing the relationship between the cooperative and shareholder-tenants.</p><div class="meta">Open PDF →</div></span></a>
 </div></div></section>
-
-
 <section class="section"><div class="wrap">
 <h2>Building &amp; Property Documents</h2>
 <p class="section-intro">Reference documents describing the building layout and physical property.</p>
@@ -38,7 +95,6 @@
 <a class="doc" href="https://sites.google.com/view/crestwoodcommunityhub/resident-directory" target="_top"><span class="icon teal">👥</span><span><h3>Resident Directory</h3><p>View the Crestwood resident directory, organized by floor and apartment. <strong>This directory is a work in progress and is not yet complete.</strong></p><div class="meta">View Resident Directory →</div></span></a>
 </div>
 </div></section>
-
 <section class="section"><div class="wrap"><h2>Contractor &amp; Renovation Resources</h2><p class="section-intro">Documents to provide to contractors and vendors working at Crestwood.</p><div class="grid">
 <a class="doc" href="docs/contractor-coi-instructions.pdf" target="_blank"><span class="icon teal">🛠️</span><span><h3>Contractor COI Instructions</h3><p>Building owner, managing agent, and property information contractors should use when preparing a Certificate of Insurance.</p><div class="meta">Open PDF →</div></span></a>
 <a class="doc" href="docs/sample-coi.pdf" target="_blank"><span class="icon teal">🧾</span><span><h3>Sample Certificate of Insurance</h3><p>Sample COI showing the insurance limits and certificate-holder/additional-insured information expected for vendors and contractors.</p><div class="meta">Open PDF →</div></span></a>

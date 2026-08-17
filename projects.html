@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Crestwood Community Hub - Projects</title>
 <style>
 :root{
@@ -32,18 +33,77 @@ a{color:inherit;text-decoration:none}.wrap{max-width:1120px;margin:auto;padding:
 footer{margin-top:24px;border-top:1px solid var(--line);background:#fafcff;padding:22px 0;color:#61708a;font-size:13px}.footer-inner{display:flex;justify-content:space-between;gap:20px}.footer-brand{font-weight:800;color:var(--navy)}
 @media(max-width:760px){.nav{display:none}.wrap{padding:0 14px}.hero-inner{padding:30px 0 26px;text-align:center}.hero h1{font-size:38px}.hero p{font-size:16px;margin-left:auto;margin-right:auto}.grid,.facts{grid-template-columns:1fr}.section{padding:24px 0}.section h2{font-size:23px}.footer-inner{display:block;text-align:center}.footer-inner div+div{margin-top:7px}}
 </style>
-</head>
-<body>
+<style>
+/* ===== Crestwood Option 2 visual refresh ===== */
+:root{
+  --cw-navy:#17385f;--cw-deep:#102a4c;--cw-teal:#18a99d;--cw-blue:#4d86c6;
+  --cw-purple:#7357d5;--cw-gold:#e7a72f;--cw-ink:#22324a;--cw-muted:#66758a;
+  --cw-line:#dfe7ef;--cw-soft:#f4f8fc;--cw-warm:#fbf8f2;
+  --cw-shadow:0 12px 30px rgba(28,52,83,.10);--cw-radius:20px;
+}
+html{scroll-behavior:smooth}
+body{
+  color:var(--cw-ink)!important;
+  background:linear-gradient(180deg,#f7fafe 0,#fff 420px)!important;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important;
+}
+.wrap{max-width:1160px!important;padding-left:24px!important;padding-right:24px!important}
+.hero{
+  position:relative!important;overflow:hidden!important;
+  background:linear-gradient(125deg,var(--page-dark,var(--cw-deep)),var(--page-accent,var(--cw-blue)))!important;
+  border:0!important;min-height:220px!important;display:flex!important;align-items:center!important;
+}
+.hero:before{content:"";position:absolute;width:330px;height:330px;border-radius:50%;right:-105px;top:-165px;background:rgba(255,255,255,.10)}
+.hero:after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;right:150px;bottom:-125px;border:28px solid rgba(255,255,255,.08)}
+.hero-inner{position:relative;z-index:2;padding-top:48px!important;padding-bottom:48px!important}
+.hero h1{margin:0 0 12px!important;color:#fff!important;font-size:clamp(38px,5vw,58px)!important;line-height:1.05!important;letter-spacing:-1.6px!important}
+.hero p{margin:0!important;color:rgba(255,255,255,.88)!important;font-size:18px!important;line-height:1.55!important;max-width:760px!important}
+.hero .callout{background:rgba(255,255,255,.12)!important;color:#fff!important;border-color:rgba(255,255,255,.25)!important;box-shadow:none!important}
+.section{padding-top:46px!important;padding-bottom:46px!important;border:0!important;background:#fff!important}
+.section[style*="background"]{background:linear-gradient(180deg,#f3f8fc,#f8fbfd)!important}
+.section h2{color:var(--cw-navy)!important;font-size:30px!important;letter-spacing:-.5px!important;margin-bottom:8px!important}
+.section h2:after{content:"";display:block;width:44px;height:4px;border-radius:999px;background:var(--page-accent,var(--cw-teal));margin-top:12px}
+.section-intro{color:var(--cw-muted)!important;font-size:16px!important;line-height:1.6!important;max-width:820px!important;margin-bottom:24px!important}
+.grid{gap:18px!important}
+.card,.doc,.project,.update,.event,.callout{
+  border:1px solid var(--cw-line)!important;border-radius:var(--cw-radius)!important;
+  box-shadow:var(--cw-shadow)!important;background:#fff!important;
+}
+.card,.project,.update,.event,.doc{transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+a.card:hover,a.doc:hover,.project:hover,.update:hover,.event:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(28,52,83,.14)!important;border-color:#cbd8e5!important}
+.card h3,.doc h3,.project h3,.update h3,.event h3{color:var(--cw-navy)!important;letter-spacing:-.2px!important}
+.card p,.doc p,.project p,.update p,.event p,.callout p{color:#5e6f85!important;line-height:1.55!important}
+.more,.meta{color:var(--page-accent,var(--cw-teal))!important;font-weight:800!important}
+.placeholder{border-style:dashed!important;background:linear-gradient(180deg,#fbfcfe,#f7f9fc)!important;box-shadow:none!important}
+.footer-inner{border-top:0!important;background:transparent!important}
+footer{background:#f5f8fb!important;border-top:1px solid var(--cw-line)!important}
+.footer-brand{color:var(--cw-navy)!important}
+@media(max-width:760px){
+  .wrap{padding-left:16px!important;padding-right:16px!important}
+  .hero{min-height:185px!important}.hero-inner{padding-top:36px!important;padding-bottom:36px!important}
+  .hero h1{font-size:38px!important}.hero p{font-size:16px!important}
+  .section{padding-top:34px!important;padding-bottom:34px!important}.section h2{font-size:26px!important}
+  .grid,.board-grid{grid-template-columns:1fr!important}
+}
+
+
+body.page-projects{--page-dark:#16385d;--page-accent:#7357d5}
+.page-projects .grid{gap:20px!important}.page-projects .project{padding:24px!important;position:relative!important;overflow:hidden!important}
+.page-projects .project:after{content:"";position:absolute;width:100px;height:100px;border-radius:50%;right:-55px;bottom:-55px;background:color-mix(in srgb,var(--page-accent) 12%, transparent)}
+.page-projects .status{border:0!important;border-radius:999px!important;font-size:11px!important;text-transform:uppercase!important;letter-spacing:.5px!important;padding:6px 10px!important}
+.page-projects .complete{background:#eaf7f2!important;color:#15785d!important}.page-projects .active{background:#eeeaff!important;color:#5c46b6!important}.page-projects .future{background:#f2f4f7!important;color:#68778a!important}
+.page-projects .facts{gap:10px!important}.page-projects .fact{background:#f7f9fc!important;border-radius:13px!important;border:1px solid #e3e9f0!important;padding:14px!important}
+.page-projects .callout{background:linear-gradient(135deg,#f0ecff,#f7f5ff)!important;border-color:#ded5ff!important}
+</style></head>
+<body class="page-projects">
 <section class="hero"><div class="wrap hero-inner">
 <h1>Building Projects</h1>
 <p>Track major Crestwood improvements, completed work, and project-related financial information in one place.</p>
 </div></section>
-
 <section class="section"><div class="wrap">
 <h2>Completed Projects</h2>
 <p class="section-intro">Projects and improvements supported by information already provided to shareholders.</p>
 <div class="grid">
-
 <div class="project">
 <span class="status complete">Completed</span>
 <h3>Lobby &amp; Hallway Renovation</h3>
@@ -56,7 +116,6 @@ footer{margin-top:24px;border-top:1px solid var(--line);background:#fafcff;paddi
 </div>
 <a class="more" href="documents.html">View supporting documents →</a>
 </div>
-
 <div class="project">
 <span class="status complete">Completed / Funded</span>
 <h3>Front Walkway &amp; Related Project Costs</h3>
@@ -67,10 +126,8 @@ footer{margin-top:24px;border-top:1px solid var(--line);background:#fafcff;paddi
 </div>
 <a class="more" href="docs/line-of-credit-assessment-notice.pdf" target="_blank">Open assessment notice →</a>
 </div>
-
 </div>
 </div></section>
-
 <section class="section" style="background:var(--soft)"><div class="wrap">
 <h2>Current Funding / Follow-Up</h2>
 <div class="grid">
@@ -84,7 +141,6 @@ footer{margin-top:24px;border-top:1px solid var(--line);background:#fafcff;paddi
 </div>
 <a class="more" href="documents.html">See assessment documents →</a>
 </div>
-
 <div class="project">
 <span class="status active">Planned / In Progress</span>
 <h3>Front Lobby Carpet Replacement</h3>
@@ -94,7 +150,6 @@ footer{margin-top:24px;border-top:1px solid var(--line);background:#fafcff;paddi
 <div class="fact"><strong>Front Lobby</strong><span>Carpet replacement</span></div>
 </div>
 </div>
-
 <div class="project">
 <span class="status active">Insurance Follow-Up</span>
 <h3>Rainstorm Damage &amp; Insurance Deductible</h3>
@@ -107,7 +162,6 @@ footer{margin-top:24px;border-top:1px solid var(--line);background:#fafcff;paddi
 </div>
 </div>
 </div></section>
-
 <section class="section"><div class="wrap">
 <h2>Future Projects</h2>
 <p class="section-intro">Add confirmed future work here as the Board or management provides project details.</p>
@@ -117,6 +171,5 @@ footer{margin-top:24px;border-top:1px solid var(--line);background:#fafcff;paddi
 </div>
 <div class="callout" style="margin-top:14px"><strong>Project transparency goal:</strong> For major projects, this page should eventually show the approved scope, budget, contractor, change orders, funding source, final cost, and completion status whenever that information is available.</div>
 </div></section>
-
 <footer><div class="wrap footer-inner"><div class="footer-brand">Crestwood Community Hub</div><div>Resident information • Documents • Updates • Resources</div></div></footer>
 </body></html>

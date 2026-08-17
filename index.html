@@ -502,6 +502,83 @@ footer{margin-top:24px;border-top:1px solid var(--line);background:#fafcff;paddi
   .assessment-purpose{font-size:11px;padding:11px 12px}
 }
 
+
+/* ===== Option 2 Homepage Visual Refresh ===== */
+:root{
+  --navy:#17365f;
+  --navy2:#244b79;
+  --teal:#159f96;
+  --sky:#eaf5fb;
+  --cream:#fbf7ef;
+  --sage:#eef7f2;
+  --lav:#f3f0fb;
+  --ink:#26384f;
+  --muted:#66768b;
+  --line:#dce6ef;
+  --shadow:0 12px 34px rgba(35,61,92,.10);
+}
+body{background:#f7fafc;color:var(--ink)}
+.hero{
+  background:linear-gradient(135deg,#edf7fb 0%,#f8fbfd 48%,#f7f1e6 100%);
+  border-bottom:0;
+  position:relative;
+  overflow:hidden;
+}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;filter:blur(1px);opacity:.45;pointer-events:none}
+.hero:before{width:260px;height:260px;background:#d7eee9;left:-110px;top:-80px}
+.hero:after{width:330px;height:330px;background:#eadfc8;right:-150px;bottom:-210px}
+.hero-grid{min-height:430px;position:relative;z-index:1;gap:48px}
+.hero h1{font-size:clamp(46px,6vw,76px);color:var(--navy);letter-spacing:-2.4px}
+.hero p{font-size:19px;color:#52647a;max-width:510px}
+.hero-kicker{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.82);border:1px solid #d9e6ed;color:var(--navy2);padding:8px 12px;border-radius:999px;font-size:12px;font-weight:800;margin-bottom:16px;box-shadow:0 4px 14px rgba(33,69,101,.06)}
+.hero-kicker-dot{width:8px;height:8px;border-radius:50%;background:var(--teal)}
+.photo-card{min-height:350px;border:7px solid rgba(255,255,255,.75);box-shadow:0 22px 48px rgba(29,57,88,.18)}
+.photo-label{background:rgba(23,54,95,.88);color:#fff;backdrop-filter:blur(8px)}
+.status-section{background:transparent;padding:30px 0 8px}
+.assessment-card{border:0;background:linear-gradient(135deg,#17365f,#244b79);box-shadow:0 18px 42px rgba(23,54,95,.18);color:white;padding:25px 26px}
+.assessment-card-head h2,.assessment-card-head p{color:#fff}
+.assessment-card-head p{opacity:.78}
+.assessment-active{background:#dff6ee;color:#247258}
+.date-box,.countdown-main,.fact{background:rgba(255,255,255,.96);border:0;box-shadow:0 3px 12px rgba(13,38,68,.08)}
+.assessment-progress-head{color:#fff}
+.assessment-progress-track{background:rgba(255,255,255,.22)}
+.assessment-progress-fill{background:linear-gradient(90deg,#66d5ca,#b8efe8)}
+.assessment-purpose{background:rgba(255,255,255,.11);color:#e7edf5}
+.assessment-purpose strong{color:#fff}.countdown-foot{color:#d7e2ee}
+.section{padding:44px 0}
+.section-head{text-align:center;max-width:690px;margin:0 auto 24px}
+.section-kicker{display:inline-block;text-transform:uppercase;letter-spacing:1.4px;font-size:11px;font-weight:900;color:var(--teal);margin-bottom:7px}
+.section-head h2,.section h2{font-size:30px;color:var(--navy);margin-bottom:8px}
+.section-head p{margin:0;color:var(--muted);font-size:15px;line-height:1.55}
+.quick-section{background:#fff}
+.quick-grid{grid-template-columns:repeat(3,1fr);gap:18px}
+.quick{min-height:105px;border:0;border-radius:20px;padding:18px;background:#f5f9fc;box-shadow:none;position:relative;overflow:hidden}
+.quick:nth-child(3n+1){background:var(--sky)}
+.quick:nth-child(3n+2){background:var(--sage)}
+.quick:nth-child(3n+3){background:var(--lav)}
+.quick:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.icon{width:48px;height:48px;border-radius:15px;background:#fff!important;box-shadow:0 5px 14px rgba(38,56,79,.08)}
+.quick-title{font-size:16px}.arrow{font-size:23px;color:#63758d}
+.happening{background:linear-gradient(180deg,#f7fafc,#eef4f7)}
+.cards3{gap:20px}
+.info-card{border:0;border-radius:22px;padding:22px;min-height:190px;box-shadow:0 8px 24px rgba(31,54,82,.07);background:#fff;position:relative;overflow:hidden}
+.info-card:before{content:"";position:absolute;left:0;top:0;width:100%;height:5px;background:var(--teal)}
+.info-card.purple:before{background:#8269c9}.info-card.warn:before{background:#d99b2b}
+.info-card h3{font-size:19px;color:var(--navy)}
+.info-card p{font-size:14px;line-height:1.6}
+.more{display:inline-block;margin-top:14px}
+.notices-section{background:#fff}
+.notice-grid{grid-template-columns:1.25fr 1fr 1fr;gap:16px}
+.notice{border:0;border-radius:18px;padding:18px;background:#f7fafc;min-height:118px;align-items:flex-start}
+.notice:first-child{background:var(--cream)}
+.notice:nth-child(2){background:var(--sky)}
+.notice:nth-child(3){background:var(--sage)}
+.notice .icon{border-radius:14px;width:42px;height:42px;min-width:42px;font-size:18px}
+.notice strong{font-size:15px;color:var(--navy);margin-bottom:5px}.notice small{display:block;line-height:1.5}
+footer{margin-top:0;background:#17365f;color:#d6e1ed;border-top:0;padding:28px 0}.footer-brand{color:#fff}
+@media(max-width:860px){.quick-grid{grid-template-columns:1fr 1fr}.notice-grid{grid-template-columns:1fr}.hero-grid{gap:28px}}
+@media(max-width:600px){.hero-grid{padding-top:30px!important}.hero-kicker{margin-bottom:12px}.hero h1{font-size:43px!important}.photo-card{min-height:230px!important;border-width:4px}.assessment-card{padding:18px!important}.section{padding:32px 0}.section-head h2,.section h2{font-size:26px!important}.quick-grid{grid-template-columns:1fr!important}.quick{min-height:82px!important}.cards3{gap:14px}.info-card{min-height:auto}.notice{min-height:auto}}
+
 </style>
 </head>
 <body>
@@ -509,6 +586,7 @@ footer{margin-top:24px;border-top:1px solid var(--line);background:#fafcff;paddi
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
+      <div class="hero-kicker"><span class="hero-kicker-dot"></span> Resident Information &amp; Resources</div>
       <h1>Crestwood<br>Community Hub</h1>
       <div class="accent"></div>
       <p>Building updates, documents, requests, and resources in one place.</p>
@@ -600,9 +678,13 @@ footer{margin-top:24px;border-top:1px solid var(--line);background:#fafcff;paddi
 </section>
 
 
-<section class="section" id="updates">
+<section class="section quick-section" id="updates">
   <div class="wrap">
-    <h2>Quick Actions</h2>
+    <div class="section-head">
+      <span class="section-kicker">Start Here</span>
+      <h2>Quick Actions</h2>
+      <p>Find the most-used Crestwood information and services in just a few taps.</p>
+    </div>
     <div class="quick-grid">
       <a class="quick" href="building-updates.html"><span class="icon">📢</span><span class="quick-title">Building Updates</span><span class="arrow">›</span></a>
       <a class="quick" href="submit-request.html"><span class="icon teal">🔧</span><span class="quick-title">Submit a Request</span><span class="arrow">›</span></a>
@@ -612,13 +694,18 @@ footer{margin-top:24px;border-top:1px solid var(--line);background:#fafcff;paddi
       <a class="quick" href="board-governance.html"><span class="icon">🏛️</span><span class="quick-title">Board &amp; Governance</span><span class="arrow">›</span></a>
       <a class="quick" href="resident-resources.html"><span class="icon teal">📚</span><span class="quick-title">Resident Resources</span><span class="arrow">›</span></a>
       <a class="quick" href="contacts.html"><span class="icon">☎️</span><span class="quick-title">Contacts</span><span class="arrow">›</span></a>
+      <a class="quick" href="https://sites.google.com/view/crestwoodcommunityhub/resident-directory" target="_top"><span class="icon purple">🏠</span><span class="quick-title">Resident Directory</span><span class="arrow">›</span></a>
     </div>
   </div>
 </section>
 
 <section class="section happening">
   <div class="wrap">
-    <h2>What’s Happening</h2>
+    <div class="section-head">
+      <span class="section-kicker">Around Crestwood</span>
+      <h2>What’s Happening</h2>
+      <p>Current building information and items residents may want to know about.</p>
+    </div>
     <div class="cards3">
       <article class="info-card">
         <div class="eyebrow">Latest Update</div>
@@ -627,10 +714,10 @@ footer{margin-top:24px;border-top:1px solid var(--line);background:#fafcff;paddi
         <a class="more" href="documents.html" target="_top">See Documents →</a>
       </article>
       <article class="info-card purple">
-        <div class="eyebrow">Upcoming Event</div>
-        <h3>Next Community Event</h3>
-        <p>Add the date, time, and location of the next verified Crestwood event here.</p>
-        <div class="more">View details →</div>
+        <div class="eyebrow">Resident Resource</div>
+        <h3>Resident Directory Now Available</h3>
+        <p>The resident directory is available to authorized residents. It is a work in progress and will be updated as additional information is confirmed.</p>
+        <a class="more" href="https://sites.google.com/view/crestwoodcommunityhub/resident-directory" target="_top">View Directory →</a>
       </article>
       <article class="info-card warn">
         <div class="eyebrow">Fee Update</div>
@@ -643,13 +730,17 @@ footer{margin-top:24px;border-top:1px solid var(--line);background:#fafcff;paddi
 </section>
 
 
-<section class="section">
+<section class="section notices-section">
   <div class="wrap">
-    <h2>Recent Notices</h2>
+    <div class="section-head">
+      <span class="section-kicker">Recent Information</span>
+      <h2>Recent Notices</h2>
+      <p>Important financial and building notices in one easy-to-scan area.</p>
+    </div>
     <div class="notice-grid">
       <div class="notice"><span class="icon">📄</span><div><strong>2025/2026 Co-op Tax Benefits</strong><small>NYC tax credits and exemptions were issued for the 2025/2026 fiscal year. The Board notice states that an assessment equivalent to $6.06 per share would appear on the May 2026 maintenance statement.</small></div></div>
-      <div class="notice"><span class="icon">📄</span><div><strong>Future Building Notice</strong><small>New verified Board or management notices will appear here.</small></div></div>
-      <div class="notice"><span class="icon">📄</span><div><strong>Future Building Notice</strong><small>New verified Board or management notices will appear here.</small></div></div>
+      <div class="notice"><span class="icon">💳</span><div><strong>Line of Credit Repayment Assessment</strong><small>The five-month assessment runs from August through December 2026 at $0.668583 per share per month.</small></div></div>
+      <div class="notice"><span class="icon">🚗</span><div><strong>Parking &amp; Bicycle Storage</strong><small>Updated parking and bicycle storage charges took effect August 1, 2026.</small></div></div>
     </div>
   </div>
 </section>
