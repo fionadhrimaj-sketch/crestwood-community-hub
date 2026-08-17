@@ -87,6 +87,27 @@ body.page-contacts{--page-dark:#17385d;--page-accent:#4d86c6}
 .page-contacts .grid{gap:16px!important}.page-contacts .card{padding:22px!important}.page-contacts .label{display:inline-block!important;border:0!important;border-radius:999px!important;background:#edf3f8!important;color:#55708d!important;padding:5px 9px!important;font-size:11px!important;font-weight:900!important;text-transform:uppercase!important;letter-spacing:.4px!important}
 .page-contacts .contact-line{background:#f7fafc!important;border:1px solid #e1e8ef!important;border-radius:13px!important;padding:12px 14px!important;margin-top:9px!important}.page-contacts .callout{background:linear-gradient(135deg,#edf5fd,#f8fbfe)!important;border-color:#d3e2f1!important}
 .page-contacts .section:first-of-type .card{border-left:5px solid #4d86c6!important}
+
+/* Strong reelection highlighting */
+.reelection-card{
+  position:relative!important;
+  border:2px solid #e0a126!important;
+  background:linear-gradient(180deg,#fffdf7,#fff9e9)!important;
+  box-shadow:0 14px 32px rgba(176,116,17,.14)!important;
+}
+.reelection-card:before{
+  content:"";position:absolute;left:-2px;top:-2px;bottom:-2px;width:7px;
+  border-radius:20px 0 0 20px;background:#e0a126;
+}
+.reelection-badge{
+  display:inline-flex!important;align-items:center!important;gap:7px!important;
+  margin-top:13px!important;padding:7px 11px!important;border-radius:999px!important;
+  background:#fff0c8!important;color:#7a4b00!important;border:1px solid #e9c260!important;
+  font-size:11px!important;font-weight:900!important;text-transform:uppercase!important;
+  letter-spacing:.055em!important;line-height:1!important;
+}
+.reelection-badge:before{content:"★";font-size:10px}
+@media(max-width:760px){.reelection-badge{font-size:11px!important;padding:8px 12px!important}}
 </style></head>
 <body class="page-contacts">
 <section class="hero"><div class="wrap hero-inner">
@@ -101,8 +122,11 @@ body.page-contacts{--page-dark:#17385d;--page-accent:#4d86c6}
 <span class="label">Property Manager</span>
 <h3>Litsa Douris</h3>
 <p>Metro Management Development, Inc.</p>
-<div class="contact-line"><strong>Phone:</strong> (718) 593-8912</div>
-<div class="contact-line"><strong>Office:</strong> 2001 Marcus Avenue, Suite S262, Lake Success, NY 11042</div>
+<div class="contact-line"><strong>Main:</strong> <a href="tel:+17187067755">(718) 706-7755</a></div>
+<div class="contact-line"><strong>Direct:</strong> <a href="tel:+17185938912">(718) 593-8912</a></div>
+<div class="contact-line"><strong>Fax:</strong> (718) 706-7760</div>
+<div class="contact-line"><strong>Email:</strong> <a href="mailto:ldouris@metromanagementdev.com">ldouris@metromanagementdev.com</a></div>
+<div class="contact-line"><strong>Website:</strong> <a href="https://www.metromanagementdev.com" target="_blank" rel="noopener noreferrer">www.metromanagementdev.com</a></div>
 </div>
 <div class="card">
 <span class="label">Tax Abatement Questions</span>
@@ -119,9 +143,9 @@ body.page-contacts{--page-dark:#17385d;--page-accent:#4d86c6}
 <div class="grid">
 <div class="card"><span class="label">President / Chair</span><h3>Claudine Gruen</h3></div>
 <div class="card"><span class="label">Vice President</span><h3>Michael Anastasiou</h3></div>
-<div class="card"><span class="label">Treasurer</span><h3>Teresa Pikner</h3></div>
+<div class="card reelection-card"><span class="label">Treasurer</span><h3>Teresa Pikner</h3><div class="reelection-badge">Up for Reelection</div></div>
 <div class="card"><span class="label">Secretary</span><h3>Linda Sweringen</h3></div>
-<div class="card"><span class="label">Director</span><h3>Geraldine Canal</h3></div>
+<div class="card reelection-card"><span class="label">Director</span><h3>Geraldine Canal</h3><div class="reelection-badge">Up for Reelection</div></div>
 <div class="card"><span class="label">Director</span><h3>Nicolay Georgiev</h3></div>
 </div>
 <div class="callout" style="margin-top:14px"><strong>Board contact method:</strong> No verified general Board email or mailing address has been added yet. Once one is confirmed, it can be placed here and connected to the Submit a Request page.</div>

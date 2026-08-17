@@ -95,6 +95,27 @@ footer{background:#f5f8fb!important;border-top:1px solid var(--cw-line)!importan
 body.page-board-governance{--page-dark:#17385d;--page-accent:#7357d5}
 .page-board-governance .board-grid{gap:16px!important}.page-board-governance .board-grid .card{padding:20px!important;border-top:4px solid #d8d0fb!important}.page-board-governance .board-grid .card:nth-child(1){border-top-color:#18a99d!important}.page-board-governance .board-grid .card:nth-child(3){border-top-color:#d8a43b!important}.page-board-governance .role{border:0!important;border-radius:999px!important;background:#edf3f8!important;color:#53667e!important;padding:5px 9px!important}.page-board-governance .role.teal{background:#e7f7f4!important;color:#117b72!important}.page-board-governance .role.purple{background:#efebff!important;color:#5d48b3!important}
 .page-board-governance .callout{background:linear-gradient(135deg,#f0edff,#faf9ff)!important;border-color:#ddd5ff!important}.page-board-governance .fact{background:#fff!important;border:1px solid #e2e8ef!important;border-radius:14px!important;padding:16px!important}
+
+/* Strong reelection highlighting */
+.reelection-card{
+  position:relative!important;
+  border:2px solid #e0a126!important;
+  background:linear-gradient(180deg,#fffdf7,#fff9e9)!important;
+  box-shadow:0 14px 32px rgba(176,116,17,.14)!important;
+}
+.reelection-card:before{
+  content:"";position:absolute;left:-2px;top:-2px;bottom:-2px;width:7px;
+  border-radius:20px 0 0 20px;background:#e0a126;
+}
+.reelection-badge{
+  display:inline-flex!important;align-items:center!important;gap:7px!important;
+  margin-top:13px!important;padding:7px 11px!important;border-radius:999px!important;
+  background:#fff0c8!important;color:#7a4b00!important;border:1px solid #e9c260!important;
+  font-size:11px!important;font-weight:900!important;text-transform:uppercase!important;
+  letter-spacing:.055em!important;line-height:1!important;
+}
+.reelection-badge:before{content:"★";font-size:10px}
+@media(max-width:760px){.reelection-badge{font-size:11px!important;padding:8px 12px!important}}
 </style></head>
 <body class="page-board-governance">
 <section class="hero"><div class="wrap hero-inner">
@@ -107,9 +128,9 @@ body.page-board-governance{--page-dark:#17385d;--page-accent:#7357d5}
 <div class="board-grid">
 <div class="card"><span class="role teal">President / Chair</span><h3>Claudine Gruen</h3></div>
 <div class="card"><span class="role">Vice President</span><h3>Michael Anastasiou</h3></div>
-<div class="card"><span class="role purple">Treasurer</span><h3>Teresa Pikner</h3></div>
+<div class="card reelection-card"><span class="role purple">Treasurer</span><h3>Teresa Pikner</h3><div class="reelection-badge">Up for Reelection</div></div>
 <div class="card"><span class="role">Secretary</span><h3>Linda Sweringen</h3></div>
-<div class="card"><span class="role gray">Director</span><h3>Geraldine Canal</h3></div>
+<div class="card reelection-card"><span class="role gray">Director</span><h3>Geraldine Canal</h3><div class="reelection-badge">Up for Reelection</div></div>
 <div class="card"><span class="role gray">Director</span><h3>Nicolay Georgiev</h3></div>
 <div class="card placeholder"><span class="role gray">Board Seat</span><h3>Vacant Board Seat</h3><p>The seventh Board seat is currently vacant.</p></div>
 </div>
