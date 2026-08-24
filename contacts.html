@@ -88,26 +88,11 @@ body.page-contacts{--page-dark:#17385d;--page-accent:#4d86c6}
 .page-contacts .contact-line{background:#f7fafc!important;border:1px solid #e1e8ef!important;border-radius:13px!important;padding:12px 14px!important;margin-top:9px!important}.page-contacts .callout{background:linear-gradient(135deg,#edf5fd,#f8fbfe)!important;border-color:#d3e2f1!important}
 .page-contacts .section:first-of-type .card{border-left:5px solid #4d86c6!important}
 
-/* Strong reelection highlighting */
-.reelection-card{
-  position:relative!important;
-  border:2px solid #e0a126!important;
-  background:linear-gradient(180deg,#fffdf7,#fff9e9)!important;
-  box-shadow:0 14px 32px rgba(176,116,17,.14)!important;
-}
-.reelection-card:before{
-  content:"";position:absolute;left:-2px;top:-2px;bottom:-2px;width:7px;
-  border-radius:20px 0 0 20px;background:#e0a126;
-}
-.reelection-badge{
-  display:inline-flex!important;align-items:center!important;gap:7px!important;
-  margin-top:13px!important;padding:7px 11px!important;border-radius:999px!important;
-  background:#fff0c8!important;color:#7a4b00!important;border:1px solid #e9c260!important;
-  font-size:11px!important;font-weight:900!important;text-transform:uppercase!important;
-  letter-spacing:.055em!important;line-height:1!important;
-}
-.reelection-badge:before{content:"★";font-size:10px}
-@media(max-width:760px){.reelection-badge{font-size:11px!important;padding:8px 12px!important}}
+.staff-card{position:relative;overflow:hidden!important}
+.staff-card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:#18a99d}
+.staff-hours{margin-top:12px;padding:11px 13px;border-radius:12px;background:#eef8f6;color:#35665f;font-size:13px;line-height:1.5}
+.reelect-card{border:2px solid #e5b54c!important;background:linear-gradient(180deg,#fffdf7,#fff9e9)!important;position:relative}
+.reelect-badge{display:inline-block;margin-top:12px;padding:7px 10px;border-radius:999px;background:#f3c654;color:#5e4300;font-size:11px;font-weight:900;letter-spacing:.5px;text-transform:uppercase}
 </style></head>
 <body class="page-contacts">
 <section class="hero"><div class="wrap hero-inner">
@@ -143,9 +128,9 @@ body.page-contacts{--page-dark:#17385d;--page-accent:#4d86c6}
 <div class="grid">
 <div class="card"><span class="label">President / Chair</span><h3>Claudine Gruen</h3></div>
 <div class="card"><span class="label">Vice President</span><h3>Michael Anastasiou</h3></div>
-<div class="card reelection-card"><span class="label">Treasurer</span><h3>Teresa Pikner</h3><div class="reelection-badge">Up for Reelection</div></div>
+<div class="card reelect-card"><span class="label">Treasurer</span><h3>Teresa Pikner</h3><span class="reelect-badge">★ Up for Reelection</span></div>
 <div class="card"><span class="label">Secretary</span><h3>Linda Sweringen</h3></div>
-<div class="card reelection-card"><span class="label">Director</span><h3>Geraldine Canal</h3><div class="reelection-badge">Up for Reelection</div></div>
+<div class="card reelect-card"><span class="label">Director</span><h3>Geraldine Canal</h3><span class="reelect-badge">★ Up for Reelection</span></div>
 <div class="card"><span class="label">Director</span><h3>Nicolay Georgiev</h3></div>
 </div>
 <div class="callout" style="margin-top:14px"><strong>Board contact method:</strong> No verified general Board email or mailing address has been added yet. Once one is confirmed, it can be placed here and connected to the Submit a Request page.</div>
@@ -154,9 +139,22 @@ body.page-contacts{--page-dark:#17385d;--page-accent:#4d86c6}
 <h2>Building &amp; Emergency Contacts</h2>
 <p class="section-intro">Only confirmed contact information should be posted here.</p>
 <div class="grid">
-<div class="card placeholder"><span class="label">Building Staff</span><h3>Superintendent / Building Staff</h3><p>Add verified building staff contact information here when available.</p><div class="more">Information coming soon</div></div>
-<div class="card placeholder"><span class="label">Emergency</span><h3>After-Hours / Emergency Contact</h3><p>Add the official after-hours or emergency building contact only after it is confirmed by management.</p><div class="more">Information coming soon</div></div>
+<div class="card staff-card">
+<span class="label">Superintendent</span>
+<h3>Joe U.</h3>
+<p>Building superintendent for Crestwood.</p>
+<div class="contact-line"><strong>Phone:</strong> <a href="tel:+17185512649">(718) 551-2649</a></div>
+<div class="staff-hours"><strong>Hours:</strong> Monday-Friday, 8:00 AM-5:00 PM<br><strong>Office hours:</strong> 8:00 AM-5:00 PM</div>
 </div>
+<div class="card staff-card">
+<span class="label">Porter</span>
+<h3>Devon R.</h3>
+<p>Building porter for Crestwood.</p>
+<div class="contact-line"><strong>Phone:</strong> <a href="tel:+19178333094">(917) 833-3094</a></div>
+<div class="staff-hours"><strong>Hours:</strong> Saturday-Wednesday, 8:00 AM-5:00 PM</div>
+</div>
+</div>
+<div class="callout" style="margin-top:16px"><strong>After-hours emergencies:</strong> An official after-hours or emergency building contact has not yet been confirmed for the Community Hub. For urgent situations, use the appropriate emergency service and follow management instructions.</div>
 </div></section>
 <footer><div class="wrap footer-inner"><div class="footer-brand">Crestwood Community Hub</div><div>Resident information • Documents • Updates • Resources</div></div></footer>
 </body></html>
