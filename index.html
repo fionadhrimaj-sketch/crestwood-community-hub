@@ -238,7 +238,7 @@ nav a:hover{color:var(--teal);border-bottom-color:var(--teal)}
   background:#e7edf3;
 }
 .assessment-progress-fill{
-  width:20%;
+  width:0%;
   height:100%;
   border-radius:999px;
   background:linear-gradient(90deg,#17a99d,#2bc5b6);
@@ -632,7 +632,7 @@ footer{margin-top:0;background:#17365f;color:#d6e1ed;border-top:0;padding:28px 0
         <div class="countdown-main">
           <span class="clock-ring" aria-hidden="true"></span>
           <div>
-            <div class="countdown-number" id="assessmentMonths">4 months</div>
+            <div class="countdown-number" id="assessmentMonths">Calculating…</div>
             <div class="countdown-label" id="assessmentCountdownLabel">remaining</div>
           </div>
         </div>
@@ -658,7 +658,7 @@ footer{margin-top:0;background:#17365f;color:#d6e1ed;border-top:0;padding:28px 0
 
       <div class="assessment-progress-head">
         <span>Assessment Progress</span>
-        <span id="assessmentPercent">20%</span>
+        <span id="assessmentPercent">Calculating…</span>
       </div>
       <div class="assessment-progress-track" aria-label="Assessment progress">
         <div class="assessment-progress-fill" id="assessmentProgress"></div>
@@ -760,42 +760,111 @@ footer{margin-top:0;background:#17365f;color:#d6e1ed;border-top:0;padding:28px 0
 
 <script>
 (function () {
-  const now = new Date();
-  const monthsEl = document.getElementById("assessmentMonths");
+  const countdownEl = document.getElementById("assessmentMonths");
   const labelEl = document.getElementById("assessmentCountdownLabel");
   const percentEl = document.getElementById("assessmentPercent");
   const progressEl = document.getElementById("assessmentProgress");
   const footEl = document.getElementById("assessmentFoot");
-  if (!monthsEl || !labelEl || !percentEl || !progressEl || !footEl) return;
+  if (!countdownEl || !labelEl || !percentEl || !progressEl || !footEl) return;
 
-  const year = now.getFullYear();
-  const month = now.getMonth(); // Jan=0
-  let percent = 0;
-  let monthsRemaining = 5;
+  // The assessment runs August 1 through December 31, 2026.
+  // Use New York's calendar date so the countdown is consistent for Crestwood residents.
+  const START = new Date(Date.UTC(2026, 7, 1));   // Aug 1, 2026
+  const END_EXCLUSIVE = new Date(Date.UTC(2027, 0, 1)); // Jan 1, 2027
+  const LAST_DAY = new Date(Date.UTC(2026, 11, 31));    // Dec 31, 2026
+  const DAY = 24 * 60 * 60 * 1000;
 
-  if (year < 2026 || (year === 2026 && month < 7)) {
-    percent = 0;
-    monthsRemaining = 5;
-    monthsEl.textContent = "5 months";
-    labelEl.textContent = "scheduled";
-    footEl.textContent = "Special assessment is scheduled for August through December 2026.";
-  } else if (year === 2026 && month >= 7 && month <= 11) {
-    const monthNumber = month - 7 + 1; // Aug=1 ... Dec=5
-    percent = monthNumber * 20;
-    monthsRemaining = 5 - monthNumber;
-    monthsEl.textContent = monthsRemaining === 0 ? "Final month" : monthsRemaining + (monthsRemaining === 1 ? " month" : " months");
-    labelEl.textContent = monthsRemaining === 0 ? "December 2026" : "remaining";
-    footEl.textContent = "Special assessment runs from August 2026 through December 2026.";
-  } else {
-    percent = 100;
-    monthsRemaining = 0;
-    monthsEl.textContent = "Complete";
-    labelEl.textContent = "December 2026";
-    footEl.innerHTML = '<span class="countdown-complete">Assessment period completed at the end of December 2026.</span>';
+  function getNewYorkDate() {
+    const parts = new Intl.DateTimeFormat("en-US", {
+      timeZone: "America/New_York",
+      year: "numeric",
+      month: "numeric",
+      day: "numeric"
+    }).formatToParts(new Date());
+
+    const values = {};
+    for (const part of parts) {
+      if (part.type !== "literal") values[part.type] = Number(part.value);
+    }
+    return new Date(Date.UTC(values.year, values.month - 1, values.day));
   }
 
-  percentEl.textContent = percent + "%";
-  progressEl.style.width = percent + "%";
+  function addMonthsUTC(date, months) {
+    const d = new Date(date.getTime());
+    const originalDay = d.getUTCDate();
+    d.setUTCDate(1);
+    d.setUTCMonth(d.getUTCMonth() + months);
+    const lastDay = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth() + 1, 0)).getUTCDate();
+    d.setUTCDate(Math.min(originalDay, lastDay));
+    return d;
+  }
+
+  function calendarDifference(fromDate, toDate) {
+    if (fromDate >= toDate) return { months: 0, days: 0 };
+
+    let months =
+      (toDate.getUTCFullYear() - fromDate.getUTCFullYear()) * 12 +
+      (toDate.getUTCMonth() - fromDate.getUTCMonth());
+
+    let anchor = addMonthsUTC(fromDate, months);
+    if (anchor > toDate) {
+      months -= 1;
+      anchor = addMonthsUTC(fromDate, months);
+    }
+
+    const days = Math.round((toDate - anchor) / DAY);
+    return { months, days };
+  }
+
+  function formatRemaining(diff) {
+    const pieces = [];
+    if (diff.months > 0) pieces.push(diff.months + (diff.months === 1 ? " month" : " months"));
+    if (diff.days > 0 || pieces.length === 0) pieces.push(diff.days + (diff.days === 1 ? " day" : " days"));
+    return pieces.join(", ");
+  }
+
+  function updateAssessmentCountdown() {
+    const today = getNewYorkDate();
+
+    if (today < START) {
+      const diff = calendarDifference(today, START);
+      countdownEl.textContent = formatRemaining(diff);
+      labelEl.textContent = "until assessment begins";
+      percentEl.textContent = "0%";
+      progressEl.style.width = "0%";
+      footEl.textContent = "Special assessment is scheduled for August 1 through December 31, 2026.";
+      return;
+    }
+
+    if (today >= END_EXCLUSIVE) {
+      countdownEl.textContent = "Complete";
+      labelEl.textContent = "assessment period ended";
+      percentEl.textContent = "100%";
+      progressEl.style.width = "100%";
+      footEl.innerHTML = '<span class="countdown-complete">Assessment period completed on December 31, 2026.</span>';
+      return;
+    }
+
+    // Calendar-style countdown to Dec. 31, including the final day in the period.
+    const diff = calendarDifference(today, LAST_DAY);
+    countdownEl.textContent = formatRemaining(diff);
+    labelEl.textContent = "remaining";
+
+    // Day-level progress, automatically updated from Aug. 1 through Dec. 31.
+    const totalDays = (END_EXCLUSIVE - START) / DAY;
+    const elapsedDays = Math.max(0, Math.min(totalDays, (today - START) / DAY));
+    const percent = (elapsedDays / totalDays) * 100;
+    const displayPercent = percent.toFixed(1).replace(".0", "");
+
+    percentEl.textContent = displayPercent + "%";
+    progressEl.style.width = percent + "%";
+    footEl.textContent = "Live countdown through December 31, 2026. Progress updates automatically each day.";
+  }
+
+  updateAssessmentCountdown();
+
+  // Refresh periodically so a page left open overnight updates itself automatically.
+  setInterval(updateAssessmentCountdown, 60 * 60 * 1000);
 })();
 </script>
 
