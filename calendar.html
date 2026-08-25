@@ -99,6 +99,65 @@ body.page-calendar{--page-dark:#17426a;--page-accent:#3e8bc9}
 .page-calendar .calendar-note{margin-top:20px!important;padding:16px 18px!important;border-radius:16px!important;background:#fff8e7!important;border:1px solid #efddad!important;box-shadow:none!important;color:#6f551e!important;font-size:14px!important;line-height:1.5!important}
 @media(max-width:900px){.page-calendar .calendar-grid{grid-template-columns:1fr!important}.page-calendar .date-card{min-height:0!important}.page-calendar .upcoming-grid{grid-template-columns:1fr!important}}
 @media(max-width:560px){.page-calendar .date-top{padding:15px!important}.page-calendar .date-body{padding:17px!important}.page-calendar .date-badge{width:62px!important;min-width:62px!important;height:62px!important}.page-calendar .upcoming-card{padding:18px!important}}
+
+/* Different color themes for the three Known Dates cards */
+.page-calendar .calendar-grid .date-card:nth-child(1) .date-top{
+  background:linear-gradient(135deg,#fff3d8,#fff9ed)!important;
+  border-bottom-color:#f0d49a!important;
+}
+.page-calendar .calendar-grid .date-card:nth-child(1) .date-badge{
+  background:#fffaf0!important;
+  border:1px solid #f0d49a!important;
+}
+.page-calendar .calendar-grid .date-card:nth-child(1) .date-badge .month{
+  color:#c88412!important;
+}
+.page-calendar .calendar-grid .date-card:nth-child(1){
+  border-top:5px solid #e4a72b!important;
+}
+.page-calendar .calendar-grid .date-card:nth-child(1) .tag{
+  background:#fff2cf!important;
+  color:#9a6508!important;
+}
+
+.page-calendar .calendar-grid .date-card:nth-child(2) .date-top{
+  background:linear-gradient(135deg,#e7f8f3,#f4fcf9)!important;
+  border-bottom-color:#bfe6da!important;
+}
+.page-calendar .calendar-grid .date-card:nth-child(2) .date-badge{
+  background:#f4fcf9!important;
+  border:1px solid #bfe6da!important;
+}
+.page-calendar .calendar-grid .date-card:nth-child(2) .date-badge .month{
+  color:#168f83!important;
+}
+.page-calendar .calendar-grid .date-card:nth-child(2){
+  border-top:5px solid #18a99d!important;
+}
+.page-calendar .calendar-grid .date-card:nth-child(2) .tag{
+  background:#def5ef!important;
+  color:#14766d!important;
+}
+
+.page-calendar .calendar-grid .date-card:nth-child(3) .date-top{
+  background:linear-gradient(135deg,#eee9ff,#f8f6ff)!important;
+  border-bottom-color:#d6ccf5!important;
+}
+.page-calendar .calendar-grid .date-card:nth-child(3) .date-badge{
+  background:#faf8ff!important;
+  border:1px solid #d6ccf5!important;
+}
+.page-calendar .calendar-grid .date-card:nth-child(3) .date-badge .month{
+  color:#7658c7!important;
+}
+.page-calendar .calendar-grid .date-card:nth-child(3){
+  border-top:5px solid #8062cf!important;
+}
+.page-calendar .calendar-grid .date-card:nth-child(3) .tag{
+  background:#eee9ff!important;
+  color:#654bb1!important;
+}
+
 </style></head>
 <body class="page-calendar">
 <section class="hero"><div class="wrap hero-inner">
