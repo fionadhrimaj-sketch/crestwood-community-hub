@@ -642,6 +642,101 @@ footer{margin-top:0;background:#17365f;color:#d6e1ed;border-top:0;padding:28px 0
   .info-card .more{margin-top:7px !important;}
 }
 
+
+/* More colorful Special Assessment panel */
+.assessment-card{
+  background:
+    radial-gradient(circle at 92% 10%,rgba(77,190,255,.18),transparent 25%),
+    linear-gradient(135deg,#17365f 0%,#214f82 62%,#285f95 100%) !important;
+}
+.assessment-card .assessment-top .status,
+.assessment-card .status{
+  background:#dff7e9 !important;
+  color:#1b7b52 !important;
+  border:1px solid #bce9d0 !important;
+}
+.assessment-dates .date-box:nth-child(1),
+.assessment-date:nth-child(1){
+  background:#eefaf7 !important;
+  border-left:5px solid #2bc0ad !important;
+}
+.assessment-dates .date-box:nth-child(2),
+.assessment-date:nth-child(2){
+  background:#f3efff !important;
+  border-left:5px solid #8f70d9 !important;
+}
+
+/* Main countdown becomes the visual anchor */
+.assessment-countdown,
+.countdown-card{
+  background:linear-gradient(135deg,#eafbf7,#eff7ff) !important;
+  border:1px solid #c9e8e0 !important;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.55);
+}
+.assessment-countdown .countdown-number,
+.countdown-card .countdown-number,
+#assessmentMonths{
+  color:#123f73 !important;
+}
+.assessment-countdown svg,
+.countdown-card svg{
+  color:#19b7aa !important;
+}
+
+/* Give each metric its own accent */
+.assessment-metrics > *:nth-child(1),
+.metric-row > *:nth-child(2){
+  background:#fff8e8 !important;
+  border-top:5px solid #e4a72b !important;
+}
+.assessment-metrics > *:nth-child(2),
+.metric-row > *:nth-child(3){
+  background:#eef7ff !important;
+  border-top:5px solid #4b91d8 !important;
+}
+.assessment-metrics > *:nth-child(3),
+.metric-row > *:nth-child(4){
+  background:#f6efff !important;
+  border-top:5px solid #8b68d0 !important;
+}
+
+/* Target common existing metric cards in the current markup */
+.assessment-card .metric-card:nth-of-type(1){background:#fff8e8 !important;border-top:5px solid #e4a72b !important}
+.assessment-card .metric-card:nth-of-type(2){background:#eef7ff !important;border-top:5px solid #4b91d8 !important}
+.assessment-card .metric-card:nth-of-type(3){background:#f6efff !important;border-top:5px solid #8b68d0 !important}
+
+/* Progress bar with a stronger visual cue */
+.assessment-progress-track,
+.progress-track{
+  background:#5f83ac !important;
+  overflow:hidden;
+}
+#assessmentProgress,
+.assessment-progress-fill,
+.progress-fill{
+  background:linear-gradient(90deg,#57dcc9 0%,#54b8e8 55%,#9b7be6 100%) !important;
+  box-shadow:0 0 10px rgba(87,220,201,.35);
+}
+
+/* Purpose callout */
+.assessment-purpose,
+.purpose{
+  background:linear-gradient(90deg,rgba(64,128,191,.34),rgba(73,150,177,.28)) !important;
+  border-left:4px solid #64dfcb !important;
+}
+
+/* Slightly stronger labels for scanning */
+.assessment-card small,
+.assessment-card .metric-label,
+.assessment-card .date-label{
+  color:#496985 !important;
+  font-weight:800 !important;
+}
+.assessment-card .assessment-title small,
+.assessment-card .assessment-subtitle{
+  color:#d9ecff !important;
+}
+
 </style>
 </head>
 <body>
@@ -761,7 +856,7 @@ footer{margin-top:0;background:#17365f;color:#d6e1ed;border-top:0;padding:28px 0
       <a class="quick" href="apartments-market.html"><span class="icon teal">🏡</span><span class="quick-title">Apartments &amp; Market</span><span class="arrow">›</span></a>
       <a class="quick" href="resident-resources.html"><span class="icon">📚</span><span class="quick-title">Resident Resources</span><span class="arrow">›</span></a>
 
-      <a class="quick" href="https://sites.google.com/view/crestwoodcommunityhub/resident-directory" target="_top"><span class="icon purple">🏠</span><span class="quick-title">Resident Directory</span><span class="arrow">›</span></a>
+      <a class="quick" href="https://sites.google.com/view/crestwoodcommunityhub/resident-directory" target="_blank" rel="noopener"><span class="icon purple">🏠</span><span class="quick-title">Resident Directory</span><span class="arrow">›</span></a>
       <a class="quick" href="submit-request.html"><span class="icon teal">🔧</span><span class="quick-title">Submit a Request</span><span class="arrow">›</span></a>
 
     </div>
@@ -786,7 +881,7 @@ footer{margin-top:0;background:#17365f;color:#d6e1ed;border-top:0;padding:28px 0
         <div class="eyebrow">Resident Resource</div>
         <h3>Resident Directory Now Available</h3>
         <p>The resident directory is available to authorized residents. It is a work in progress and will be updated as additional information is confirmed.</p>
-        <a class="more" href="https://sites.google.com/view/crestwoodcommunityhub/resident-directory" target="_top">View Directory →</a>
+        <a class="more" href="https://sites.google.com/view/crestwoodcommunityhub/resident-directory" target="_blank" rel="noopener">View Directory →</a>
       </article>
       <article class="info-card">
         <div class="eyebrow">Building Market</div>
