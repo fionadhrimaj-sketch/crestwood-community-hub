@@ -79,7 +79,7 @@ footer{background:#f5f8fb!important;border-top:1px solid var(--cw-line)!importan
 
 
 body.page-calendar{--page-dark:#17426a;--page-accent:#3e8bc9}
-.page-calendar .calendar-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:18px!important}
+.page-calendar .calendar-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:18px!important}
 .page-calendar .date-card{position:relative!important;overflow:hidden!important;border:1px solid var(--cw-line)!important;border-radius:20px!important;background:#fff!important;box-shadow:var(--cw-shadow)!important;padding:0!important;min-height:235px!important;display:flex!important;flex-direction:column!important;transition:transform .18s ease,box-shadow .18s ease!important}
 .page-calendar .date-card:hover{transform:translateY(-3px)!important;box-shadow:0 16px 36px rgba(28,52,83,.14)!important}
 .page-calendar .date-top{display:flex!important;align-items:center!important;gap:14px!important;padding:18px 20px!important;background:linear-gradient(135deg,#eaf5ff,#f6fbff)!important;border-bottom:1px solid #dce8f3!important}
@@ -140,20 +140,38 @@ body.page-calendar{--page-dark:#17426a;--page-accent:#3e8bc9}
 }
 
 .page-calendar .calendar-grid .date-card:nth-child(3) .date-top{
+  background:linear-gradient(135deg,#fff0e8,#fff8f4)!important;
+  border-bottom-color:#efc6b2!important;
+}
+.page-calendar .calendar-grid .date-card:nth-child(3) .date-badge{
+  background:#fff8f4!important;
+  border:1px solid #efc6b2!important;
+}
+.page-calendar .calendar-grid .date-card:nth-child(3) .date-badge .month{
+  color:#c8663b!important;
+}
+.page-calendar .calendar-grid .date-card:nth-child(3){
+  border-top:5px solid #df7749!important;
+}
+.page-calendar .calendar-grid .date-card:nth-child(3) .tag{
+  background:#ffe6d8!important;
+  color:#a64e28!important;
+}
+.page-calendar .calendar-grid .date-card:nth-child(4) .date-top{
   background:linear-gradient(135deg,#eee9ff,#f8f6ff)!important;
   border-bottom-color:#d6ccf5!important;
 }
-.page-calendar .calendar-grid .date-card:nth-child(3) .date-badge{
+.page-calendar .calendar-grid .date-card:nth-child(4) .date-badge{
   background:#faf8ff!important;
   border:1px solid #d6ccf5!important;
 }
-.page-calendar .calendar-grid .date-card:nth-child(3) .date-badge .month{
+.page-calendar .calendar-grid .date-card:nth-child(4) .date-badge .month{
   color:#7658c7!important;
 }
-.page-calendar .calendar-grid .date-card:nth-child(3){
+.page-calendar .calendar-grid .date-card:nth-child(4){
   border-top:5px solid #8062cf!important;
 }
-.page-calendar .calendar-grid .date-card:nth-child(3) .tag{
+.page-calendar .calendar-grid .date-card:nth-child(4) .tag{
   background:#eee9ff!important;
   color:#654bb1!important;
 }
@@ -175,6 +193,10 @@ body.page-calendar{--page-dark:#17426a;--page-accent:#3e8bc9}
   <article class="date-card">
     <div class="date-top"><div class="date-badge"><span class="month">AUG</span></div><div class="date-year"><strong>August 2026</strong><br/>Assessment Begins</div></div>
     <div class="date-body"><h3>Line of Credit Repayment Assessment</h3><p>The line-of-credit repayment assessment begins in August 2026 and runs through December 2026.</p><span class="tag">Assessment</span></div>
+  </article>
+  <article class="date-card">
+    <div class="date-top"><div class="date-badge"><span class="month">AUG</span></div><div class="date-year"><strong>August 31, 2026</strong><br/>8:00 AM-5:00 PM</div></div>
+    <div class="date-body"><h3>Front Door Entrance Closed</h3><p>The front entrance will be closed for minor vestibule floor repairs. Use the back entrances for building access. Deliveries must use the basement entrance.</p><span class="tag">Access Notice</span></div>
   </article>
   <article class="date-card">
     <div class="date-top"><div class="date-badge"><span class="month">DEC</span></div><div class="date-year"><strong>December 31, 2026</strong><br/>Period Ends</div></div>
