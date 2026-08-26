@@ -116,6 +116,48 @@ body.page-board-governance{--page-dark:#17385d;--page-accent:#7357d5}
 }
 .reelection-badge:before{content:"★";font-size:10px}
 @media(max-width:760px){.reelection-badge{font-size:11px!important;padding:8px 12px!important}}
+
+/* Shareholder Group Meetings */
+.shareholder-meeting-card{
+  border:1px solid #d7e5ef!important;
+  border-left:6px solid #18a99d!important;
+  background:linear-gradient(135deg,#ffffff,#f7fbfd)!important;
+  padding:24px!important;
+}
+.shareholder-meeting-meta{
+  display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px;
+}
+.shareholder-meeting-meta span{
+  display:inline-flex;align-items:center;padding:6px 10px;border-radius:999px;
+  background:#eaf7f5;color:#176f69;font-size:11px;font-weight:900;
+}
+.shareholder-meeting-card h3{font-size:22px!important;margin:0 0 8px!important}
+.meeting-disclaimer{
+  margin:14px 0;padding:13px 15px;border-radius:13px;background:#fff8e7;
+  border:1px solid #eed9a5;color:#6f551e;font-size:13px;line-height:1.55;
+}
+.meeting-topics{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 16px;
+  margin:16px 0 18px;padding:0;list-style:none;
+}
+.meeting-topics li{
+  position:relative;padding-left:20px;color:#51657d;font-size:13px;line-height:1.5;
+}
+.meeting-topics li:before{
+  content:"✓";position:absolute;left:0;top:0;color:#18a99d;font-weight:900;
+}
+.action-box{
+  margin-top:16px;padding:16px;border-radius:14px;background:#f1f5ff;
+  border:1px solid #d8e1f2;
+}
+.action-box strong{display:block;color:#17385f;margin-bottom:7px}
+.action-box ul{margin:0;padding-left:18px;color:#5b6d84;font-size:13px;line-height:1.55}
+.meeting-link{
+  display:inline-flex;align-items:center;margin-top:18px;padding:11px 15px;
+  border-radius:11px;background:#17385f;color:#fff!important;font-size:13px;font-weight:900;
+}
+@media(max-width:760px){.meeting-topics{grid-template-columns:1fr}.shareholder-meeting-card{padding:18px!important}}
+
 </style></head>
 <body class="page-board-governance">
 <section class="hero"><div class="wrap hero-inner">
@@ -159,9 +201,52 @@ body.page-board-governance{--page-dark:#17385d;--page-accent:#7357d5}
 <div class="card placeholder"><h3>Annual Meeting</h3><p>No verified annual meeting date has been added yet.</p><div class="more">Awaiting confirmed notice</div></div>
 <div class="card placeholder"><h3>Election Information</h3><p>Add candidate information, election notices, voting instructions, and certified results when available.</p><div class="more">Information coming soon</div></div>
 <div class="card placeholder"><h3>Proxy Information</h3><p>Add the current approved proxy form and instructions once a verified version is available.</p><div class="more">Information coming soon</div></div>
-<div class="card placeholder"><h3>Meeting Minutes</h3><p>Add approved shareholder-facing meeting minutes or summaries if and when they are made available.</p><div class="more">Information coming soon</div></div>
+<div class="card placeholder"><h3>Official Meeting Minutes</h3><p>Approved Board or shareholder meeting minutes may be added here if and when they are made available for shareholder distribution.</p><div class="more">Information coming soon</div></div>
 </div>
 <div class="callout" style="margin-top:14px"><strong>Important:</strong> This page is intended as an easy reference. For any formal governance question, the actual By-Laws, Proprietary Lease, meeting notice, and applicable law control.</div>
 </div></section>
+
+<section class="section"><div class="wrap">
+<h2>Shareholder Group Meetings</h2>
+<p class="section-intro">Informal meeting notes shared by participating Crestwood shareholders. These are separate from official Board or corporate meeting minutes.</p>
+
+<div class="card shareholder-meeting-card">
+  <div class="shareholder-meeting-meta">
+    <span>August 24, 2026</span>
+    <span>In Person</span>
+    <span>Informal Shareholder Group</span>
+  </div>
+  <h3>First In-Person Shareholder Group Meeting</h3>
+  <p>Shareholders met to organize, share information, identify common building concerns, discuss Board and election questions, and create a list of follow-up items to bring to management and the Board.</p>
+
+  <div class="meeting-disclaimer"><strong>Important:</strong> These notes reflect discussion among participating shareholders. They are not official Board or management minutes. Some items are questions, estimates, opinions, reported statements, or matters still being researched and should not be treated as verified building facts unless supported by an official document or source.</div>
+
+  <ul class="meeting-topics">
+    <li>Purpose and organization of the shareholder group</li>
+    <li>Board structure, open seats, elections, and bylaws questions</li>
+    <li>Renovation, carpet, reserve, and maintenance concerns raised by attendees</li>
+    <li>Drainage and flooding concerns discussed by the group</li>
+    <li>Building safety and emergency communication questions</li>
+    <li>Shareholder access to Board meetings and communication channels</li>
+    <li>Voting process and privacy concerns raised by attendees</li>
+    <li>Requests for financial documents and updated governing documents</li>
+  </ul>
+
+  <div class="action-box">
+    <strong>Key Follow-Up Items</strong>
+    <ul>
+      <li>Request confirmation about Board size and whether additional seats can be opened.</li>
+      <li>Request updated bylaws and any amendments made since the original document.</li>
+      <li>Request information related to the lobby carpet contract and compare alternative pricing.</li>
+      <li>Confirm upcoming Board and annual shareholder meeting dates.</li>
+      <li>Continue outreach to shareholders and develop a prioritized list of concerns.</li>
+      <li>Explore a more neutral vote-collection process for future elections.</li>
+    </ul>
+  </div>
+
+  <a class="meeting-link" href="docs/shareholder-group-meeting-notes-2026-08-24.pdf" target="_blank" rel="noopener">Open Full Meeting Notes →</a>
+</div>
+</div></section>
+
 <footer><div class="wrap footer-inner"><div class="footer-brand">Crestwood Community Hub</div><div>Resident information • Documents • Updates • Resources</div></div></footer>
 </body></html>
