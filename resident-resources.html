@@ -107,6 +107,31 @@ body.page-resident-resources{--page-dark:#12465b;--page-accent:#18a99d}
 .page-resident-resources .meta{margin-top:12px!important}.page-resident-resources .steps{background:linear-gradient(135deg,#e9f8f5,#f6fbfb)!important;border:1px solid #cee9e4!important;border-radius:18px!important;padding:20px!important}
 .page-resident-resources .callout{background:linear-gradient(135deg,#eff9f7,#f7fbfb)!important;border-color:#d2ebe6!important}
 @media(max-width:720px){.page-resident-resources .grid{grid-template-columns:1fr!important}}
+
+/* Cleaner Fire Safety card layout */
+.fire-safety-card{
+  display:flex!important;
+  flex-direction:column!important;
+  gap:12px!important;
+}
+.fire-safety-card h3{margin-bottom:0!important}
+.fire-safety-card p{margin:0!important}
+.fire-safety-link{
+  display:inline-flex!important;
+  align-self:flex-start!important;
+  margin-top:6px!important;
+  padding:9px 12px!important;
+  border-radius:10px!important;
+  background:#eef7f6!important;
+  color:#167c74!important;
+  font-size:12px!important;
+  font-weight:900!important;
+  line-height:1!important;
+}
+.fire-safety-link:hover{
+  background:#e1f1ef!important;
+}
+
 </style></head>
 <body class="page-resident-resources">
 <section class="hero">
@@ -192,11 +217,11 @@ body.page-resident-resources{--page-dark:#12465b;--page-accent:#18a99d}
 <h2>Building Safety &amp; Emergency Information</h2>
 <p class="section-intro">Important resident safety information and emergency guidance for Crestwood.</p>
 <div class="grid">
-  <a class="card link-card" href="docs/fire-safety-notice.pdf" target="_blank" rel="noopener">
+  <div class="card fire-safety-card">
     <h3>Fire Safety Notice</h3>
     <p>Crestwood is identified in this notice as a non-combustible (fireproof) building. The notice explains what residents should do if a fire is inside their apartment and what to do if a fire is elsewhere in the building.</p>
-    <div class="more">Open Fire Safety Notice →</div>
-  </a>
+    <a class="fire-safety-link" href="docs/fire-safety-notice.pdf" target="_blank" rel="noopener">Open Fire Safety Notice →</a>
+  </div>
   <div class="card">
     <h3>Key Fire Safety Reminders</h3>
     <p><strong>If the fire is in your apartment:</strong> leave the apartment, take your keys, close but do not lock the apartment door, use the nearest stairwell, do not use the elevator, and call 911 once you are in a safe location.</p>
