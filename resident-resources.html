@@ -132,6 +132,63 @@ body.page-resident-resources{--page-dark:#12465b;--page-accent:#18a99d}
   background:#e1f1ef!important;
 }
 
+
+/* Cleaner parking card */
+.parking-card{
+  display:flex!important;
+  flex-direction:column!important;
+  gap:12px!important;
+}
+.parking-card h3{margin:0!important}
+.parking-stats{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+}
+.parking-stat{
+  padding:10px 12px;
+  border:1px solid #dfe8e7;
+  border-radius:12px;
+  background:#f7fbfa;
+}
+.parking-stat strong{
+  display:block;
+  font-size:20px;
+  line-height:1.1;
+  margin-bottom:3px;
+}
+.parking-stat span{
+  font-size:12px;
+  line-height:1.35;
+  color:var(--muted);
+  font-weight:700;
+}
+.parking-process{
+  margin:0!important;
+  padding-left:18px!important;
+}
+.parking-process li{
+  margin:0 0 6px 0;
+  line-height:1.45;
+}
+.parking-process li:last-child{margin-bottom:0}
+.parking-contact{
+  display:inline-flex!important;
+  align-self:flex-start!important;
+  margin-top:2px!important;
+  padding:9px 12px!important;
+  border-radius:10px!important;
+  background:#eef7f6!important;
+  color:#167c74!important;
+  font-size:12px!important;
+  font-weight:900!important;
+  line-height:1!important;
+}
+.parking-contact:hover{background:#e1f1ef!important}
+@media (max-width:560px){
+  .parking-stats{grid-template-columns:1fr 1fr}
+}
+
 </style></head>
 <body class="page-resident-resources">
 <section class="hero">
@@ -209,12 +266,21 @@ body.page-resident-resources{--page-dark:#12465b;--page-accent:#18a99d}
 <p>Confirmed shareholder meeting notices, election information, proxies, and related materials will be added here when available.</p>
 <div class="meta">Information coming soon</div>
 </div>
-<div class="card">
+<div class="card parking-card">
 <h3>Parking &amp; Waiting List</h3>
-<p>Crestwood currently has <strong>10 paid parking spaces</strong>. Management has advised that there are currently <strong>5 shareholders on the waiting list</strong>.</p>
-<p>Any shareholder may request to be added to the waiting list. When a shareholder with a parking space sells their apartment, the next person on the waiting list becomes eligible for the space.</p>
-<p>Management does not publish the full waiting list, but shareholders may contact management to confirm whether they are on the list and ask about their current status.</p>
-<a class="meta" href="https://sites.google.com/view/crestwoodcommunityhub/contacts" target="_blank" rel="noopener">Contact Management About Parking →</a>
+
+<div class="parking-stats">
+  <div class="parking-stat"><strong>10</strong><span>Paid parking spaces</span></div>
+  <div class="parking-stat"><strong>5</strong><span>Shareholders currently waiting</span></div>
+</div>
+
+<ul class="parking-process">
+  <li>Any shareholder may ask management to be added to the waiting list.</li>
+  <li>When a parking-space holder sells their apartment, the next person on the list becomes eligible.</li>
+  <li>The full list is not published, but management can confirm your status.</li>
+</ul>
+
+<a class="parking-contact" href="https://sites.google.com/view/crestwoodcommunityhub/contacts" target="_blank" rel="noopener">Contact Management About Parking →</a>
 </div>
 
 <a class="card" href="https://sites.google.com/view/crestwoodcommunityhub/resident-directory" target="_blank" rel="noopener"><h3>Resident Directory</h3><p>View the resident directory by floor and apartment. The directory is a work in progress and is not yet complete.</p><div class="meta">View Resident Directory →</div></a></div>
