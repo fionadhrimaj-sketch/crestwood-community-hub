@@ -235,6 +235,64 @@ body.page-resident-resources{--page-dark:#12465b;--page-accent:#18a99d}
   font-size:13px;
 }
 
+
+/* Parking list details */
+.parking-note{
+  margin:2px 0 0;
+  color:#617188;
+  font-size:14px;
+  line-height:1.5;
+}
+.parking-details{
+  border:1px solid #dfe8e7;
+  border-radius:12px;
+  background:#fbfdfd;
+  overflow:hidden;
+}
+.parking-details + .parking-details{margin-top:8px}
+.parking-details summary{
+  cursor:pointer;
+  padding:11px 13px;
+  font-size:13px;
+  font-weight:800;
+  color:var(--ink);
+  list-style-position:inside;
+}
+.parking-details[open] summary{
+  border-bottom:1px solid #e7eeee;
+  background:#f6faf9;
+}
+.parking-table-wrap{
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+}
+.parking-table{
+  width:100%;
+  border-collapse:collapse;
+  min-width:520px;
+  font-size:13px;
+}
+.parking-table th,
+.parking-table td{
+  padding:9px 10px;
+  text-align:left;
+  border-bottom:1px solid #edf1f1;
+  vertical-align:top;
+}
+.parking-table th{
+  color:#526276;
+  font-size:12px;
+  font-weight:800;
+  background:#fbfdfd;
+}
+.parking-table tr:last-child td{border-bottom:0}
+.parking-updated{
+  margin-top:8px;
+  color:#7a8798;
+  font-size:12px;
+  line-height:1.4;
+}
+
 </style></head>
 <body class="page-resident-resources">
 <section class="hero">
@@ -253,16 +311,67 @@ body.page-resident-resources{--page-dark:#12465b;--page-accent:#18a99d}
 
 <div class="card parking-card">
 <h3>Parking &amp; Waiting List</h3>
+
 <div class="parking-stats">
-  <div class="parking-stat"><strong>10</strong><span>Paid parking spaces</span></div>
-  <div class="parking-stat"><strong>5</strong><span>Shareholders currently waiting</span></div>
+  <div class="parking-stat"><strong>10</strong><span>Current paid parking spaces</span></div>
+  <div class="parking-stat"><strong>8</strong><span>Shareholders on the waiting list</span></div>
 </div>
+
+<p class="parking-note"><strong>Who maintains the list:</strong> The building superintendent keeps and updates both the current parking list and the waiting list.</p>
+
 <ul class="parking-process">
-  <li>Any shareholder may ask management to be added to the waiting list.</li>
-  <li>When a parking-space holder sells their apartment, the next person on the list becomes eligible.</li>
-  <li>The full list is not published, but management can confirm your status.</li>
+  <li>Any shareholder may ask to be added to the waiting list.</li>
+  <li>To add your name or check your status, contact the superintendent.</li>
+  <li>When a parking-space holder sells their apartment, the next person on the waiting list becomes eligible for the space.</li>
 </ul>
-<a class="parking-contact" href="https://sites.google.com/view/crestwoodcommunityhub/contacts" target="_blank" rel="noopener">Contact Management About Parking →</a>
+
+<a class="parking-contact" href="https://sites.google.com/view/crestwoodcommunityhub/contacts" target="_blank" rel="noopener">Contact the Superintendent →</a>
+
+<details class="parking-details">
+  <summary>View Current Parking Assignments</summary>
+  <div class="parking-table-wrap">
+    <table class="parking-table">
+      <thead>
+        <tr><th>Spot</th><th>Date</th><th>Name</th><th>Apartment</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>3/13/2002</td><td>William Doherty</td><td>1L</td></tr>
+        <tr><td>2</td><td>3/13/2002</td><td>Joe Ukaj</td><td>1H</td></tr>
+        <tr><td>3</td><td>11/15/2002</td><td>Eva Marciniak</td><td>3L</td></tr>
+        <tr><td>4</td><td>1/2/2003</td><td>Paul Fabozzi</td><td>1E</td></tr>
+        <tr><td>5</td><td>1/5/2003</td><td>Claudine Gruen</td><td>1B</td></tr>
+        <tr><td>6</td><td>12/1/2003</td><td>Karen Vigoriti</td><td>4J</td></tr>
+        <tr><td>7</td><td>9/1/2007</td><td>Gerald Lee</td><td>5H</td></tr>
+        <tr><td>8</td><td>10/19/2007</td><td>Janus Wojciechowski</td><td>3J</td></tr>
+        <tr><td>9</td><td>2/20/2012</td><td>Elizabeth Weingart</td><td>5M</td></tr>
+        <tr><td>10</td><td>2/26/2013</td><td>Dennis Sendek</td><td>4L</td></tr>
+      </tbody>
+    </table>
+  </div>
+</details>
+
+<details class="parking-details">
+  <summary>View Parking Waiting List</summary>
+  <div class="parking-table-wrap">
+    <table class="parking-table">
+      <thead>
+        <tr><th>Position</th><th>Date Added</th><th>Name</th><th>Apartment</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>3/13/2002</td><td>Joel Aronofsky</td><td>2B</td></tr>
+        <tr><td>2</td><td>12/1/2003</td><td>Doug Roemer</td><td>6J</td></tr>
+        <tr><td>3</td><td>2/22/2014</td><td>Marie Ward</td><td>3C</td></tr>
+        <tr><td>4</td><td>6/8/2014</td><td>Andrew Kwasny</td><td>6D</td></tr>
+        <tr><td>5</td><td>8/29/2021</td><td>Rafael Torres</td><td>4E</td></tr>
+        <tr><td>6</td><td>3/30/2023</td><td>Anna Bajor</td><td>5G</td></tr>
+        <tr><td>7</td><td>7/9/2025</td><td>Valerie Braule</td><td>4B</td></tr>
+        <tr><td>8</td><td>8/26/2026</td><td>Mark Buccieri</td><td>4D</td></tr>
+      </tbody>
+    </table>
+  </div>
+</details>
+
+<div class="parking-updated">Latest list provided to residents includes waiting-list entries through August 26, 2026.</div>
 </div>
 
 <div class="card">
