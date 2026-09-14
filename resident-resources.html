@@ -244,23 +244,56 @@ body.page-resident-resources{--page-dark:#12465b;--page-accent:#18a99d}
   line-height:1.5;
 }
 .parking-details{
-  border:1px solid #dfe8e7;
   border-radius:12px;
-  background:#fbfdfd;
   overflow:hidden;
 }
-.parking-details + .parking-details{margin-top:8px}
+.parking-details + .parking-details{margin-top:10px}
+
 .parking-details summary{
   cursor:pointer;
-  padding:11px 13px;
+  padding:12px 14px;
   font-size:13px;
   font-weight:800;
-  color:var(--ink);
   list-style-position:inside;
+  border-radius:12px;
+  transition:filter .15s ease, transform .15s ease;
 }
-.parking-details[open] summary{
-  border-bottom:1px solid #e7eeee;
-  background:#f6faf9;
+.parking-details summary:hover,
+.parking-details summary:focus{
+  filter:brightness(.98);
+  outline:none;
+}
+
+/* Current parking assignments */
+.parking-current{
+  border:1px solid #9fc3e8;
+  background:#f7fbff;
+}
+.parking-current summary{
+  background:#e9f3ff;
+  color:#174f82;
+}
+.parking-current[open] summary{
+  border-bottom:1px solid #bcd4ec;
+  border-bottom-left-radius:0;
+  border-bottom-right-radius:0;
+  background:#dcecff;
+}
+
+/* Waiting list */
+.parking-waiting{
+  border:1px solid #e6c98d;
+  background:#fffdf8;
+}
+.parking-waiting summary{
+  background:#fff3d8;
+  color:#7b5310;
+}
+.parking-waiting[open] summary{
+  border-bottom:1px solid #e8d3a6;
+  border-bottom-left-radius:0;
+  border-bottom-right-radius:0;
+  background:#ffeab8;
 }
 .parking-table-wrap{
   overflow-x:auto;
@@ -327,7 +360,7 @@ body.page-resident-resources{--page-dark:#12465b;--page-accent:#18a99d}
 
 <a class="parking-contact" href="https://sites.google.com/view/crestwoodcommunityhub/contacts" target="_blank" rel="noopener">Contact the Superintendent →</a>
 
-<details class="parking-details">
+<details class="parking-details parking-current">
   <summary>View Current Parking Assignments</summary>
   <div class="parking-table-wrap">
     <table class="parking-table">
@@ -350,7 +383,7 @@ body.page-resident-resources{--page-dark:#12465b;--page-accent:#18a99d}
   </div>
 </details>
 
-<details class="parking-details">
+<details class="parking-details parking-waiting">
   <summary>View Parking Waiting List</summary>
   <div class="parking-table-wrap">
     <table class="parking-table">
