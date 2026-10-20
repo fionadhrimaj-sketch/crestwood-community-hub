@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crestwood Sales, Rentals & Building History</title>
+<style>
+:root{
+  --navy:#102a63;
+  --teal:#18a99d;
+  --blue:#3787f3;
+  --purple:#7357d5;
+  --ink:#22324a;
+  --muted:#67758c;
+  --line:#e7edf4;
+  --soft:#f6f9fd;
+  --shadow:0 10px 28px rgba(23,50,92,.10);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  color:var(--ink);
+  background:#fff;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:auto;padding:0 22px}
+.hero{
+  padding:42px 0 30px;
+  background:linear-gradient(180deg,#fbfdff,#eef8ff);
+  border-bottom:1px solid var(--line);
+}
+.kicker{
+  display:inline-flex;
+  padding:7px 11px;
+  border-radius:999px;
+  background:#e9fbf8;
+  color:#0e8d83;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.2px;
+}
+h1{
+  margin:12px 0 8px;
+  color:var(--navy);
+  font-size:clamp(35px,5vw,55px);
+  line-height:1.05;
+  letter-spacing:-1.5px;
+}
+.hero p{margin:0;max-width:760px;color:#596b86;font-size:17px;line-height:1.55}
+.fact-strip{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+  margin-top:24px;
+}
+.fact{
+  border:1px solid #dbe7f1;
+  background:rgba(255,255,255,.92);
+  border-radius:14px;
+  padding:15px;
+}
+.fact small{display:block;color:var(--muted);font-size:11px;font-weight:700;margin-bottom:3px}
+.fact strong{display:block;color:var(--navy);font-size:18px}
+.section{padding:30px 0}
+.section.alt{background:#fafcff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:18px}
+.section h2{margin:0;color:var(--navy);font-size:27px}
+.section-note{color:var(--muted);font-size:12px;line-height:1.4;max-width:460px;text-align:right}
+.active-card{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:22px;
+  border:1px solid #d8e5ef;
+  border-radius:20px;
+  padding:22px;
+  background:linear-gradient(135deg,#fff,#f5fbff);
+  box-shadow:var(--shadow);
+}
+.status{
+  display:inline-flex;
+  border-radius:999px;
+  padding:6px 10px;
+  background:#e7f7ef;
+  color:#267850;
+  font-size:11px;
+  font-weight:900;
+}
+.active-card h3{margin:11px 0 4px;color:#172d5b;font-size:25px}
+.price{font-size:31px;color:var(--navy);font-weight:900;margin:5px 0}
+.details{color:#52647e;font-size:15px;line-height:1.5}
+.source{margin-top:11px;color:#728096;font-size:12px}
+.button{
+  align-self:center;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:155px;
+  padding:12px 16px;
+  border-radius:12px;
+  background:var(--navy);
+  color:#fff;
+  font-weight:800;
+  font-size:14px;
+}
+.button:hover{opacity:.92}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:16px;background:#fff}
+table{width:100%;border-collapse:collapse;min-width:700px}
+th{
+  background:#f1f6fb;
+  text-align:left;
+  color:#4c607d;
+  font-size:11px;
+  letter-spacing:.25px;
+  text-transform:uppercase;
+  padding:12px 14px;
+}
+td{padding:13px 14px;border-top:1px solid var(--line);font-size:13px;color:#31445f}
+td strong{color:var(--navy)}
+.tag{
+  display:inline-flex;
+  padding:5px 8px;
+  border-radius:999px;
+  background:#eef5ff;
+  color:#356da9;
+  font-size:10px;
+  font-weight:800;
+}
+.note-card{
+  border:1px solid #dfe8f2;
+  border-radius:16px;
+  padding:18px;
+  background:#f8fbfe;
+  color:#536781;
+  line-height:1.55;
+  font-size:13px;
+}
+.source-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:15px}
+.source-card{
+  border:1px solid var(--line);
+  border-radius:15px;
+  padding:16px;
+  background:#fff;
+  transition:.18s ease;
+}
+.source-card:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.source-card strong{display:block;color:var(--navy);font-size:15px;margin-bottom:4px}
+.source-card span{display:block;color:var(--muted);font-size:12px;line-height:1.4}
+.public-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px}
+.public-stat{
+  border:1px solid #dfe8f2;
+  border-radius:14px;
+  padding:15px;
+  background:#fff;
+}
+.public-stat strong{display:block;font-size:23px;color:var(--navy)}
+.public-stat span{font-size:11px;color:var(--muted);line-height:1.35}
+.disclaimer{
+  margin-top:16px;
+  padding:14px 16px;
+  border-left:4px solid var(--teal);
+  background:#f6fbfb;
+  color:#52647e;
+  font-size:12px;
+  line-height:1.5;
+}
+footer{
+  border-top:1px solid var(--line);
+  background:#fafcff;
+  padding:22px 0;
+  color:#67758c;
+  font-size:12px;
+}
+@media(max-width:760px){
+  .wrap{padding:0 14px}
+  .hero{padding:30px 0 24px}
+  .fact-strip{grid-template-columns:1fr 1fr}
+  .section-head{display:block}
+  .section-note{text-align:left;margin-top:6px}
+  .active-card{grid-template-columns:1fr}
+  .button{justify-self:start}
+  .source-grid{grid-template-columns:1fr}
+  .public-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:460px){
+  .fact-strip,.public-grid{grid-template-columns:1fr}
+  .price{font-size:27px}
+}
+</style>
+</head>
+<body>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <span class="kicker">Crestwood Community Hub</span>
+    <h1>Sales, Rentals &amp; Building History</h1>
+    <p>A resident-friendly reference for current listings, recent apartment sales, past rentals, floor-plan resources and public building information. Buyer and seller names are intentionally not displayed.</p>
+
+    <div class="fact-strip" aria-label="Building facts">
+      <div class="fact"><small>Year Built</small><strong>1938</strong></div>
+      <div class="fact"><small>Building Type</small><strong>Co-op</strong></div>
+      <div class="fact"><small>Floors</small><strong>6</strong></div>
+      <div class="fact"><small>Apartments</small><strong>72</strong></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Currently Available</h2>
+      <div class="section-note">Listing information changes frequently. Use the original listing for the latest price, status and showing information.</div>
+    </div>
+
+    <article class="active-card">
+      <div>
+        <span class="status">FOR SALE</span>
+        <h3>Apartment 2C</h3>
+        <div class="price">$249,000</div>
+        <div class="details">1 bedroom &nbsp;•&nbsp; 1 bathroom &nbsp;•&nbsp; co-op</div>
+        <div class="source">Listing source: Zillow • Price reduced October 5, 2026</div>
+      </div>
+      <a class="button" href="https://www.zillow.com/homedetails/124-16-84th-Rd-2C-Kew-Gardens-NY-11415/109178685_zpid/" target="_blank" rel="noopener noreferrer">View Listing ↗</a>
+    </article>
+
+    <article class="active-card" style="margin-top:16px;">
+      <div>
+        <span class="status">FOR SALE</span>
+        <h3>Apartment 2E</h3>
+        <div class="price">$675,000</div>
+        <div class="details">3 bedrooms &nbsp;•&nbsp; 2 bathrooms &nbsp;•&nbsp; approximately 1,450 sq. ft.</div>
+        <div class="source">Listing source: Zillow • Keller Williams Legendary</div>
+      </div>
+      <a class="button" href="https://www.zillow.com/b/124-16-84th-rd-kew-gardens-ny-9gpSPx/" target="_blank" rel="noopener noreferrer">View Listing ↗</a>
+    </article>
+
+    <div class="disclaimer"><strong>Resident reference only.</strong> Crestwood Community Hub does not represent the seller, buyer, landlord, tenant, broker or managing agent. Prices and listing status may change without notice.</div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Recent &amp; Selected Sales</h2>
+      <div class="section-note">Names of buyers and sellers are excluded. Dates and prices shown below come from publicly available listing/transaction history.</div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Date</th><th>Apartment</th><th>Sale Price</th><th>Details</th><th>Floor Plan</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Sep. 30, 2025</td><td><strong>1D</strong></td><td>$300,000</td><td>1 bed • 1 bath • 785 sq. ft.</td><td><span class="tag">Available on StreetEasy</span></td></tr>
+          <tr><td>Jan. 23, 2025</td><td><strong>5K</strong></td><td>$339,000</td><td>2 beds • 1 bath • 1,200 sq. ft.</td><td>—</td></tr>
+          <tr><td>Jul. 24, 2024</td><td><strong>5D</strong></td><td>$300,000</td><td>Studio • 1 bath</td><td>—</td></tr>
+          <tr><td>Jun. 6, 2023</td><td><strong>6A</strong></td><td>$180,000</td><td>Studio • 1 bath • 659 sq. ft.</td><td>—</td></tr>
+          <tr><td>Nov. 14, 2022</td><td><strong>1M</strong></td><td>$180,000</td><td>Studio • 1 bath • 700 sq. ft.</td><td><span class="tag">Available on StreetEasy</span></td></tr>
+          <tr><td>Sep. 27, 2022</td><td><strong>5L</strong></td><td>$620,000</td><td>2 beds • 2 baths • 1,500 sq. ft.</td><td><span class="tag">Available on StreetEasy</span></td></tr>
+          <tr><td>Feb. 15, 2022</td><td><strong>5F</strong></td><td>$189,000</td><td>Studio • 1 bath • 700 sq. ft.</td><td><span class="tag">Available on StreetEasy</span></td></tr>
+          <tr><td>Jan. 21, 2022</td><td><strong>5C</strong></td><td>$227,000</td><td>1 bed • 1 bath • 700 sq. ft.</td><td><span class="tag">Available on StreetEasy</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Past Rentals</h2>
+      <div class="section-note">StreetEasy records six previous rental listings for the building. The most recent visible records are shown here.</div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Off-Market Date</th><th>Apartment</th><th>Last Listed Rent</th><th>Details</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Jan. 2, 2026</td><td><strong>Unit shown as #1</strong></td><td>$2,349 / month</td><td>1 bed • 1 bath • 800 sq. ft.</td></tr>
+          <tr><td>May 7, 2024</td><td><strong>Unit shown as #5</strong></td><td>$2,800 / month</td><td>2 beds • 1 bath • 1,200 sq. ft.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note-card" style="margin-top:12px;">Some older listing websites do not display complete apartment numbers for rental history, so the Hub will not guess or assign a unit number where the source is unclear.</div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Building Background &amp; Public Records</h2>
+      <div class="section-note">This section summarizes non-personal building-level information only.</div>
+    </div>
+
+    <div class="public-grid">
+      <div class="public-stat"><strong>0</strong><span>Bedbug-infested units reported in the annual reports shown for 2018–2025</span></div>
+      <div class="public-stat"><strong>0</strong><span>Rodent inspection records in the Augrented dataset</span></div>
+      <div class="public-stat"><strong>0</strong><span>Executed eviction records in the Augrented dataset</span></div>
+      <div class="public-stat"><strong>0</strong><span>Vacate-order records in the Augrented dataset</span></div>
+    </div>
+
+    <div class="note-card">
+      Public-record sources also contain historical HPD complaints, housing violations, DOB records, permits and facade-related enforcement history. Because status can change and some older records remain displayed long after work is completed, the Hub links residents to the source records rather than presenting a third-party risk score as a definitive statement about current building condition.
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Building &amp; Market Resources</h2>
+      <div class="section-note">Use these external sources for additional listing history, floor plans and building information.</div>
+    </div>
+
+    <div class="source-grid">
+      <a class="source-card" href="https://streeteasy.com/building/124_16-84-road-kew_gardens" target="_blank" rel="noopener noreferrer"><strong>StreetEasy ↗</strong><span>Sales history, rental history and floor plans for selected apartments.</span></a>
+      <a class="source-card" href="https://www.zillow.com/b/124-16-84th-rd-kew-gardens-ny-9gpSPx/" target="_blank" rel="noopener noreferrer"><strong>Zillow ↗</strong><span>Current and recent apartment listings.</span></a>
+      <a class="source-card" href="https://www.compass.com/building/124-16-84th-rd-queens-ny-11415/293535264918305445/" target="_blank" rel="noopener noreferrer"><strong>Compass ↗</strong><span>Active listings, past sales and past rentals when available.</span></a>
+      <a class="source-card" href="https://www.propertyshark.com/mason/Property/538198/124-16-84-Rd-Queens-NY-11415/" target="_blank" rel="noopener noreferrer"><strong>PropertyShark ↗</strong><span>Property characteristics, public records and transaction information.</span></a>
+      <a class="source-card" href="https://miltoncoste.com/building/queens/124-16-84th-road" target="_blank" rel="noopener noreferrer"><strong>Milton Coste ↗</strong><span>Building facts and real-estate reference information.</span></a>
+      <a class="source-card" href="https://augrented.com/nyc/4092460305-124-16-84-road" target="_blank" rel="noopener noreferrer"><strong>Augrented ↗</strong><span>Aggregated NYC public-record background information. Third-party risk scoring is not reproduced here.</span></a>
+    </div>
+
+    <div class="disclaimer">Market information is for informational use by Crestwood residents. If you notice a listing that has sold, been rented, gone into contract or been removed, please send the updated link so the Hub can be corrected.</div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">Crestwood Community Hub • Sales, Rentals &amp; Building History • Updated October 20, 2026</div>
+</footer>
+
+</body>
+</html>
