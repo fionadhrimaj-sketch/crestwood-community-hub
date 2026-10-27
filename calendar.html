@@ -79,7 +79,7 @@ footer{background:#f5f8fb!important;border-top:1px solid var(--cw-line)!importan
 
 
 body.page-calendar{--page-dark:#17426a;--page-accent:#3e8bc9}
-.page-calendar .calendar-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:18px!important}
+.page-calendar .calendar-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:18px!important}
 .page-calendar .date-card{position:relative!important;overflow:hidden!important;border:1px solid var(--cw-line)!important;border-radius:20px!important;background:#fff!important;box-shadow:var(--cw-shadow)!important;padding:0!important;min-height:235px!important;display:flex!important;flex-direction:column!important;transition:transform .18s ease,box-shadow .18s ease!important}
 .page-calendar .date-card:hover{transform:translateY(-3px)!important;box-shadow:0 16px 36px rgba(28,52,83,.14)!important}
 .page-calendar .date-top{display:flex!important;align-items:center!important;gap:14px!important;padding:18px 20px!important;background:linear-gradient(135deg,#eaf5ff,#f6fbff)!important;border-bottom:1px solid #dce8f3!important}
@@ -99,86 +99,6 @@ body.page-calendar{--page-dark:#17426a;--page-accent:#3e8bc9}
 .page-calendar .calendar-note{margin-top:20px!important;padding:16px 18px!important;border-radius:16px!important;background:#fff8e7!important;border:1px solid #efddad!important;box-shadow:none!important;color:#6f551e!important;font-size:14px!important;line-height:1.5!important}
 @media(max-width:900px){.page-calendar .calendar-grid{grid-template-columns:1fr!important}.page-calendar .date-card{min-height:0!important}.page-calendar .upcoming-grid{grid-template-columns:1fr!important}}
 @media(max-width:560px){.page-calendar .date-top{padding:15px!important}.page-calendar .date-body{padding:17px!important}.page-calendar .date-badge{width:62px!important;min-width:62px!important;height:62px!important}.page-calendar .upcoming-card{padding:18px!important}}
-
-/* Different color themes for the three Known Dates cards */
-.page-calendar .calendar-grid .date-card:nth-child(1) .date-top{
-  background:linear-gradient(135deg,#fff3d8,#fff9ed)!important;
-  border-bottom-color:#f0d49a!important;
-}
-.page-calendar .calendar-grid .date-card:nth-child(1) .date-badge{
-  background:#fffaf0!important;
-  border:1px solid #f0d49a!important;
-}
-.page-calendar .calendar-grid .date-card:nth-child(1) .date-badge .month{
-  color:#c88412!important;
-}
-.page-calendar .calendar-grid .date-card:nth-child(1){
-  border-top:5px solid #e4a72b!important;
-}
-.page-calendar .calendar-grid .date-card:nth-child(1) .tag{
-  background:#fff2cf!important;
-  color:#9a6508!important;
-}
-
-.page-calendar .calendar-grid .date-card:nth-child(2) .date-top{
-  background:linear-gradient(135deg,#e7f8f3,#f4fcf9)!important;
-  border-bottom-color:#bfe6da!important;
-}
-.page-calendar .calendar-grid .date-card:nth-child(2) .date-badge{
-  background:#f4fcf9!important;
-  border:1px solid #bfe6da!important;
-}
-.page-calendar .calendar-grid .date-card:nth-child(2) .date-badge .month{
-  color:#168f83!important;
-}
-.page-calendar .calendar-grid .date-card:nth-child(2){
-  border-top:5px solid #18a99d!important;
-}
-.page-calendar .calendar-grid .date-card:nth-child(2) .tag{
-  background:#def5ef!important;
-  color:#14766d!important;
-}
-
-.page-calendar .calendar-grid .date-card:nth-child(3) .date-top{
-  background:linear-gradient(135deg,#fff0e8,#fff8f4)!important;
-  border-bottom-color:#efc6b2!important;
-}
-.page-calendar .calendar-grid .date-card:nth-child(3) .date-badge{
-  background:#fff8f4!important;
-  border:1px solid #efc6b2!important;
-}
-.page-calendar .calendar-grid .date-card:nth-child(3) .date-badge .month{
-  color:#c8663b!important;
-}
-.page-calendar .calendar-grid .date-card:nth-child(3){
-  border-top:5px solid #df7749!important;
-}
-.page-calendar .calendar-grid .date-card:nth-child(3) .tag{
-  background:#ffe6d8!important;
-  color:#a64e28!important;
-}
-.page-calendar .calendar-grid .date-card:nth-child(4) .date-top{
-  background:linear-gradient(135deg,#eee9ff,#f8f6ff)!important;
-  border-bottom-color:#d6ccf5!important;
-}
-.page-calendar .calendar-grid .date-card:nth-child(4) .date-badge{
-  background:#faf8ff!important;
-  border:1px solid #d6ccf5!important;
-}
-.page-calendar .calendar-grid .date-card:nth-child(4) .date-badge .month{
-  color:#7658c7!important;
-}
-.page-calendar .calendar-grid .date-card:nth-child(4){
-  border-top:5px solid #8062cf!important;
-}
-.page-calendar .calendar-grid .date-card:nth-child(4) .tag{
-  background:#eee9ff!important;
-  color:#654bb1!important;
-}
-
-
-.page-calendar a.tag{cursor:pointer!important;transition:transform .15s ease,box-shadow .15s ease!important}
-.page-calendar a.tag:hover{transform:translateY(-1px)!important;box-shadow:0 4px 10px rgba(28,52,83,.10)!important}
 </style></head>
 <body class="page-calendar">
 <section class="hero"><div class="wrap hero-inner">
@@ -198,10 +118,6 @@ body.page-calendar{--page-dark:#17426a;--page-accent:#3e8bc9}
     <div class="date-body"><h3>Line of Credit Repayment Assessment</h3><p>The line-of-credit repayment assessment begins in August 2026 and runs through December 2026.</p><span class="tag">Assessment</span></div>
   </article>
   <article class="date-card">
-    <div class="date-top"><div class="date-badge"><span class="month">AUG</span></div><div class="date-year"><strong>August 31, 2026</strong><br/>8:00 AM-5:00 PM</div></div>
-    <div class="date-body"><h3>Front Door Entrance Closed</h3><p>The front entrance will be closed for minor vestibule floor repairs. Use the back entrances for building access. Deliveries must use the basement entrance.</p><a class="tag" href="docs/front-door-closure-2026-08-31.pdf" target="_blank" rel="noopener">Access Notice ↗</a></div>
-  </article>
-  <article class="date-card">
     <div class="date-top"><div class="date-badge"><span class="month">DEC</span></div><div class="date-year"><strong>December 31, 2026</strong><br/>Period Ends</div></div>
     <div class="date-body"><h3>June 25 Operating Assessment Period Ends</h3><p>The June 25 notice states that its operating assessment continues through December 31, 2026.</p><span class="tag">Assessment</span></div>
   </article>
@@ -209,9 +125,16 @@ body.page-calendar{--page-dark:#17426a;--page-accent:#3e8bc9}
 </div></section>
 <section class="section" style="background:var(--soft)"><div class="wrap">
 <h2>Upcoming Meetings &amp; Events</h2>
-<p class="section-intro">New dates will be added as official notices and meeting information are received.</p>
+<p class="section-intro">Confirmed meetings and community dates based on official notices and verified information.</p>
 <div class="upcoming-grid">
-  <article class="upcoming-card"><div class="upcoming-icon">31</div><div><h3>Annual Shareholder Meeting</h3><p>No verified annual shareholder meeting date has been announced yet.</p><span class="tag">Date TBD</span></div></article>
+  <article class="upcoming-card">
+    <div class="upcoming-icon">27</div>
+    <div>
+      <h3>2026 Annual Shareholder Meeting &amp; Board Election</h3>
+      <p><strong>Tuesday, October 27, 2026 at 7:00 PM</strong><br>In person, downstairs basement area. Two Board of Directors seats are up for election. The proxy submission deadline was 4:00 PM on October 27.</p>
+      <a class="tag" href="https://sites.google.com/view/crestwoodcommunityhub/2026-annual-meeting-board-election" target="_top">Meeting Details &amp; Candidates →</a>
+    </div>
+  </article>
   <article class="upcoming-card"><div class="upcoming-icon">+</div><div><h3>Future Building &amp; Community Dates</h3><p>Board meetings, election dates, project milestones, and community events will appear here once confirmed.</p><span class="tag">Updates Coming</span></div></article>
 </div>
 <div class="calendar-note"><strong>Calendar note:</strong> Dates are added only when supported by a verified Board, management, or shareholder notice.</div>
