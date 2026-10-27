@@ -61,6 +61,16 @@ footer{margin-top:24px;border-top:1px solid var(--line);background:#fafcff;paddi
 .notice-disclaimer strong{color:#5f4a17}
 @media(max-width:760px){.notice-grid{grid-template-columns:1fr}}
 
+
+.fire-notice-card{grid-column:1/-1;scroll-margin-top:24px}
+.fire-download{margin-top:10px!important}
+.fire-download a{display:inline-flex;padding:10px 12px;border-radius:10px;background:#eaf5fb;color:#155982;font-weight:800;font-size:13px;text-decoration:none}
+.fire-download a:hover{background:#d9eaf7}
+.fire-details{margin-top:11px;border:1px solid #e1e9f2;border-radius:10px;background:white}
+.fire-details summary{cursor:pointer;padding:12px 14px;font-weight:800;color:#1c3562}
+.fire-details[open] summary{border-bottom:1px solid #e1e9f2}
+.fire-details ul{margin:10px 14px 14px;padding-left:22px}
+.fire-disclaimer{margin-top:13px!important;font-size:12px!important;color:#6a7180!important}
 </style>
 </head>
 <body>
@@ -72,6 +82,8 @@ footer{margin-top:24px;border-top:1px solid var(--line);background:#fafcff;paddi
     <p>Helpful Crestwood information for everyday resident needs, contractors, governing documents, and building procedures.</p>
   </div>
 </section>
+
+<div class="wrap" style="padding-top:18px"><a href="#fire-safety-notice" style="display:block;padding:14px 17px;border-radius:13px;background:#fff5e5;border:1px solid #f0d6a3;font-weight:800;color:#17365f;text-decoration:none">Fire Safety Instructions: What to Do in an Emergency →</a></div>
 
 <section class="section">
   <div class="wrap">
@@ -172,10 +184,37 @@ footer{margin-top:24px;border-top:1px solid var(--line);background:#fafcff;paddi
         </ul>
       </div>
 
-      <div class="notice-card emergency">
-        <span class="label">Fire Safety</span>
-        <h3>Fire &amp; Emergency Safety Plan</h3>
-        <p>The lobby contains the building's posted Fire &amp; Emergency Safety Plan and Fire Safety Notice, including evacuation guidance and building safety information. Residents should review the posted notices and follow FDNY instructions during an emergency.</p>
+      <div class="notice-card emergency fire-notice-card" id="fire-safety-notice">
+        <span class="label">Fire Safety • Posted Notice</span>
+        <h3>Fire Safety Notice</h3>
+        <p><strong>In the event of fire, stay calm, notify the Fire Department and follow the directions of Fire Department personnel.</strong> The posted notice identifies the building as <strong>non-combustible (fireproof)</strong>.</p>
+        <p class="fire-download"><a href="docs/crestwood-fire-safety-notice.pdf" target="_blank" rel="noopener">View or print the photographed official notice (PDF) →</a> &nbsp; <a href="docs/crestwood-fire-safety-notice-clean.pdf" target="_blank" rel="noopener">Read clean formatted copy (PDF) →</a></p>
+        <details class="fire-details">
+          <summary>If the fire is in your apartment</summary>
+          <ul>
+            <li>Close the door to the room where the fire is and leave the apartment.</li>
+            <li>Make sure everyone leaves the apartment with you. Take your keys.</li>
+            <li>Close, but do not lock, the apartment door.</li>
+            <li>Alert people on your floor by knocking on their doors on your way to the exit.</li>
+            <li>Use the nearest stairwell to leave the building. <strong>Do not use the elevator.</strong></li>
+            <li>Call 911 once you reach a safe location. Do not assume the fire has been reported unless firefighters are on the scene.</li>
+            <li>Meet members of your household at a pre-determined location outside the building. Notify firefighters if anyone is unaccounted for.</li>
+          </ul>
+        </details>
+        <details class="fire-details">
+          <summary>If the fire is not in your apartment</summary>
+          <ul>
+            <li>Stay inside your apartment and listen for instructions from firefighters unless conditions become dangerous.</li>
+            <li>If you must exit, first feel your apartment door and doorknob for heat. If they are not hot, open the door slightly and check the hallway for smoke, heat or fire.</li>
+            <li>If you can safely exit your apartment, follow the instructions above for a fire in your apartment.</li>
+            <li>If you cannot safely exit, call 911 and give your address, floor, apartment number and number of people in your apartment.</li>
+            <li>Seal the doors with wet towels or sheets and seal air ducts or other openings where smoke may enter.</li>
+            <li>Open windows a few inches at top and bottom unless flames and smoke are coming from below. <strong>Do not break any windows.</strong></li>
+            <li>If conditions appear life-threatening, open a window and wave a towel or sheet to attract firefighters' attention.</li>
+            <li>If smoke conditions worsen before help arrives, get down on the floor and take short breaths through your nose. If possible, retreat to a balcony or terrace away from the source of the smoke, heat or fire.</li>
+          </ul>
+        </details>
+        <p class="fire-disclaimer">Instructions transcribed for convenience from the posted Fire Safety Notice. Refer to the original PDF and follow firefighters' directions in an emergency.</p>
       </div>
 
       <div class="notice-card">
