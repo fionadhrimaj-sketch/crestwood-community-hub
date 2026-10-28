@@ -739,6 +739,18 @@ footer{margin-top:0;background:#17365f;color:#d6e1ed;border-top:0;padding:28px 0
 }
 
 </style>
+<style>
+/* Year-by-year What's Happening archive */
+.year-archive{border:1px solid #dbe5ef;border-radius:18px;background:#fff;overflow:hidden;margin-top:18px;box-shadow:0 5px 18px rgba(25,57,90,.06)}
+.year-archive > summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 22px;background:#eef6fc;color:#102a63;font-weight:800;font-size:20px}
+.year-archive > summary::-webkit-details-marker{display:none}
+.year-archive > summary:after{content:'+';font-size:25px;font-weight:500;line-height:1}
+.year-archive[open] > summary:after{content:'−'}
+.year-hint{margin-left:auto;font-size:12px;color:#60758e;font-weight:500}
+.year-archive > .cards3{padding:18px;}
+.year-archive > summary:focus-visible{outline:3px solid #18a99d;outline-offset:-3px}
+@media(max-width:600px){.year-archive > summary{padding:15px;font-size:18px}.year-archive > .cards3{padding:12px}.year-hint{display:none}}
+</style>
 </head>
 <body>
 <main id="home">
@@ -853,17 +865,16 @@ footer{margin-top:0;background:#17365f;color:#d6e1ed;border-top:0;padding:28px 0
 <h2>What’s Happening</h2>
 <p>Current building information and items residents may want to know about.</p>
 </div>
-<article aria-label="Apartment door and saddle paint touchups" style="margin:0 0 18px;padding:17px 20px;border-radius:18px;background:#fff;border-top:4px solid #18a99d;box-shadow:0 6px 22px rgba(30,65,90,.09);">
-  <div style="font-size:12px;font-weight:800;color:#008c85;">Building Maintenance • October 27, 2026</div>
-  <h3 style="margin:6px 0;color:#102a63;font-size:19px;">Apartment Doors &amp; Saddles: Paint Touchups</h3>
-  <p style="margin:0;color:#617188;font-size:14px;line-height:1.6;">Touchup painting of apartment doorways and saddles was scheduled for Tuesday, October 27, where needed. Residents were advised to use caution when entering or leaving apartments. Freshly painted areas required approximately 30 minutes to dry.</p>
-</article>
-<div class="cards3">
+<details class="year-archive" open=""><summary><span class="year-title">2026 Updates</span><span class="year-hint">Select to expand or collapse</span></summary><div class="cards3">
 <article class="info-card warn">
 <div class="eyebrow">October 27, 2026 • Election Update</div>
 <h3>2026 Annual Meeting &amp; Board Election</h3>
 <p>Shareholder-reported results: Eva Marciniak and Ioana R. Popescu won the two Board seats. Awaiting official written confirmation from the election inspectors or management.</p>
 <a class="more" href="https://sites.google.com/view/crestwoodcommunityhub/2026-annual-meeting-board-election" rel="noopener" target="_blank">View Meeting Details &amp; Candidate Statements →</a>
+</article><article aria-label="Apartment door and saddle paint touchups" style="margin:0 0 18px;padding:17px 20px;border-radius:18px;background:#fff;border-top:4px solid #18a99d;box-shadow:0 6px 22px rgba(30,65,90,.09);;grid-column:1/-1;">
+<div style="font-size:12px;font-weight:800;color:#008c85;">Building Maintenance • October 27, 2026</div>
+<h3 style="margin:6px 0;color:#102a63;font-size:19px;">Apartment Doors &amp; Saddles: Paint Touchups</h3>
+<p style="margin:0;color:#617188;font-size:14px;line-height:1.6;">Touchup painting of apartment doorways and saddles was scheduled for Tuesday, October 27, where needed. Residents were advised to use caution when entering or leaving apartments. Freshly painted areas required approximately 30 minutes to dry.</p>
 </article>
 <article class="info-card purple">
 <div class="eyebrow">Amenity Update</div>
@@ -886,7 +897,7 @@ footer{margin-top:0;background:#17365f;color:#d6e1ed;border-top:0;padding:28px 0
 <article class="info-card">
 <div class="eyebrow">Building Market</div>
 <h3>Two Apartments Listed for Sale: 2C &amp; 2E</h3>
-<p><strong>Apartment 2C:</strong> $249,000 · 1 bedroom · 1 bathroom.<br><strong>Apartment 2E:</strong> $675,000 · 3 bedrooms · 2 bathrooms · approximately 1,450 sq. ft.</p>
+<p><strong>Apartment 2C:</strong> $249,000 · 1 bedroom · 1 bathroom.<br/><strong>Apartment 2E:</strong> $675,000 · 3 bedrooms · 2 bathrooms · approximately 1,450 sq. ft.</p>
 <p>Prices and availability reflect the listing information shown in the Hub and may change. Check the original listings for the latest status.</p>
 <a class="more" href="https://sites.google.com/view/crestwoodcommunityhub/apartments-market" rel="noopener" target="_blank">View Apartments &amp; Market →</a>
 </article>
@@ -896,7 +907,7 @@ footer{margin-top:0;background:#17365f;color:#d6e1ed;border-top:0;padding:28px 0
 <p>Effective August 1, 2026, monthly parking charges increase by $25, and bicycle storage fees increase to $12 per month per space.</p>
 <a class="more" href="https://sites.google.com/view/crestwoodcommunityhub/documents" rel="noopener" target="_top">See Documents →</a>
 </article>
-</div>
+</div></details>
 </div>
 </section>
 <section class="section notices-section">
