@@ -62,6 +62,18 @@ footer{margin-top:24px;border-top:1px solid var(--line);background:#fafcff;paddi
 .notice-disclaimer strong{color:#5f4a17}
 @media(max-width:760px){.notice-grid{grid-template-columns:1fr}}
 
+
+/* Safety notices: expandable by resident, collapsed by default */
+.crestwood-safety-accordion{border:1px solid var(--line);border-radius:16px;background:#fff;overflow:hidden;box-shadow:0 3px 12px rgba(32,55,90,.05)}
+.crestwood-safety-accordion>summary{cursor:pointer;padding:19px 20px;display:flex;flex-direction:column;gap:5px;position:relative;list-style:none;padding-right:52px}
+.crestwood-safety-accordion>summary::-webkit-details-marker{display:none}
+.crestwood-safety-accordion>summary:after{content:'+';position:absolute;right:20px;top:19px;font-size:25px;font-weight:700;color:var(--navy)}
+.crestwood-safety-accordion[open]>summary:after{content:'−'}
+.crestwood-safety-heading{font-size:25px;font-weight:800;color:var(--navy)}
+.crestwood-safety-hint{font-size:14px;color:var(--muted)}
+.crestwood-safety-contents{padding:5px 18px 20px}
+.crestwood-safety-accordion>summary:focus-visible{outline:3px solid var(--teal);outline-offset:-4px}
+@media(max-width:760px){.crestwood-safety-heading{font-size:22px}}
 </style>
 </head>
 <body>
@@ -120,14 +132,30 @@ footer{margin-top:24px;border-top:1px solid var(--line);background:#fafcff;paddi
 <h2>Everyday Resident Information</h2>
 <p class="section-intro">For current rules, move procedures, and repair instructions, confirm requirements directly with management.</p>
 <div class="grid">
-
 </div>
 </div>
 </section>
 <section class="section" style="background:var(--soft)">
 <div class="wrap">
-<h2>Safety &amp; Building Notices</h2>
-<p class="section-intro">A resident-friendly reference to important notices currently posted on the Crestwood lobby bulletin board.</p>
+<h2>Financial Information</h2>
+<p class="section-intro">Audited financial statements and the supplementary unaudited financial summary shared at the 2026 Annual Meeting.</p>
+<div class="grid">
+<a class="card" href="https://drive.google.com/file/d/13c90Rf8txyN7yZlRY7ZaD4C4erE4vAQU/view?usp=sharing" target="_blank">
+<h3>2025 Audited Financial Statements</h3>
+<p>The official audited statements for 2025 and 2024.</p>
+<div class="meta">Open audited statements →</div>
+</a>
+<a class="card" href="https://fionadhrimaj-sketch.github.io/crestwood-community-hub/august-2026-statements-of-operations.html" rel="noopener noreferrer" target="_blank">
+<h3>August 2026 Statements of Operations</h3>
+<p>Board-provided, management-prepared unaudited financial summary distributed at the October 27, 2026 Annual Meeting. Includes August 2026 cash-basis figures and comparisons with the 2025 and 2024 audited accrual figures. For shareholder discussion only.</p>
+<div class="meta">View meeting financial summary →</div>
+</a>
+</div>
+</div>
+</section><section class="section" style="background:var(--soft)">
+<div class="wrap"><details class="crestwood-safety-accordion"><summary><span class="crestwood-safety-heading">Safety &amp; Building Notices</span><span class="crestwood-safety-hint">Select to view safety contacts, notices, and building information</span></summary><div class="crestwood-safety-contents">
+
+
 <div class="notice-grid">
 <div class="notice-card emergency">
 <span class="label">Emergency Contact</span>
@@ -187,26 +215,9 @@ footer{margin-top:24px;border-top:1px solid var(--line);background:#fafcff;paddi
 <div class="notice-disclaimer">
 <strong>About these notices:</strong> This section is provided as a convenient resident reference based on notices posted in the Crestwood lobby. The physical lobby postings and any current notices issued by the Board, management, NYC agencies, or emergency authorities remain the official source.
     </div>
-</div>
+</div></details></div>
 </section>
-<section class="section" style="background:var(--soft)">
-<div class="wrap">
-<h2>Financial Information</h2>
-<p class="section-intro">Audited financial statements and the supplementary unaudited financial summary shared at the 2026 Annual Meeting.</p>
-<div class="grid">
-<a class="card" href="https://drive.google.com/file/d/13c90Rf8txyN7yZlRY7ZaD4C4erE4vAQU/view?usp=sharing" target="_blank">
-<h3>2025 Audited Financial Statements</h3>
-<p>The official audited statements for 2025 and 2024.</p>
-<div class="meta">Open audited statements →</div>
-</a>
-<a class="card" href="https://fionadhrimaj-sketch.github.io/crestwood-community-hub/august-2026-statements-of-operations.html" target="_blank" rel="noopener noreferrer">
-<h3>August 2026 Statements of Operations</h3>
-<p>Board-provided, management-prepared unaudited financial summary distributed at the October 27, 2026 Annual Meeting. Includes August 2026 cash-basis figures and comparisons with the 2025 and 2024 audited accrual figures. For shareholder discussion only.</p>
-<div class="meta">View meeting financial summary →</div>
-</a>
-</div>
-</div>
-</section>
+
 <footer>
 <div class="wrap footer-inner">
 <div class="footer-brand">Crestwood Community Hub</div>
