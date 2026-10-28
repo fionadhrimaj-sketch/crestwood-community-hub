@@ -751,7 +751,19 @@ footer{margin-top:0;background:#17365f;color:#d6e1ed;border-top:0;padding:28px 0
 .year-archive > summary:focus-visible{outline:3px solid #18a99d;outline-offset:-3px}
 @media(max-width:600px){.year-archive > summary{padding:15px;font-size:18px}.year-archive > .cards3{padding:12px}.year-hint{display:none}}
 </style>
-</head>
+<style>/* Quick Actions: two rows of five on wider screens */
+@media (min-width: 1050px) {
+  .quick-section .quick-grid { display:grid !important;grid-template-columns:repeat(5,minmax(0,1fr)) !important;gap:14px !important; }
+  .quick-section .quick {min-width:0;}
+  .quick-section .quick-title {overflow-wrap:anywhere;}
+}
+@media (min-width: 650px) and (max-width: 1049px) {
+  .quick-section .quick-grid {display:grid !important;grid-template-columns:repeat(3,minmax(0,1fr)) !important;}
+}
+@media (max-width: 649px) {
+  .quick-section .quick-grid {display:grid !important;grid-template-columns:repeat(2,minmax(0,1fr)) !important;}
+}
+</style></head>
 <body>
 <main id="home">
 <section class="hero">
@@ -844,18 +856,18 @@ footer{margin-top:0;background:#17365f;color:#d6e1ed;border-top:0;padding:28px 0
 <p>Find the most-used Crestwood information and services in just a few taps.</p>
 </div>
 <div class="quick-grid">
-<a class="quick" href="https://sites.google.com/view/crestwoodcommunityhub/projects" rel="noopener" target="_blank"><span class="icon teal">🏗️</span><span class="quick-title">Projects</span><span class="arrow">›</span></a>
-<a class="quick" href="https://sites.google.com/view/crestwoodcommunityhub/building-updates" rel="noopener" target="_blank"><span class="icon">📢</span><span class="quick-title">Building Updates</span><span class="arrow">›</span></a>
-<a class="quick" href="https://sites.google.com/view/crestwoodcommunityhub/resident-resources" rel="noopener" target="_blank"><span class="icon">📚</span><span class="quick-title">Resident Resources</span><span class="arrow">›</span></a>
-<a class="quick" href="https://sites.google.com/view/crestwoodcommunityhub/contacts" rel="noopener" target="_blank"><span class="icon teal">☎️</span><span class="quick-title">Contacts</span><span class="arrow">›</span></a>
-<a class="quick" href="https://sites.google.com/view/crestwoodcommunityhub/documents" rel="noopener" target="_blank"><span class="icon">📄</span><span class="quick-title">Documents</span><span class="arrow">›</span></a>
-<a class="quick" href="https://sites.google.com/view/crestwoodcommunityhub/calendar" rel="noopener" target="_blank"><span class="icon teal">📅</span><span class="quick-title">Calendar</span><span class="arrow">›</span></a>
-<a class="quick" href="https://sites.google.com/view/crestwoodcommunityhub/board-governance" rel="noopener" target="_blank"><span class="icon purple">🏛️</span><span class="quick-title">Board &amp; Governance</span><span class="arrow">›</span></a>
-<a class="quick" href="https://sites.google.com/view/crestwoodcommunityhub/apartment-shares" rel="noopener" target="_blank"><span class="icon purple">📊</span><span class="quick-title">Apartment Shares &amp; Layouts</span><span class="arrow">›</span></a>
-<a class="quick" href="https://sites.google.com/view/crestwoodcommunityhub/apartments-market" rel="noopener" target="_blank"><span class="icon teal">🏡</span><span class="quick-title">Apartments &amp; Market</span><span class="arrow">›</span></a>
-<a class="quick" href="https://sites.google.com/view/crestwoodcommunityhub/resident-directory" rel="noopener" target="_blank"><span class="icon purple">🏠</span><span class="quick-title">Resident Directory</span><span class="arrow">›</span></a>
-<a class="quick" href="https://sites.google.com/view/crestwoodcommunityhub/submit-a-request" rel="noopener" target="_blank"><span class="icon teal">🔧</span><span class="quick-title">Submit a Request</span><span class="arrow">›</span></a>
-</div>
+
+
+
+
+
+
+
+
+
+
+
+<a class="quick" href="https://sites.google.com/view/crestwoodcommunityhub/resident-resources" rel="noopener" target="_blank"><span class="icon">📚</span><span class="quick-title">Resident Resources</span><span class="arrow">›</span></a><a class="quick" href="https://sites.google.com/view/crestwoodcommunityhub/building-updates" rel="noopener" target="_blank"><span class="icon">📢</span><span class="quick-title">Building Updates</span><span class="arrow">›</span></a><a class="quick" href="https://sites.google.com/view/crestwoodcommunityhub/documents" rel="noopener" target="_blank"><span class="icon">📄</span><span class="quick-title">Documents</span><span class="arrow">›</span></a><a class="quick" href="https://sites.google.com/view/crestwoodcommunityhub/projects" rel="noopener" target="_blank"><span class="icon teal">🏗️</span><span class="quick-title">Projects</span><span class="arrow">›</span></a><a class="quick" href="https://sites.google.com/view/crestwoodcommunityhub/calendar" rel="noopener" target="_blank"><span class="icon teal">📅</span><span class="quick-title">Calendar</span><span class="arrow">›</span></a><a class="quick" href="https://sites.google.com/view/crestwoodcommunityhub/contacts" rel="noopener" target="_blank"><span class="icon teal">☎️</span><span class="quick-title">Contacts</span><span class="arrow">›</span></a><a class="quick" href="https://sites.google.com/view/crestwoodcommunityhub/board-governance" rel="noopener" target="_blank"><span class="icon purple">🏛️</span><span class="quick-title">Board &amp; Governance</span><span class="arrow">›</span></a><a class="quick" href="https://sites.google.com/view/crestwoodcommunityhub/apartment-shares" rel="noopener" target="_blank"><span class="icon purple">📊</span><span class="quick-title">Apartment Shares &amp; Layouts</span><span class="arrow">›</span></a><a class="quick" href="https://sites.google.com/view/crestwoodcommunityhub/apartments-market" rel="noopener" target="_blank"><span class="icon teal">🏡</span><span class="quick-title">Apartments &amp; Market</span><span class="arrow">›</span></a><a class="quick" href="https://sites.google.com/view/crestwoodcommunityhub/resident-directory" rel="noopener" target="_blank"><span class="icon purple">🏠</span><span class="quick-title">Resident Directory</span><span class="arrow">›</span></a></div>
 </div>
 </section>
 <section class="section happening">
