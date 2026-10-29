@@ -138,7 +138,18 @@ body.page-calendar{--page-dark:#17426a;--page-accent:#3e8bc9}
 .page-calendar .past-grid .date-card{min-height:0!important}
 .page-calendar .date-body .calendar-link{align-self:flex-start;margin-top:16px}
 @media(max-width:900px){.page-calendar .past-grid{grid-template-columns:1fr!important}}
-</style></head>
+</style><style>
+/* Matching pastel icon treatment throughout the Crestwood Hub */
+.cw-card-head{display:flex;gap:13px;align-items:center;margin:0 0 10px}
+.cw-card-head h3{margin:0!important}
+.cw-icon{display:inline-flex;align-items:center;justify-content:center;flex:0 0 42px;width:42px;height:42px;border-radius:12px;font-size:20px;line-height:1;background:#e8f4ff;color:#155a91}
+.cw-icon.green{background:#e5f7f1;color:#157d69}
+.cw-icon.purple{background:#f0ebff;color:#6649b5}
+.cw-icon.amber{background:#fff3dc;color:#8d5c00}
+.cw-icon.blue{background:#e8f4ff;color:#155a91}
+.cw-icon.pink{background:#ffeaf2;color:#9c4468}
+@media(max-width:600px){.cw-icon{flex-basis:38px;width:38px;height:38px;font-size:18px}.cw-card-head{gap:10px}}
+</style><style>.page-calendar .date-body .cw-card-head{margin-bottom:8px}.page-calendar .no-events .cw-card-head{margin-bottom:6px}.page-calendar .date-body .tag{margin-top:12px!important}.page-calendar .no-events .cw-icon{width:48px;height:48px;flex-basis:48px}</style></head>
 <body class="page-calendar">
 <section class="hero"><div class="wrap hero-inner">
 <h1>Calendar</h1>
@@ -147,24 +158,22 @@ body.page-calendar{--page-dark:#17426a;--page-accent:#3e8bc9}
 <section class="section" style="background:var(--soft)"><div class="wrap">
 <h2>Upcoming Meetings &amp; Events</h2>
 <p class="section-intro">Confirmed building meetings and community events will appear here when dates are announced.</p>
-<div class="upcoming-grid"><div class="upcoming-card no-events"><div class="upcoming-icon">✓</div><div><h3>No upcoming meetings or events announced</h3><p>Confirmed Board meetings, shareholder meetings, and community events will be listed here as dates become available.</p></div></div></div>
+<div class="upcoming-grid"><div class="upcoming-card no-events"><div><div class="cw-card-head"><span aria-hidden="true" class="cw-icon blue">📅</span><h3>No upcoming meetings or events announced</h3></div><p>Confirmed Board meetings, shareholder meetings, and community events will be listed here as dates become available.</p></div></div></div>
 </div></section><section class="section"><div class="wrap">
 <h2>Important Dates &amp; Deadlines</h2>
 <p class="section-intro">Upcoming building deadlines first, with past fee changes and announcements available below.</p>
 <div class="calendar-grid">
-
-
 <article class="date-card">
 <div class="date-top"><div class="date-badge"><span class="month">DEC</span></div><div class="date-year"><strong>December 31, 2026</strong><br/>Assessment End Date</div></div>
-<div class="date-body"><h3>Insurance-Deductible Assessment Ends</h3><p>The assessment for the building’s $50,000 insurance deductible is scheduled to continue through December 31, 2026, according to the June 25 notice.</p><span class="tag">Assessment</span><a class="calendar-link" href="https://sites.google.com/view/crestwoodcommunityhub/june-2026-assmt-fee" rel="noopener noreferrer" target="_blank">View June 25 Notice →</a></div>
+<div class="date-body"><div class="cw-card-head"><span aria-hidden="true" class="cw-icon amber">📆</span><h3>Insurance-Deductible Assessment Ends</h3></div><p>The assessment for the building’s $50,000 insurance deductible is scheduled to continue through December 31, 2026, according to the June 25 notice.</p><span class="tag">Assessment</span><a class="calendar-link" href="https://sites.google.com/view/crestwoodcommunityhub/june-2026-assmt-fee" rel="noopener noreferrer" target="_blank">View June 25 Notice →</a></div>
 </article>
 </div>
 <details class="past-dates"><summary>Past Dates (2)</summary><div class="calendar-grid past-grid"><article class="date-card">
 <div class="date-top"><div class="date-badge"><span class="month">AUG</span></div><div class="date-year"><strong>August 1, 2026</strong><br/>Effective Date</div></div>
-<div class="date-body"><h3>Parking &amp; Bicycle Storage Fee Changes</h3><p>Monthly parking charges increase by $25, and bicycle storage fees become $12 per month per space.</p><span class="tag">Fee Change</span></div>
+<div class="date-body"><div class="cw-card-head"><span aria-hidden="true" class="cw-icon blue">🅿️</span><h3>Parking &amp; Bicycle Storage Fee Changes</h3></div><p>Monthly parking charges increase by $25, and bicycle storage fees become $12 per month per space.</p><span class="tag">Fee Change</span></div>
 </article><article class="date-card">
 <div class="date-top"><div class="date-badge"><span class="month">AUG</span></div><div class="date-year"><strong>August 2026</strong><br/>Assessment Begins</div></div>
-<div class="date-body"><h3>Line of Credit Repayment Assessment</h3><p>The Community Hub previously listed August 2026 as the start of this assessment. Refer to the original notice for the authoritative billing schedule.</p><span class="tag">Assessment</span></div>
+<div class="date-body"><div class="cw-card-head"><span aria-hidden="true" class="cw-icon purple">💵</span><h3>Line of Credit Repayment Assessment</h3></div><p>The Community Hub previously listed August 2026 as the start of this assessment. Refer to the original notice for the authoritative billing schedule.</p><span class="tag">Assessment</span></div>
 </article></div></details></div></section>
 <footer><div class="wrap footer-inner"><div class="footer-brand">Crestwood Community Hub</div><div>Resident information • Documents • Updates • Resources</div></div><p style="max-width:1120px;margin:12px auto 0;padding:0 22px;font-size:12px;line-height:1.6;color:#69778c;text-align:center">Independent shareholder-created resource. Not an official website or communication channel of the Crestwood Board or Metro Management. Original notices and governing documents control; verify current requirements with management.</p></footer>
 </body></html>

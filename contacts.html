@@ -99,6 +99,17 @@ body.page-contacts{--page-dark:#17385d;--page-accent:#4d86c6}
 .page-contacts .contact-line a{color:#135b96;text-decoration:underline;text-underline-offset:2px;overflow-wrap:anywhere}
 .page-contacts .callout a{font-weight:800;color:#155a92;text-decoration:underline;text-underline-offset:3px}
 .page-contacts a:focus-visible{outline:3px solid #18a99d;outline-offset:3px}
+</style><style>
+/* Matching pastel icon treatment throughout the Crestwood Hub */
+.cw-card-head{display:flex;gap:13px;align-items:center;margin:0 0 10px}
+.cw-card-head h3{margin:0!important}
+.cw-icon{display:inline-flex;align-items:center;justify-content:center;flex:0 0 42px;width:42px;height:42px;border-radius:12px;font-size:20px;line-height:1;background:#e8f4ff;color:#155a91}
+.cw-icon.green{background:#e5f7f1;color:#157d69}
+.cw-icon.purple{background:#f0ebff;color:#6649b5}
+.cw-icon.amber{background:#fff3dc;color:#8d5c00}
+.cw-icon.blue{background:#e8f4ff;color:#155a91}
+.cw-icon.pink{background:#ffeaf2;color:#9c4468}
+@media(max-width:600px){.cw-icon{flex-basis:38px;width:38px;height:38px;font-size:18px}.cw-card-head{gap:10px}}
 </style></head>
 <body class="page-contacts">
 <section class="hero"><div class="wrap hero-inner">
@@ -111,7 +122,7 @@ body.page-contacts{--page-dark:#17385d;--page-accent:#4d86c6}
 <div class="grid">
 <div class="card">
 <span class="label">Property Manager</span>
-<h3>Litsa Douris</h3>
+<div class="cw-card-head"><span aria-hidden="true" class="cw-icon blue">🏢</span><h3>Litsa Douris</h3></div>
 <p>Metro Management Development, Inc.</p>
 <div class="contact-line"><strong>Main:</strong> <a href="tel:+17187067755">(718) 706-7755</a></div>
 <div class="contact-line"><strong>Direct:</strong> <a href="tel:+17185938912">(718) 593-8912</a></div>
@@ -121,7 +132,7 @@ body.page-contacts{--page-dark:#17385d;--page-accent:#4d86c6}
 </div>
 <div class="card">
 <span class="label">Tax Abatement Questions</span>
-<h3>Metro Management</h3>
+<div class="cw-card-head"><span aria-hidden="true" class="cw-icon purple">📋</span><h3>Metro Management</h3></div>
 <p>For questions related to the 2025/2026 co-op tax benefits notice.</p>
 <div class="contact-line"><strong>Phone:</strong> <a href="tel:+17187067755,8906">(718) 706-7755 ext. 8906</a></div>
 <div class="contact-line"><strong>Email:</strong> <a href="mailto:abatement@metromanagementdev.com">abatement@metromanagementdev.com</a></div>
@@ -131,22 +142,21 @@ body.page-contacts{--page-dark:#17385d;--page-accent:#4d86c6}
 <section class="section" style="background:var(--soft)"><div class="wrap">
 <h2>Board of Directors</h2>
 <p class="section-intro">View the current Board members and governing information in one place.</p>
-
-<a class="card directory-link" href="https://sites.google.com/view/crestwoodcommunityhub/board-governance" rel="noopener noreferrer" target="_blank"><h3>View Board of Directors</h3><p>Open the current Board roster and governance documents.</p><span class="more">View Board &amp; Governance →</span></a></div></section>
+<a class="card directory-link" href="https://sites.google.com/view/crestwoodcommunityhub/board-governance" rel="noopener noreferrer" target="_blank"><div class="cw-card-head"><span aria-hidden="true" class="cw-icon purple">🏛️</span><h3>View Board of Directors</h3></div><p>Open the current Board roster and governance documents.</p><span class="more">View Board &amp; Governance →</span></a></div></section>
 <section class="section"><div class="wrap">
 <h2>Building &amp; Emergency Contacts</h2>
 <p class="section-intro">Only confirmed contact information should be posted here.</p>
 <div class="grid">
 <div class="card staff-card">
 <span class="label">Superintendent</span>
-<h3>Joe U.</h3>
+<div class="cw-card-head"><span aria-hidden="true" class="cw-icon green">🔧</span><h3>Joe U.</h3></div>
 <p>Building superintendent for Crestwood.</p>
 <div class="contact-line"><strong>Phone:</strong> <a href="tel:+17185512649">(718) 551-2649</a></div>
 <div class="staff-hours"><strong>Hours:</strong> Monday-Friday, 8:00 AM-5:00 PM<br/><strong>Office hours:</strong> 8:00 AM-5:00 PM</div>
 </div>
 <div class="card staff-card">
 <span class="label">Porter</span>
-<h3>Devon R.</h3>
+<div class="cw-card-head"><span aria-hidden="true" class="cw-icon blue">🧹</span><h3>Devon R.</h3></div>
 <p>Building porter for Crestwood.</p>
 <div class="contact-line"><strong>Phone:</strong> <a href="tel:+19178333094">(917) 833-3094</a></div>
 <div class="staff-hours"><strong>Hours:</strong> Saturday-Wednesday, 8:00 AM-5:00 PM</div>

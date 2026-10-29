@@ -33,7 +33,18 @@ a{color:inherit;text-decoration:none}.wrap{max-width:1120px;margin:auto;padding:
 footer{margin-top:24px;border-top:1px solid var(--line);background:#fafcff;padding:22px 0;color:#61708a;font-size:13px}.footer-inner{display:flex;justify-content:space-between;gap:20px}.footer-brand{font-weight:800;color:var(--navy)}
 @media(max-width:760px){.nav{display:none}.wrap{padding:0 14px}.hero-inner{padding:30px 0 26px;text-align:center}.hero h1{font-size:38px}.hero p{font-size:16px;margin-left:auto;margin-right:auto}.grid,.facts{grid-template-columns:1fr}.section{padding:24px 0}.section h2{font-size:23px}.footer-inner{display:block;text-align:center}.footer-inner div+div{margin-top:7px}}
 </style>
-</head>
+<style>
+/* Matching pastel icon treatment throughout the Crestwood Hub */
+.cw-card-head{display:flex;gap:13px;align-items:center;margin:0 0 10px}
+.cw-card-head h3{margin:0!important}
+.cw-icon{display:inline-flex;align-items:center;justify-content:center;flex:0 0 42px;width:42px;height:42px;border-radius:12px;font-size:20px;line-height:1;background:#e8f4ff;color:#155a91}
+.cw-icon.green{background:#e5f7f1;color:#157d69}
+.cw-icon.purple{background:#f0ebff;color:#6649b5}
+.cw-icon.amber{background:#fff3dc;color:#8d5c00}
+.cw-icon.blue{background:#e8f4ff;color:#155a91}
+.cw-icon.pink{background:#ffeaf2;color:#9c4468}
+@media(max-width:600px){.cw-icon{flex-basis:38px;width:38px;height:38px;font-size:18px}.cw-card-head{gap:10px}}
+</style></head>
 <body>
 <section class="hero"><div class="wrap hero-inner">
 <h1>Building Projects</h1>
@@ -44,7 +55,7 @@ footer{margin-top:24px;border-top:1px solid var(--line);background:#fafcff;paddi
 <div class="grid">
 <div class="project">
 <span class="status future">Status to be confirmed</span>
-<h3>Front Lobby Carpet Replacement</h3>
+<div class="cw-card-head"><span aria-hidden="true" class="cw-icon purple">🛠️</span><h3>Front Lobby Carpet Replacement</h3></div>
 <p>A separate front lobby carpet replacement project has a reported cost of <strong>$32,000</strong>. This is being tracked separately from the earlier lobby and hallway renovation.</p>
 <div class="facts">
 <div class="fact"><strong>$32,000</strong><span>Reported project cost</span></div>
@@ -53,7 +64,7 @@ footer{margin-top:24px;border-top:1px solid var(--line);background:#fafcff;paddi
 </div>
 <div class="project">
 <span class="status active">Insurance Follow-Up</span>
-<h3>Rainstorm Damage &amp; Insurance Deductible</h3>
+<div class="cw-card-head"><span aria-hidden="true" class="cw-icon blue">🌧️</span><h3>Rainstorm Damage &amp; Insurance Deductible</h3></div>
 <p>A June 25, 2026 notice states that the current assessment would continue through December 31, 2026 to help cover a $50,000 insurance deductible related to rainstorm damage affecting the lobby and first-floor apartments.</p>
 <div class="facts">
 <div class="fact"><strong>$50,000</strong><span>Insurance deductible stated in the notice</span></div>
@@ -68,7 +79,7 @@ footer{margin-top:24px;border-top:1px solid var(--line);background:#fafcff;paddi
 <div class="grid">
 <div class="project">
 <span class="status complete">Completed</span>
-<h3>Lobby &amp; Hallway Renovation</h3>
+<div class="cw-card-head"><span aria-hidden="true" class="cw-icon green">🏢</span><h3>Lobby &amp; Hallway Renovation</h3></div>
 <p>The shareholder assessment notice states that the hallway and lobby renovations were completed. The 2025 audited financial statements report approximately $562,000 of expenses associated with the project through December 31, 2025.</p>
 <div class="facts">
 <div class="fact"><strong>$350,000</strong><span>Capital assessment originally implemented for the renovation</span></div>
@@ -80,7 +91,7 @@ footer{margin-top:24px;border-top:1px solid var(--line);background:#fafcff;paddi
 </div>
 <div class="project">
 <span class="status future">Referenced in project notices</span>
-<h3>Front Walkway &amp; Related Project Costs</h3>
+<div class="cw-card-head"><span aria-hidden="true" class="cw-icon amber">🚶</span><h3>Front Walkway &amp; Related Project Costs</h3></div>
 <p>The shareholder notice identifies the front walkway among the building projects connected to completed renovation work and related vendor payments. See the project notice for the funding details.</p>
 <div class="facts">
 <div class="fact"><strong>$112,800</strong><span>Borrowed amount stated in the shareholder notice</span></div>
@@ -90,6 +101,5 @@ footer{margin-top:24px;border-top:1px solid var(--line);background:#fafcff;paddi
 </div>
 </div>
 </div></section>
-
 <footer><div class="wrap footer-inner"><div class="footer-brand">Crestwood Community Hub</div><div>Resident information • Documents • Updates • Resources</div></div></footer>
 </body></html>
