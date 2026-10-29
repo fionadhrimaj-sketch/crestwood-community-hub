@@ -74,67 +74,73 @@ footer{margin-top:24px;border-top:1px solid var(--line);background:#fafcff;paddi
 .crestwood-safety-contents{padding:5px 18px 20px}
 .crestwood-safety-accordion>summary:focus-visible{outline:3px solid var(--teal);outline-offset:-4px}
 @media(max-width:760px){.crestwood-safety-heading{font-size:22px}}
+
+/* Match Documents page: icon-led cards */
+a.card{display:flex;align-items:flex-start;gap:14px;transition:transform .16s ease,box-shadow .16s ease}
+a.card:hover{transform:translateY(-1px);box-shadow:var(--shadow)}
+a.card .resource-icon{width:44px;height:44px;min-width:44px;border-radius:12px;display:grid;place-items:center;background:#edf5ff;font-size:22px;line-height:1}
+a.card .resource-icon.teal{background:#e9fbf8}
+a.card .resource-icon.purple{background:#f2edff}
+a.card .card-body{display:block;min-width:0;flex:1}
+@media(max-width:760px){a.card{padding:15px}}
 </style>
 </head>
 <body>
 <section class="hero">
 <div class="wrap hero-inner">
 <h1>Resident Resources</h1>
-<p>Helpful Crestwood information for everyday resident needs, contractors, governing documents, and building procedures.</p>
+<p>Quick access to governing documents, financial information, contractor resources, and building safety notices.</p>
 </div>
 </section>
-
-
-
 <section class="section" style="background:var(--soft)">
 <div class="wrap">
 <h2>Governing Documents</h2>
 <p class="section-intro">Quick access to the documents that govern shareholder rights, responsibilities, and occupancy.</p>
 <div class="grid">
-<a class="card" href="https://sites.google.com/view/crestwoodcommunityhub/crestwood-bylaws" target="_blank">
+<a class="card" href="https://sites.google.com/view/crestwoodcommunityhub/crestwood-bylaws" rel="noopener noreferrer" target="_blank"><span aria-hidden="true" class="resource-icon purple">🏛️</span><span class="card-body">
 <h3>Crestwood By-Laws</h3>
 <p>Rules governing shareholder meetings, directors, elections, officers, vacancies, and corporate procedures.</p>
 <div class="meta">Open By-Laws →</div>
-</a>
-<a class="card" href="https://sites.google.com/view/crestwoodcommunityhub/proprietary-lease" target="_blank">
+</span></a>
+<a class="card" href="https://sites.google.com/view/crestwoodcommunityhub/proprietary-lease" rel="noopener noreferrer" target="_blank"><span aria-hidden="true" class="resource-icon">📘</span><span class="card-body">
 <h3>Proprietary Lease</h3>
 <p>The lease governing the relationship between Crestwood and shareholder-tenants, including occupancy and lease obligations.</p>
 <div class="meta">Open Proprietary Lease →</div>
-</a>
+</span></a>
 </div>
 </div>
 </section><section class="section" style="background:var(--soft)">
 <div class="wrap">
 <h2>Financial Information</h2>
-<p class="section-intro">Audited financial statements and the supplementary unaudited financial summary shared at the 2026 Annual Meeting.</p>
+<p class="section-intro">Quick links to audited financial reports, the August 2026 statement, and current assessments and fees.</p>
 <div class="grid">
-<a class="card" href="https://sites.google.com/view/crestwoodcommunityhub/2025-audited-financial-statement" target="_blank">
+<a class="card" href="https://sites.google.com/view/crestwoodcommunityhub/2025-audited-financial-statement" rel="noopener noreferrer" target="_blank"><span aria-hidden="true" class="resource-icon">📊</span><span class="card-body">
 <h3>2025 Audited Financial Statements</h3>
 <p>The official audited statements for 2025 and 2024.</p>
 <div class="meta">Open audited statements →</div>
-</a>
-<a class="card" href="https://sites.google.com/view/crestwoodcommunityhub/august-2026-statements-of-operations" rel="noopener noreferrer" target="_blank">
+</span></a>
+<a class="card" href="https://sites.google.com/view/crestwoodcommunityhub/august-2026-statements-of-operations" rel="noopener noreferrer" target="_blank"><span aria-hidden="true" class="resource-icon">📈</span><span class="card-body">
 <h3>August 2026 Statements of Operations</h3>
 <p>Board-provided, management-prepared unaudited financial summary distributed at the October 27, 2026 Annual Meeting. Includes August 2026 cash-basis figures and comparisons with the 2025 and 2024 audited accrual figures. For shareholder discussion only.</p>
 <div class="meta">View meeting financial summary →</div>
-</a>
-</div>
+</span></a>
+<a class="card" href="https://sites.google.com/view/crestwoodcommunityhub/assessment-fees" rel="noopener noreferrer" target="_blank"><span aria-hidden="true" class="resource-icon teal">📋</span><span class="card-body"><h3>Assessments &amp; Fees Explained</h3><p>Review the current assessment explanations, related charges, and links to the original building notices.</p><div class="meta">View assessments &amp; fees →</div></span></a></div>
 </div>
 </section><section class="section">
 <div class="wrap">
 <h2>Contractors &amp; Renovations</h2>
 <p class="section-intro">Use these documents when hiring a contractor or vendor to perform work in the building.</p>
 <div class="grid">
-<a class="card" href="https://sites.google.com/view/crestwoodcommunityhub/contractor-coi-instructions" target="_blank">
+<a class="card" href="https://sites.google.com/view/crestwoodcommunityhub/contractor-coi-instructions" rel="noopener noreferrer" target="_blank"><span aria-hidden="true" class="resource-icon teal">🛠️</span><span class="card-body">
 <h3>Contractor COI Instructions</h3>
 <p>Start with the easy-to-follow contractor insurance and renovation checklist. The original instructions remain linked inside the guide.</p>
 <div class="meta">Open contractor guide →</div>
-</a>
-<a class="card" href="https://sites.google.com/view/crestwoodcommunityhub/sample-coi" target="_blank">
+</span></a>
+<a class="card" href="https://sites.google.com/view/crestwoodcommunityhub/sample-coi" rel="noopener noreferrer" target="_blank"><span aria-hidden="true" class="resource-icon purple">📄</span><span class="card-body">
 <h3>Sample Certificate of Insurance</h3>
 <p>Sample COI showing expected liability limits, certificate holder information, and additional-insured language.</p>
 <div class="meta">Open sample COI →</div>
-</a>
+</span></a>
 </div>
 <div class="callout" style="margin-top:14px">
 <strong>Contractor reminder:</strong>
@@ -148,11 +154,11 @@ footer{margin-top:24px;border-top:1px solid var(--line);background:#fafcff;paddi
 </section><section class="section" style="background:var(--soft)">
 <div class="wrap"><h2>Safety &amp; Building Notices</h2>
 <p class="section-intro">Safety contacts, emergency guidance, building policies, and posted notices are available on their own Community Hub page.</p>
-<div class="grid"><a class="card" href="https://sites.google.com/view/crestwoodcommunityhub/safety-building" target="_blank" rel="noopener noreferrer">
+<div class="grid"><a class="card" href="https://sites.google.com/view/crestwoodcommunityhub/safety-building" rel="noopener noreferrer" target="_blank"><span aria-hidden="true" class="resource-icon teal">🛡️</span><span class="card-body">
 <h3>Safety &amp; Building Notices</h3>
 <p>Find superintendent contact details, fire and gas safety information, smoke and carbon monoxide guidance, and other building notices.</p>
 <div class="meta">View safety &amp; building notices →</div>
-</a></div></div>
+</span></a></div></div>
 </section><footer>
 <div class="wrap footer-inner">
 <div class="footer-brand">Crestwood Community Hub</div>
