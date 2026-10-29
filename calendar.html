@@ -122,45 +122,49 @@ body.page-calendar{--page-dark:#17426a;--page-accent:#3e8bc9}
 .page-calendar .calendar-note{margin-top:20px!important;padding:16px 18px!important;border-radius:16px!important;background:#fff8e7!important;border:1px solid #efddad!important;box-shadow:none!important;color:#6f551e!important;font-size:14px!important;line-height:1.5!important}
 @media(max-width:900px){.page-calendar .calendar-grid{grid-template-columns:1fr!important}.page-calendar .date-card{min-height:0!important}.page-calendar .upcoming-grid{grid-template-columns:1fr!important}}
 @media(max-width:560px){.page-calendar .date-top{padding:15px!important}.page-calendar .date-body{padding:17px!important}.page-calendar .date-badge{width:62px!important;min-width:62px!important;height:62px!important}.page-calendar .upcoming-card{padding:18px!important}}
+</style><style>
+/* Calendar: upcoming-first, compact upcoming status, expandable history */
+.page-calendar .upcoming-grid{grid-template-columns:1fr!important}
+.page-calendar .no-events{max-width:860px;align-items:center}
+.page-calendar .calendar-grid:not(.past-grid){grid-template-columns:minmax(0,1fr)!important;max-width:850px}
+.page-calendar .calendar-grid:not(.past-grid) .date-card{min-height:0!important}
+.page-calendar .past-dates{margin-top:28px;border:1px solid #dfe7ef;border-radius:18px;background:#fff;box-shadow:0 5px 16px rgba(28,52,83,.07);overflow:hidden}
+.page-calendar .past-dates summary{cursor:pointer;font-weight:800;font-size:18px;color:#17385f;padding:20px 24px;list-style:none;display:flex;align-items:center;justify-content:space-between}
+.page-calendar .past-dates summary::-webkit-details-marker{display:none}
+.page-calendar .past-dates summary::after{content:'+';font-size:24px;line-height:1;color:#3e8bc9}
+.page-calendar .past-dates[open] summary::after{content:'−'}
+.page-calendar .past-dates summary:focus-visible{outline:3px solid #18a99d;outline-offset:-3px}
+.page-calendar .past-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;padding:0 18px 20px}
+.page-calendar .past-grid .date-card{min-height:0!important}
+.page-calendar .date-body .calendar-link{align-self:flex-start;margin-top:16px}
+@media(max-width:900px){.page-calendar .past-grid{grid-template-columns:1fr!important}}
 </style></head>
 <body class="page-calendar">
 <section class="hero"><div class="wrap hero-inner">
 <h1>Calendar</h1>
-<p>Important Crestwood dates, assessment periods, fee changes, and future community meetings.</p>
+<p>Upcoming community meetings, important deadlines, and past building dates.</p>
 </div></section>
 <section class="section" style="background:var(--soft)"><div class="wrap">
-<h2>Meeting Archive &amp; Future Events</h2>
-<p class="section-intro">Confirmed meetings and community dates based on official notices and verified information.</p>
-<div class="upcoming-grid">
-<article class="upcoming-card">
-<div class="upcoming-icon">27</div>
-<div>
-<h3>2026 Annual Shareholder Meeting &amp; Board Election</h3>
-<p><strong>Tuesday, October 27, 2026 at 7:00 PM</strong><br/>In person, downstairs basement area. Two Board seats were contested; shareholder-reported winners are Eva Marciniak and Ioana R. Popescu, pending written confirmation. The proxy submission deadline was 4:00 PM on October 27.</p>
-<a class="calendar-link" href="https://sites.google.com/view/crestwoodcommunityhub/2026-annual-meeting-board-election" rel="noopener noreferrer" target="_blank">Meeting Details &amp; Candidates →</a>
-</div>
-</article>
-<article class="upcoming-card"><div class="upcoming-icon">+</div><div><h3>Future Building &amp; Community Dates</h3><p>Board meetings, election dates, project milestones, and community events will appear here once confirmed.</p><span class="tag">Updates Coming</span></div></article>
-</div>
-
+<h2>Upcoming Meetings &amp; Events</h2>
+<p class="section-intro">Confirmed building meetings and community events will appear here when dates are announced.</p>
+<div class="upcoming-grid"><div class="upcoming-card no-events"><div class="upcoming-icon">✓</div><div><h3>No upcoming meetings or events announced</h3><p>Confirmed Board meetings, shareholder meetings, and community events will be listed here as dates become available.</p></div></div></div>
 </div></section><section class="section"><div class="wrap">
-<h2>Known Dates</h2>
-<p class="section-intro">Confirmed dates and changes currently affecting Crestwood residents.</p>
+<h2>Important Dates &amp; Deadlines</h2>
+<p class="section-intro">Upcoming building deadlines first, with past fee changes and announcements available below.</p>
 <div class="calendar-grid">
-<article class="date-card">
-<div class="date-top"><div class="date-badge"><span class="month">AUG</span></div><div class="date-year"><strong>August 1, 2026</strong><br/>Effective Date</div></div>
-<div class="date-body"><h3>Parking &amp; Bicycle Storage Fee Changes</h3><p>Monthly parking charges increase by $25, and bicycle storage fees become $12 per month per space.</p><span class="tag">Fee Change</span></div>
-</article>
-<article class="date-card">
-<div class="date-top"><div class="date-badge"><span class="month">AUG</span></div><div class="date-year"><strong>August 2026</strong><br/>Assessment Begins</div></div>
-<div class="date-body"><h3>Line of Credit Repayment Assessment</h3><p>The line-of-credit repayment assessment begins in August 2026 and runs through December 2026.</p><span class="tag">Assessment</span></div>
-</article>
+
+
 <article class="date-card">
 <div class="date-top"><div class="date-badge"><span class="month">DEC</span></div><div class="date-year"><strong>December 31, 2026</strong><br/>Period Ends</div></div>
-<div class="date-body"><h3>June 25 Operating Assessment Period Ends</h3><p>The June 25 notice states that its operating assessment continues through December 31, 2026.</p><span class="tag">Assessment</span></div>
+<div class="date-body"><h3>June 25 Operating Assessment Period Ends</h3><p>The June 25 notice states that its operating assessment continues through December 31, 2026.</p><span class="tag">Assessment</span><a class="calendar-link" href="https://sites.google.com/view/crestwoodcommunityhub/assessment-fees" rel="noopener noreferrer" target="_blank">View Assessments &amp; Fees →</a></div>
 </article>
 </div>
-</div></section>
-
+<details class="past-dates"><summary>Past Dates (2)</summary><div class="calendar-grid past-grid"><article class="date-card">
+<div class="date-top"><div class="date-badge"><span class="month">AUG</span></div><div class="date-year"><strong>August 1, 2026</strong><br/>Effective Date</div></div>
+<div class="date-body"><h3>Parking &amp; Bicycle Storage Fee Changes</h3><p>Monthly parking charges increase by $25, and bicycle storage fees become $12 per month per space.</p><span class="tag">Fee Change</span></div>
+</article><article class="date-card">
+<div class="date-top"><div class="date-badge"><span class="month">AUG</span></div><div class="date-year"><strong>August 2026</strong><br/>Assessment Begins</div></div>
+<div class="date-body"><h3>Line of Credit Repayment Assessment</h3><p>The Community Hub previously listed August 2026 as the start of this assessment. Refer to the original notice for the authoritative billing schedule.</p><span class="tag">Assessment</span></div>
+</article></div></details></div></section>
 <footer><div class="wrap footer-inner"><div class="footer-brand">Crestwood Community Hub</div><div>Resident information • Documents • Updates • Resources</div></div><p style="max-width:1120px;margin:12px auto 0;padding:0 22px;font-size:12px;line-height:1.6;color:#69778c;text-align:center">Independent shareholder-created resource. Not an official website or communication channel of the Crestwood Board or Metro Management. Original notices and governing documents control; verify current requirements with management.</p></footer>
 </body></html>
