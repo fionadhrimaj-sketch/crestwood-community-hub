@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Apartments &amp; Building Market | Crestwood Community Hub</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Apartments &amp; Market | Crestwood Community Hub</title>
 <style>
 :root{
   --navy:#17365f;--navy2:#244b79;--blue:#3787f3;--teal:#159f96;
@@ -129,178 +130,147 @@ footer{padding:30px 0 45px;color:#7a8999;font-size:12px}
   .btn{width:100%}
 }
 </style>
-</head>
+<style>
+.section-head{display:flex;flex-wrap:wrap;align-items:center;column-gap:12px}
+.section-head .eyebrow,.section-head p{flex-basis:100%}
+.section-icon{height:42px;width:42px;display:inline-grid;place-items:center;border-radius:13px;background:#eaf5fb;font-size:21px;flex:none}
+.section-head h2{flex:1;min-width:220px}
+.resource-icon{width:42px;height:42px;display:grid;place-items:center;border-radius:13px;margin-bottom:12px;font-size:21px}
+.fact-icon{width:31px;height:31px;border-radius:10px;background:#eef6fb;display:grid;place-items:center;font-size:17px;margin-bottom:8px}
+.fact{min-height:129px}
+.source-card{min-height:177px}
+a:focus-visible{outline:3px solid #3787f3;outline-offset:3px}
+@media(max-width:600px){.fact{min-height:118px}.section-head h2{min-width:0;flex:1;font-size:25px}}
+</style><style>
+/* Compact reference listings: both apartments visible at a glance */
+.compact-listings{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.compact-listing{background:#fff;border:1px solid #d9e6f0;border-radius:18px;padding:20px 22px;box-shadow:0 7px 20px rgba(31,54,82,.06)}
+.compact-listing-top{display:flex;justify-content:space-between;gap:10px;align-items:start;flex-wrap:wrap}
+.compact-listing h3{font-size:22px;margin:0 0 5px;color:var(--navy)}
+.compact-date{font-size:11px;font-weight:800;color:#638099}
+.compact-price{font-size:25px;color:var(--navy);white-space:nowrap}
+.compact-details{color:#2e678d;font-weight:800;font-size:13px;line-height:1.6;margin:14px 0 5px}
+.compact-description{font-size:13px;color:#687b91;margin:4px 0 14px;line-height:1.5}
+.compact-links{display:flex;flex-wrap:wrap;gap:8px}
+.compact-links a{padding:8px 11px;border-radius:9px;background:#eaf5fb;color:#205b86;font-size:12px;font-weight:800}
+.compact-links a:first-child{background:var(--navy);color:#fff}
+.compact-links a:focus-visible{outline:3px solid #3787f3;outline-offset:3px}
+@media(max-width:740px){.compact-listings{grid-template-columns:1fr}.compact-listing{padding:17px 18px}.compact-price{font-size:23px}}
+</style></head>
 <body>
-
 <section class="hero">
-  <div class="wrap">
-    <div class="kicker">Crestwood Property Information</div>
-    <h1>Apartments &amp; Building Market</h1>
-    <p>Current apartments for sale, recent Crestwood sales and rental history, floor-plan resources, and selected non-personal building facts gathered from public real-estate and property-record sources.</p>
-    <div class="asof">Market information checked August 19, 2026</div>
-  </div>
-</section>
-
 <div class="wrap">
-  <div class="fact-strip">
-    <div class="fact"><small>Built</small><strong>1938</strong></div>
-    <div class="fact"><small>Building</small><strong>6 Floors</strong></div>
-    <div class="fact"><small>Residential Units</small><strong>72</strong></div>
-    <div class="fact"><small>Building Area</small><strong>82,767 sq. ft.</strong></div>
-    <div class="fact"><small>Building Class</small><strong>D4 Co-op</strong></div>
-  </div>
+<div class="kicker">Crestwood Property Information</div>
+<h1>Apartments &amp; Market</h1>
+<p>Apartment listings previously reported, recent sales, rental history, and building information from public sources.</p>
+<div class="asof">Source references dated August–October 2026</div>
+<p style="font-size:12px;line-height:1.5;margin-top:12px">Market information is informational, may be outdated, and is not a verified live listing feed. Confirm price, availability, transaction data, and dates with the linked original source.</p></div>
+</section>
+<div class="wrap">
+<div class="fact-strip">
+<div class="fact"><span class="fact-icon">📅</span><small>Built</small><strong>1938</strong></div>
+<div class="fact"><span class="fact-icon">🏢</span><small>Building</small><strong>6 Floors</strong></div>
+<div class="fact"><span class="fact-icon">🏠</span><small>Residential Units</small><strong>72</strong></div>
+<div class="fact"><span class="fact-icon">📐</span><small>Building Area</small><strong>82,767 sq. ft.</strong></div>
+<div class="fact"><span class="fact-icon">📋</span><small>Building Class</small><strong>D4 Co-op</strong></div>
 </div>
-
+</div>
 <section class="section">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">On the Market</div>
-      <h2>Currently for Sale</h2>
-      <p>Public listing sources do not always update at the same time. Zillow and Compass currently show one active sale in the building.</p>
-    </div>
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">On the Market</div>
+<span class="section-icon">🏷️</span><h2>Sale Listing Reference</h2>
+<p>Apartments 2C and 2E appeared in 2026 sale listings. These are dated listing references, not confirmation that either apartment is currently available.</p>
+</div>
+<div class="compact-listings"><article class="compact-listing"><div class="compact-listing-top"><div><h3>Apartment 2C</h3><span class="compact-date">October 2026 Listing Reference</span></div><strong class="compact-price">$249,000</strong></div><p class="compact-details">1 Bedroom · 1 Bathroom · Co-op</p><p class="compact-description">Price reduction recorded October 5, 2026.</p><div class="compact-links"><a href="https://www.zillow.com/homedetails/124-16-84th-Rd-2C-Kew-Gardens-NY-11415/109178685_zpid/" rel="noopener noreferrer" target="_blank">View Apartment 2C on Zillow</a></div></article><article class="compact-listing"><div class="compact-listing-top"><div><h3>Apartment 2E</h3><span class="compact-date">August 2026 Listing</span></div><strong class="compact-price">$675,000</strong></div><p class="compact-details">3 Bedrooms · 2 Bathrooms · Approx. 1,450 sq. ft. · Approx. $466 / sq. ft.</p><p class="compact-description">Prewar co-op with eat-in kitchen, storage, and building amenities.</p><div class="compact-links"><a href="https://www.zillow.com/b/124-16-84th-rd-kew-gardens-ny-9gpSPx/" rel="noopener noreferrer" target="_blank">View Zillow Listing</a><a href="https://www.realtor.com/realestateandhomes-detail/12416-84th-Rd-Apt-2E_Kew-Gardens_NY_11415_M38470-40235" rel="noopener noreferrer" target="_blank">View Realtor.com</a><a href="https://www.compass.com/building/124-16-84th-rd-queens-ny-11415/293535264918305445/" rel="noopener noreferrer" target="_blank">View Compass</a></div></article></div>
 
-    <article class="listing">
-      <div class="listing-visual">
-        <span class="status">Active Listing</span>
-        <div class="unit-big">2E<span>124-16 84th Road</span></div>
-      </div>
-      <div class="listing-body">
-        <div class="price">$675,000</div>
-        <div class="stats">
-          <span class="stat">3 Bedrooms</span>
-          <span class="stat">2 Bathrooms</span>
-          <span class="stat">Approx. 1,450 sq. ft.</span>
-          <span class="stat">Approx. $466 / sq. ft.</span>
-        </div>
-        <p>This prewar co-op listing is described as a bright three-bedroom, two-bath apartment with an eat-in kitchen, separate foyer/dining area, extensive walk-in closet storage, and access to building amenities including a fitness room, bicycle storage, and laundry facilities.</p>
-        <div class="highlights">
-          <div class="highlight">Listed by Keller Williams Legendary</div>
-          <div class="highlight">Listing status shown as active</div>
-          <div class="highlight">Entry level: 2</div>
-          <div class="highlight">Listing updated Aug. 17, 2026 on Realtor.com</div>
-        </div>
-        <div class="buttons">
-          <a class="btn" href="https://www.zillow.com/b/124-16-84th-rd-kew-gardens-ny-9gpSPx/" target="_blank" rel="noopener">View Zillow Listing ↗</a>
-          <a class="btn alt" href="https://www.realtor.com/realestateandhomes-detail/12416-84th-Rd-Apt-2E_Kew-Gardens_NY_11415_M38470-40235" target="_blank" rel="noopener">View Realtor.com ↗</a>
-          <a class="btn outline" href="https://www.compass.com/building/124-16-84th-rd-queens-ny-11415/293535264918305445/" target="_blank" rel="noopener">View Compass ↗</a>
-        </div>
-        <div class="source-note">Listing details are provided for resident convenience and should be verified with the listing broker. The Community Hub is not affiliated with the seller, broker, Zillow, Realtor.com, Compass, or StreetEasy.</div>
-      </div>
-    </article>
-  </div>
+</div>
 </section>
-
 <section class="section alt">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Building Market</div>
-      <h2>Recent Sales</h2>
-      <p>Recent recorded or reported transactions from public real-estate sources. Buyer and seller names are intentionally excluded.</p>
-    </div>
-    <div class="table-card"><div class="table-scroll">
-      <table>
-        <thead><tr><th>Unit</th><th>Sale / Closing Date</th><th>Sale Price</th><th>Asking Price</th><th>Apartment</th><th>Floor Plan</th></tr></thead>
-        <tbody>
-          <tr><td><strong>1D</strong></td><td>Sep. 30, 2025</td><td><strong>$300,000</strong></td><td>$318,000</td><td>1 bed / 1 bath / 785 sq. ft.</td><td><span class="pill">Available on StreetEasy</span></td></tr>
-          <tr><td><strong>5K</strong></td><td>Jan. 23, 2025</td><td><strong>$339,000</strong></td><td>$345,000</td><td>2 bed / 1 bath / 1,200 sq. ft.</td><td>—</td></tr>
-          <tr><td><strong>5D</strong></td><td>Jul. 24, 2024</td><td><strong>$300,000</strong></td><td>—</td><td>Studio / 1 bath</td><td>—</td></tr>
-          <tr><td><strong>6A</strong></td><td>Jun. 6, 2023</td><td><strong>$180,000</strong></td><td>$195,000</td><td>Studio / 1 bath / 659 sq. ft.</td><td>—</td></tr>
-          <tr><td><strong>5G</strong></td><td>Mar. 30, 2023</td><td><strong>$225,000</strong></td><td>—</td><td>Details not listed</td><td>—</td></tr>
-          <tr><td><strong>1M</strong></td><td>Nov. 14, 2022</td><td><strong>$180,000</strong></td><td>$187,000</td><td>Studio / 1 bath / 700 sq. ft.</td><td><span class="pill">Available on StreetEasy</span></td></tr>
-          <tr><td><strong>5L</strong></td><td>Sep. 27, 2022</td><td><strong>$620,000</strong></td><td>$649,000</td><td>2 bed / 2 bath / 1,500 sq. ft.</td><td><span class="pill">Available on StreetEasy</span></td></tr>
-          <tr><td><strong>5F</strong></td><td>Feb. 15, 2022</td><td><strong>$189,000</strong></td><td>$189,000</td><td>Studio / 1 bath / 700 sq. ft.</td><td><span class="pill">Available on StreetEasy</span></td></tr>
-          <tr><td><strong>5C</strong></td><td>Jan. 21, 2022</td><td><strong>$227,000</strong></td><td>—</td><td>1 bed / 1 bath / 700 sq. ft.</td><td><span class="pill">Available on StreetEasy</span></td></tr>
-          <tr><td><strong>6G</strong></td><td>Jul. 13, 2020</td><td><strong>$300,000</strong></td><td>—</td><td>Details not listed</td><td>—</td></tr>
-        </tbody>
-      </table>
-    </div></div>
-    <div class="source-note">Source: StreetEasy building sales history and public-record data. Some dates represent recorded closings; some represent reported sold dates.</div>
-  </div>
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Building Market</div>
+<span class="section-icon">📈</span><h2>Recent Sales</h2>
+<p>Recent recorded or reported transactions from public real-estate sources. Buyer and seller names are intentionally excluded.</p>
+</div>
+<div class="table-card"><div class="table-scroll">
+<table>
+<thead><tr><th>Unit</th><th>Sale / Closing Date</th><th>Sale Price</th><th>Asking Price</th><th>Apartment</th><th>Floor Plan</th></tr></thead>
+<tbody>
+<tr><td><strong>1D</strong></td><td>Sep. 30, 2025</td><td><strong>$300,000</strong></td><td>$318,000</td><td>1 bed / 1 bath / 785 sq. ft.</td><td><span class="pill">Available on StreetEasy</span></td></tr>
+<tr><td><strong>5K</strong></td><td>Jan. 23, 2025</td><td><strong>$339,000</strong></td><td>$345,000</td><td>2 bed / 1 bath / 1,200 sq. ft.</td><td>—</td></tr>
+<tr><td><strong>5D</strong></td><td>Jul. 24, 2024</td><td><strong>$300,000</strong></td><td>—</td><td>Studio / 1 bath</td><td>—</td></tr>
+<tr><td><strong>6A</strong></td><td>Jun. 6, 2023</td><td><strong>$180,000</strong></td><td>$195,000</td><td>Studio / 1 bath / 659 sq. ft.</td><td>—</td></tr>
+<tr><td><strong>5G</strong></td><td>Mar. 30, 2023</td><td><strong>$225,000</strong></td><td>—</td><td>Details not listed</td><td>—</td></tr>
+<tr><td><strong>1M</strong></td><td>Nov. 14, 2022</td><td><strong>$180,000</strong></td><td>$187,000</td><td>Studio / 1 bath / 700 sq. ft.</td><td><span class="pill">Available on StreetEasy</span></td></tr>
+<tr><td><strong>5L</strong></td><td>Sep. 27, 2022</td><td><strong>$620,000</strong></td><td>$649,000</td><td>2 bed / 2 bath / 1,500 sq. ft.</td><td><span class="pill">Available on StreetEasy</span></td></tr>
+<tr><td><strong>5F</strong></td><td>Feb. 15, 2022</td><td><strong>$189,000</strong></td><td>$189,000</td><td>Studio / 1 bath / 700 sq. ft.</td><td><span class="pill">Available on StreetEasy</span></td></tr>
+<tr><td><strong>5C</strong></td><td>Jan. 21, 2022</td><td><strong>$227,000</strong></td><td>—</td><td>1 bed / 1 bath / 700 sq. ft.</td><td><span class="pill">Available on StreetEasy</span></td></tr>
+<tr><td><strong>6G</strong></td><td>Jul. 13, 2020</td><td><strong>$300,000</strong></td><td>—</td><td>Details not listed</td><td>—</td></tr>
+</tbody>
+</table>
+</div></div>
+<div class="source-note">Source: StreetEasy building sales history and public-record data. Some dates represent recorded closings; some represent reported sold dates.</div>
+</div>
 </section>
-
 <section class="section">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Rental Reference</div>
-      <h2>Past Rentals</h2>
-      <p>Publicly reported asking/base rents from prior listings. These are historical examples, not current rental offers.</p>
-    </div>
-    <div class="table-card"><div class="table-scroll">
-      <table>
-        <thead><tr><th>Off-Market Date</th><th>Unit Shown by Source</th><th>Base Rent</th><th>Beds</th><th>Baths</th><th>Approx. Size</th></tr></thead>
-        <tbody>
-          <tr><td>Jan. 2, 2026</td><td><strong>#1</strong></td><td><strong>$2,349/mo.</strong></td><td>1</td><td>1</td><td>800 sq. ft.</td></tr>
-          <tr><td>May 7, 2024</td><td><strong>#5</strong></td><td><strong>$2,800/mo.</strong></td><td>2</td><td>1</td><td>1,200 sq. ft.</td></tr>
-          <tr><td>Dec. 15, 2020</td><td><strong>#2</strong></td><td><strong>$1,775/mo.</strong></td><td>1</td><td>1</td><td>700 sq. ft.</td></tr>
-          <tr><td>Dec. 10, 2020</td><td><strong>#14</strong></td><td><strong>$1,800/mo.</strong></td><td>1</td><td>1</td><td>750 sq. ft.</td></tr>
-          <tr><td>Oct. 20, 2020</td><td><strong>2A</strong></td><td><strong>$2,200/mo.</strong></td><td>2</td><td>1</td><td>1,050 sq. ft.</td></tr>
-          <tr><td>May 20, 2017</td><td><strong>6A</strong></td><td><strong>$1,400/mo.</strong></td><td>Studio</td><td>1</td><td>600 sq. ft.</td></tr>
-        </tbody>
-      </table>
-    </div></div>
-    <div class="source-note">Source: StreetEasy historical rental listings. Some older listing records use abbreviated unit identifiers exactly as shown by the source.</div>
-  </div>
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Rental Reference</div>
+<span class="section-icon">🔑</span><h2>Past Rentals</h2>
+<p>Publicly reported asking/base rents from prior listings. These are historical examples, not current rental offers.</p>
+</div>
+<div class="table-card"><div class="table-scroll">
+<table>
+<thead><tr><th>Off-Market Date</th><th>Unit Shown by Source</th><th>Base Rent</th><th>Beds</th><th>Baths</th><th>Approx. Size</th></tr></thead>
+<tbody>
+<tr><td>Jan. 2, 2026</td><td><strong>#1</strong></td><td><strong>$2,349/mo.</strong></td><td>1</td><td>1</td><td>800 sq. ft.</td></tr>
+<tr><td>May 7, 2024</td><td><strong>#5</strong></td><td><strong>$2,800/mo.</strong></td><td>2</td><td>1</td><td>1,200 sq. ft.</td></tr>
+<tr><td>Dec. 15, 2020</td><td><strong>#2</strong></td><td><strong>$1,775/mo.</strong></td><td>1</td><td>1</td><td>700 sq. ft.</td></tr>
+<tr><td>Dec. 10, 2020</td><td><strong>#14</strong></td><td><strong>$1,800/mo.</strong></td><td>1</td><td>1</td><td>750 sq. ft.</td></tr>
+<tr><td>Oct. 20, 2020</td><td><strong>2A</strong></td><td><strong>$2,200/mo.</strong></td><td>2</td><td>1</td><td>1,050 sq. ft.</td></tr>
+<tr><td>May 20, 2017</td><td><strong>6A</strong></td><td><strong>$1,400/mo.</strong></td><td>Studio</td><td>1</td><td>600 sq. ft.</td></tr>
+</tbody>
+</table>
+</div></div>
+<div class="source-note">Source: StreetEasy historical rental listings. Some older listing records use abbreviated unit identifiers exactly as shown by the source.</div>
+</div>
 </section>
-
 <section class="section warm">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Property Profile</div>
-      <h2>Building Facts</h2>
-      <p>Building-level facts compiled from multiple public property and real-estate sources.</p>
-    </div>
-    <div class="market-grid">
-      <div class="record"><div class="icon">🏢</div><h3>Prewar Cooperative</h3><p>Built in 1938 with 6 stories and 72 residential apartments.</p></div>
-      <div class="record"><div class="icon">📐</div><h3>Building &amp; Lot Size</h3><p>Approximately 82,767 sq. ft. of building area on an approximately 28,000 sq. ft. lot. Public sources list the lot at about 200 × 200 feet.</p></div>
-      <div class="record"><div class="icon">🗂️</div><h3>Property Classification</h3><p>Building class D4, commonly used for elevator cooperative apartment buildings. Zoning is reported as R7A.</p></div>
-      <div class="record"><div class="icon">📍</div><h3>Kew Gardens</h3><p>124-16 84th Road, Kew Gardens, Queens, NY 11415. Community District 9, City Council District 29.</p></div>
-      <div class="record"><div class="icon">🧾</div><h3>HPD Registration</h3><p>The Augrented report shows an HPD registration filed September 11, 2025 and valid through September 1, 2026.</p></div>
-      <div class="record"><div class="icon">🔎</div><h3>Public Records</h3><p>Public databases include historical sales, building permits, complaints, violations, and other property records. Current status should always be confirmed with the responsible NYC agency.</p></div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Property Profile</div>
+<span class="section-icon">🏢</span><h2>Building Facts</h2>
+<p>Building-level facts compiled from multiple public property and real-estate sources.</p>
+</div>
+<div class="market-grid">
+<div class="record"><div class="icon">🏢</div><h3>Prewar Cooperative</h3><p>Built in 1938 with 6 stories and 72 residential apartments.</p></div>
+<div class="record"><div class="icon">📐</div><h3>Building &amp; Lot Size</h3><p>Approximately 82,767 sq. ft. of building area on an approximately 28,000 sq. ft. lot. Public sources list the lot at about 200 × 200 feet.</p></div>
+<div class="record"><div class="icon">🗂️</div><h3>Property Classification</h3><p>Building class D4, commonly used for elevator cooperative apartment buildings. Zoning is reported as R7A.</p></div>
+<div class="record"><div class="icon">📍</div><h3>Kew Gardens</h3><p>124-16 84th Road, Kew Gardens, Queens, NY 11415. Community District 9, City Council District 29.</p></div>
+<div class="record"><div class="icon">🧾</div><h3>HPD Registration</h3><p>The Augrented report shows an HPD registration filed September 11, 2025 and valid through September 1, 2026.</p></div>
+<div class="record"><div class="icon">🔎</div><h3>Public Records</h3><p>Public databases include historical sales, building permits, complaints, violations, and other property records. Current status should always be confirmed with the responsible NYC agency.</p></div>
+</div>
+</div>
 </section>
-
-<section class="section alt">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Selected Public-Record Highlights</div>
-      <h2>Building Records Snapshot</h2>
-      <p>This is a limited resident-friendly summary from the Augrented report dated August 19, 2026. It is not a complete compliance report.</p>
-    </div>
-    <div class="market-grid">
-      <div class="record"><div class="icon">🛏️</div><h3>Bedbug Filings</h3><p>The annual reports shown for 2018 through 2025 each list 0 infested units.</p></div>
-      <div class="record"><div class="icon">🏠</div><h3>No Vacate Orders</h3><p>The report shows no HPD emergency vacate-order records in its dataset.</p></div>
-      <div class="record"><div class="icon">⚖️</div><h3>No HPD Litigation / AEP Records</h3><p>The report shows no HPD litigation records and no Alternative Enforcement Program / problem-building designation records in its dataset.</p></div>
-      <div class="record"><div class="icon">📄</div><h3>No Executed Evictions Listed</h3><p>The report's NYC eviction dataset shows no executed eviction records for the property from 2017 to the report date.</p></div>
-      <div class="record caution"><div class="icon">⚠️</div><h3>FISP Record to Verify</h3><p>The report lists a 2022 DOB violation as active for failure to file the Cycle 9A FISP technical report. Residents should verify the current status directly with NYC DOB because third-party datasets may lag.</p></div>
-      <div class="record"><div class="icon">🛠️</div><h3>Historical Permits &amp; Enforcement</h3><p>The report includes historical building permits and resolved ECB/OATH matters. These records span many years and should not be interpreted as current conditions without agency verification.</p></div>
-    </div>
-    <div class="privacy"><strong>Privacy approach:</strong> The Community Hub intentionally does not publish buyer names, seller names, tenant names, or other personal transaction-party information even when those names appear in public records.</div>
-  </div>
-</section>
-
 <section class="section">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Research Links</div>
-      <h2>Building &amp; Market Sources</h2>
-      <p>Use these external sources for additional listing, floor-plan, transaction, and building-record information.</p>
-    </div>
-    <div class="links-grid">
-      <div class="source-card"><h3>Zillow</h3><p>Current building page and active listing information.</p><a href="https://www.zillow.com/b/124-16-84th-rd-kew-gardens-ny-9gpSPx/" target="_blank" rel="noopener">Open Zillow ↗</a></div>
-      <div class="source-card"><h3>Compass</h3><p>Active listing, building facts, sales, and floor-plan resources.</p><a href="https://www.compass.com/building/124-16-84th-rd-queens-ny-11415/293535264918305445/" target="_blank" rel="noopener">Open Compass ↗</a></div>
-      <div class="source-card"><h3>StreetEasy</h3><p>Historical sales, rentals, and floor plans for selected units.</p><a href="https://streeteasy.com/building/124_16-84-road-kew_gardens" target="_blank" rel="noopener">Open StreetEasy ↗</a></div>
-      <div class="source-card"><h3>PropertyShark</h3><p>Property characteristics and public-record building information.</p><a href="https://www.propertyshark.com/mason/Property/538198/124-16-84-Rd-Queens-NY-11415/" target="_blank" rel="noopener">Open PropertyShark ↗</a></div>
-      <div class="source-card"><h3>Augrented</h3><p>Aggregated NYC building records including complaints, violations, permits, and filings.</p><a href="https://augrented.com/nyc/4092460305-124-16-84-road" target="_blank" rel="noopener">Open Augrented ↗</a></div>
-      <div class="source-card"><h3>Realtor.com</h3><p>Detailed current listing information for Apartment 2E.</p><a href="https://www.realtor.com/realestateandhomes-detail/12416-84th-Rd-Apt-2E_Kew-Gardens_NY_11415_M38470-40235" target="_blank" rel="noopener">Open Realtor.com ↗</a></div>
-    </div>
-
-    <div class="notice" style="margin-top:22px"><strong>Market information notice:</strong> Listing, sale, rental, floor-plan, and building information is compiled from publicly available third-party sources for resident reference only. Availability, pricing, measurements, building policies, and public-record status may change or contain errors. Verify current information with the listing broker, managing agent, or appropriate NYC agency before relying on it.</div>
-  </div>
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Research Links</div>
+<span class="section-icon">🔗</span><h2>Building &amp; Market Sources</h2>
+<p>Use these external sources for additional listing, floor-plan, transaction, and building-record information.</p>
+</div>
+<div class="links-grid">
+<div class="source-card"><div class="resource-icon" style="background:#eaf5fb">🏷️</div><h3>Zillow</h3><p>Building page and listing history.</p><a href="https://www.zillow.com/b/124-16-84th-rd-kew-gardens-ny-9gpSPx/" rel="noopener noreferrer" target="_blank">Open Zillow ↗</a></div>
+<div class="source-card"><div class="resource-icon" style="background:#eef7f2">📊</div><h3>Compass</h3><p>Building details, sales, and floor-plan resources.</p><a href="https://www.compass.com/building/124-16-84th-rd-queens-ny-11415/293535264918305445/" rel="noopener noreferrer" target="_blank">Open Compass ↗</a></div>
+<div class="source-card"><div class="resource-icon" style="background:#f3f0fb">🏡</div><h3>StreetEasy</h3><p>Historical sales, rentals, and floor plans for selected units.</p><a href="https://streeteasy.com/building/124_16-84-road-kew_gardens" rel="noopener noreferrer" target="_blank">Open StreetEasy ↗</a></div>
+<div class="source-card"><div class="resource-icon" style="background:#fff3e4">📅</div><h3>Realtor.com</h3><p>Apartment 2E listing reference and updates.</p><a href="https://www.realtor.com/realestateandhomes-detail/12416-84th-Rd-Apt-2E_Kew-Gardens_NY_11415_M38470-40235" rel="noopener noreferrer" target="_blank">Open Realtor.com ↗</a></div>
+</div>
+<div class="notice" style="margin-top:22px">Market information notice: Listings, sale prices, historical rents, apartment sizes, and property facts are based on third-party sources last reviewed August 19, 2026. Listing availability and other details may have changed. Verify directly with the source, broker, managing agent, or relevant NYC agency.</div>
+</div>
 </section>
-
 <footer>
-  <div class="wrap">Crestwood Community Hub · Apartments &amp; Building Market</div>
-</footer>
+<div class="wrap">Crestwood Community Hub · Apartments &amp; Market</div>
+<p style="max-width:1120px;margin:12px auto 0;padding:0 22px;font-size:12px;line-height:1.6;color:#69778c;text-align:center">Independent shareholder-created resource. Not an official website or communication channel of the Crestwood Board or Metro Management. Original notices and governing documents control; verify current requirements with management.</p></footer>
 </body>
 </html>
