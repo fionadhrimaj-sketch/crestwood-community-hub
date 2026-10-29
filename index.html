@@ -763,7 +763,12 @@ footer{margin-top:0;background:#17365f;color:#d6e1ed;border-top:0;padding:28px 0
 @media (max-width: 649px) {
   .quick-section .quick-grid {display:grid !important;grid-template-columns:repeat(2,minmax(0,1fr)) !important;}
 }
-</style></head>
+</style><style>
+#crestwood-back-to-top{position:fixed;right:24px;bottom:24px;z-index:9999;display:none;align-items:center;gap:8px;padding:11px 17px;border:0;border-radius:24px;background:#163b68;color:white;font:600 14px/1.2 Arial,sans-serif;box-shadow:0 4px 16px rgba(0,0,0,.24);cursor:pointer}
+#crestwood-back-to-top:hover,#crestwood-back-to-top:focus-visible{background:#24598d;outline:2px solid #fff;outline-offset:2px}
+@media(max-width:600px){#crestwood-back-to-top{right:14px;bottom:16px;padding:11px 14px;font-size:13px}}
+</style>
+</head>
 <body>
 <main id="home">
 <section class="hero">
@@ -1022,6 +1027,16 @@ footer{margin-top:0;background:#17365f;color:#d6e1ed;border-top:0;padding:28px 0
 
   // Refresh periodically so a page left open overnight updates itself automatically.
   setInterval(updateAssessmentCountdown, 60 * 60 * 1000);
+})();
+</script>
+<button type="button" id="crestwood-back-to-top" aria-label="Back to top">↑ Back to Top</button>
+<script>
+(function(){
+ const btn=document.getElementById('crestwood-back-to-top');
+ function update(){btn.style.display=window.scrollY>280?'flex':'none';}
+ btn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+ window.addEventListener('scroll',update,{passive:true});
+ update();
 })();
 </script>
 </body>
